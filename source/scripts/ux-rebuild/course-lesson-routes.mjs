@@ -4,4 +4,4 @@ export const existingLessons={
  'full-stack':'082.html',
  'data-structures-algorithms':'091.html'
 };
-export const lessonUrl=slug=>existingLessons[slug]||'lesson-'+slug+'.html';
+export const lessonUrl=slug=>'lesson-'+slug+'.html';

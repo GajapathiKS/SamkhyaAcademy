@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "c-programming-fundamentals",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 2867088,
+    "titlePresent": true,
+    "textCharacters": 6802,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "cpp-essentials",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 2888074,
+    "titlePresent": true,
+    "textCharacters": 6671,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "javascript-foundations",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 2884363,
+    "titlePresent": true,
+    "textCharacters": 6661,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "data-structures-algorithms",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 213496,
+    "titlePresent": true,
+    "textCharacters": 7615,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "ai-engineering",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 2097285,
+    "titlePresent": true,
+    "textCharacters": 8583,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "ai-leadership",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 2725571,
+    "titlePresent": true,
+    "textCharacters": 7201,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "applied-ml-engineering",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 3418283,
+    "titlePresent": true,
+    "textCharacters": 8216,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "full-stack",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 2635453,
+    "titlePresent": true,
+    "textCharacters": 6829,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "data-analytics",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 3087409,
+    "titlePresent": true,
+    "textCharacters": 6719,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "cybersecurity",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 2135196,
+    "titlePresent": true,
+    "textCharacters": 7048,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "space-tech",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 3055002,
+    "titlePresent": true,
+    "textCharacters": 7989,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "entrepreneurship",
+    "pages": 6,
+    "a4": true,
+    "searchable": true,
+    "bytes": 2922830,
+    "titlePresent": true,
+    "textCharacters": 7999,
+    "standaloneSap": false,
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  }
+]

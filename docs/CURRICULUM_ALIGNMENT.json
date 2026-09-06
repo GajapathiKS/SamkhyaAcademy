@@ -1,0 +1,1306 @@
+[
+  {
+    "slug": "c-programming-fundamentals",
+    "version": "af957354f851",
+    "modules": [
+      {
+        "title": "Programming and C Foundations",
+        "evidence": "Compilable source, command transcript and input validation cases.",
+        "lessons": [
+          {
+            "title": "Set up the C toolchain",
+            "file": "lesson-c-programming-fundamentals.html"
+          },
+          {
+            "title": "Variables and data types",
+            "file": "lesson-c-programming-fundamentals-m01-l02.html"
+          },
+          {
+            "title": "Operators and expressions",
+            "file": "lesson-c-programming-fundamentals-m01-l03.html"
+          },
+          {
+            "title": "Input and output",
+            "file": "lesson-c-programming-fundamentals-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Control Flow and Functions",
+        "evidence": "Function contract and boundary-case test log.",
+        "lessons": [
+          {
+            "title": "Conditions",
+            "file": "lesson-c-programming-fundamentals-m02-l01.html"
+          },
+          {
+            "title": "Loops",
+            "file": "lesson-c-programming-fundamentals-m02-l02.html"
+          },
+          {
+            "title": "Functions and scope",
+            "file": "lesson-c-programming-fundamentals-m02-l03.html"
+          },
+          {
+            "title": "Debugging fundamentals",
+            "file": "lesson-c-programming-fundamentals-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Arrays, Strings and Pointers",
+        "evidence": "Array/string bounds worksheet and read-only function.",
+        "lessons": [
+          {
+            "title": "Arrays",
+            "file": "lesson-c-programming-fundamentals-m03-l01.html"
+          },
+          {
+            "title": "Strings",
+            "file": "lesson-c-programming-fundamentals-m03-l02.html"
+          },
+          {
+            "title": "Pointer foundations",
+            "file": "lesson-c-programming-fundamentals-m03-l03.html"
+          },
+          {
+            "title": "Pointers with arrays",
+            "file": "lesson-c-programming-fundamentals-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Structures, Files and Capstone",
+        "evidence": "Terminal application, reproducible tests and project README.",
+        "lessons": [
+          {
+            "title": "Structures and enums",
+            "file": "lesson-c-programming-fundamentals-m04-l01.html"
+          },
+          {
+            "title": "File handling",
+            "file": "lesson-c-programming-fundamentals-m04-l02.html"
+          },
+          {
+            "title": "Memory safety review",
+            "file": "lesson-c-programming-fundamentals-m04-l03.html"
+          },
+          {
+            "title": "Terminal application capstone",
+            "file": "lesson-c-programming-fundamentals-m04-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cpp-essentials",
+    "version": "4762cadb8eb6",
+    "modules": [
+      {
+        "title": "Modern C++ Foundations",
+        "evidence": "Reproducible two-file project and lifetime explanation.",
+        "lessons": [
+          {
+            "title": "Toolchain and first program",
+            "file": "lesson-cpp-essentials.html"
+          },
+          {
+            "title": "Types and control flow",
+            "file": "lesson-cpp-essentials-m01-l02.html"
+          },
+          {
+            "title": "Functions and references",
+            "file": "lesson-cpp-essentials-m01-l03.html"
+          },
+          {
+            "title": "Namespaces and headers",
+            "file": "lesson-cpp-essentials-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Object-Oriented C++",
+        "evidence": "Class diagram, invariant tests and interface example.",
+        "lessons": [
+          {
+            "title": "Classes and objects",
+            "file": "lesson-cpp-essentials-m02-l01.html"
+          },
+          {
+            "title": "Constructors",
+            "file": "lesson-cpp-essentials-m02-l02.html"
+          },
+          {
+            "title": "Inheritance",
+            "file": "lesson-cpp-essentials-m02-l03.html"
+          },
+          {
+            "title": "Interfaces and polymorphism",
+            "file": "lesson-cpp-essentials-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "STL and Problem Solving",
+        "evidence": "Container tests and documented error handling.",
+        "lessons": [
+          {
+            "title": "Vectors and maps",
+            "file": "lesson-cpp-essentials-m03-l01.html"
+          },
+          {
+            "title": "Iterators",
+            "file": "lesson-cpp-essentials-m03-l02.html"
+          },
+          {
+            "title": "Algorithms",
+            "file": "lesson-cpp-essentials-m03-l03.html"
+          },
+          {
+            "title": "Exceptions",
+            "file": "lesson-cpp-essentials-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Ownership and Capstone",
+        "evidence": "Console capstone, ownership map and regression cases.",
+        "lessons": [
+          {
+            "title": "Stack and heap",
+            "file": "lesson-cpp-essentials-m04-l01.html"
+          },
+          {
+            "title": "Smart pointers",
+            "file": "lesson-cpp-essentials-m04-l02.html"
+          },
+          {
+            "title": "RAII",
+            "file": "lesson-cpp-essentials-m04-l03.html"
+          },
+          {
+            "title": "Console application capstone",
+            "file": "lesson-cpp-essentials-m04-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "javascript-foundations",
+    "version": "90a82d1739f7",
+    "modules": [
+      {
+        "title": "JavaScript Language Foundations",
+        "evidence": "Pure filtering function and input/output tests.",
+        "lessons": [
+          {
+            "title": "Values and variables",
+            "file": "lesson-javascript-foundations.html"
+          },
+          {
+            "title": "Functions",
+            "file": "lesson-javascript-foundations-m01-l02.html"
+          },
+          {
+            "title": "Arrays and objects",
+            "file": "lesson-javascript-foundations-m01-l03.html"
+          },
+          {
+            "title": "Errors and debugging",
+            "file": "lesson-javascript-foundations-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Browser and DOM",
+        "evidence": "Accessible filtering page and interaction checklist.",
+        "lessons": [
+          {
+            "title": "DOM selection",
+            "file": "lesson-javascript-foundations-m02-l01.html"
+          },
+          {
+            "title": "Events",
+            "file": "lesson-javascript-foundations-m02-l02.html"
+          },
+          {
+            "title": "Forms and validation",
+            "file": "lesson-javascript-foundations-m02-l03.html"
+          },
+          {
+            "title": "Accessible UI state",
+            "file": "lesson-javascript-foundations-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Asynchronous JavaScript",
+        "evidence": "Asynchronous page with explicit state transitions.",
+        "lessons": [
+          {
+            "title": "Promises",
+            "file": "lesson-javascript-foundations-m03-l01.html"
+          },
+          {
+            "title": "Async and await",
+            "file": "lesson-javascript-foundations-m03-l02.html"
+          },
+          {
+            "title": "Fetch and JSON",
+            "file": "lesson-javascript-foundations-m03-l03.html"
+          },
+          {
+            "title": "Loading and error states",
+            "file": "lesson-javascript-foundations-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Modules and Capstone",
+        "evidence": "Interactive app, tests and reproducible README.",
+        "lessons": [
+          {
+            "title": "ES modules",
+            "file": "lesson-javascript-foundations-m04-l01.html"
+          },
+          {
+            "title": "Tooling basics",
+            "file": "lesson-javascript-foundations-m04-l02.html"
+          },
+          {
+            "title": "Testing concepts",
+            "file": "lesson-javascript-foundations-m04-l03.html"
+          },
+          {
+            "title": "Interactive web app capstone",
+            "file": "lesson-javascript-foundations-m04-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "data-structures-algorithms",
+    "version": "ccd5d40f7a42",
+    "modules": [
+      {
+        "title": "Complexity, Arrays and Strings",
+        "evidence": "Annotated trace, invariant and complexity comparison.",
+        "lessons": [
+          {
+            "title": "Big O with live traces",
+            "file": "lesson-data-structures-algorithms.html"
+          },
+          {
+            "title": "Array memory visualizer",
+            "file": "lesson-data-structures-algorithms-m01-l02.html"
+          },
+          {
+            "title": "Two pointers and sliding windows",
+            "file": "lesson-data-structures-algorithms-m01-l03.html"
+          },
+          {
+            "title": "Searching and sorting",
+            "file": "lesson-data-structures-algorithms-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Linked Structures",
+        "evidence": "Linked-structure traces and edge-case tests.",
+        "lessons": [
+          {
+            "title": "Singly linked list simulation",
+            "file": "lesson-data-structures-algorithms-m02-l01.html"
+          },
+          {
+            "title": "Doubly linked lists",
+            "file": "lesson-data-structures-algorithms-m02-l02.html"
+          },
+          {
+            "title": "Stacks and queues",
+            "file": "lesson-data-structures-algorithms-m02-l03.html"
+          },
+          {
+            "title": "Hash tables",
+            "file": "lesson-data-structures-algorithms-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Trees and Heaps",
+        "evidence": "Tree explorer trace and invariant tests.",
+        "lessons": [
+          {
+            "title": "Binary tree explorer",
+            "file": "lesson-data-structures-algorithms-m03-l01.html"
+          },
+          {
+            "title": "BST operations",
+            "file": "lesson-data-structures-algorithms-m03-l02.html"
+          },
+          {
+            "title": "DFS and BFS",
+            "file": "lesson-data-structures-algorithms-m03-l03.html"
+          },
+          {
+            "title": "Heaps and priority queues",
+            "file": "lesson-data-structures-algorithms-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Graphs and Dynamic Programming",
+        "evidence": "Graph trace, path reconstruction and assumptions.",
+        "lessons": [
+          {
+            "title": "Graph builder",
+            "file": "lesson-data-structures-algorithms-m04-l01.html"
+          },
+          {
+            "title": "BFS and DFS simulation",
+            "file": "lesson-data-structures-algorithms-m04-l02.html"
+          },
+          {
+            "title": "Shortest paths",
+            "file": "lesson-data-structures-algorithms-m04-l03.html"
+          },
+          {
+            "title": "Dynamic programming patterns",
+            "file": "lesson-data-structures-algorithms-m04-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Problem Solving and Capstone",
+        "evidence": "Algorithm visualizer, tests and complexity explanation.",
+        "lessons": [
+          {
+            "title": "Pattern selection",
+            "file": "lesson-data-structures-algorithms-m05-l01.html"
+          },
+          {
+            "title": "Constraint-driven design",
+            "file": "lesson-data-structures-algorithms-m05-l02.html"
+          },
+          {
+            "title": "Timed problem sets",
+            "file": "lesson-data-structures-algorithms-m05-l03.html"
+          },
+          {
+            "title": "Algorithm visualizer capstone",
+            "file": "lesson-data-structures-algorithms-m05-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-engineering",
+    "version": "32454006c70b",
+    "modules": [
+      {
+        "title": "Engineering Readiness Bridge",
+        "evidence": "Service contract, fixture and boundary tests.",
+        "lessons": [
+          {
+            "title": "Backend/API readiness",
+            "file": "lesson-ai-engineering.html"
+          },
+          {
+            "title": "Data and database readiness",
+            "file": "lesson-ai-engineering-m01-l02.html"
+          },
+          {
+            "title": "Testing and Git",
+            "file": "lesson-ai-engineering-m01-l03.html"
+          },
+          {
+            "title": "Cloud foundations",
+            "file": "lesson-ai-engineering-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "AI Engineering",
+        "evidence": "Grounded response set and retrieval evaluation.",
+        "lessons": [
+          {
+            "title": "LLM foundations",
+            "file": "lesson-ai-engineering-m02-l01.html"
+          },
+          {
+            "title": "Prompt and context engineering",
+            "file": "lesson-ai-engineering-m02-l02.html"
+          },
+          {
+            "title": "Structured output and tools",
+            "file": "lesson-ai-engineering-m02-l03.html"
+          },
+          {
+            "title": "Embeddings, vector databases and RAG",
+            "file": "lesson-ai-engineering-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Agents, Voice and Multimodal AI",
+        "evidence": "Orchestration diagram and multimodal failure cases.",
+        "lessons": [
+          {
+            "title": "Agents, tasks and memory",
+            "file": "lesson-ai-engineering-m03-l01.html"
+          },
+          {
+            "title": "MCP, skills and multi-agent patterns",
+            "file": "lesson-ai-engineering-m03-l02.html"
+          },
+          {
+            "title": "STT, TTS and realtime agents",
+            "file": "lesson-ai-engineering-m03-l03.html"
+          },
+          {
+            "title": "Vision and document AI",
+            "file": "lesson-ai-engineering-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Production AI Engineering",
+        "evidence": "Evaluation report, operational dashboard plan and runbook.",
+        "lessons": [
+          {
+            "title": "Evaluations and guardrails",
+            "file": "lesson-ai-engineering-m04-l01.html"
+          },
+          {
+            "title": "Docker, CI/CD and cloud",
+            "file": "lesson-ai-engineering-m04-l02.html"
+          },
+          {
+            "title": "LLMOps and observability",
+            "file": "lesson-ai-engineering-m04-l03.html"
+          },
+          {
+            "title": "Security, scale and cost",
+            "file": "lesson-ai-engineering-m04-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise Integration",
+        "evidence": "Adapter contract, access matrix and audit trace.",
+        "lessons": [
+          {
+            "title": "SSO, OAuth/OIDC and RBAC",
+            "file": "lesson-ai-engineering-m05-l01.html"
+          },
+          {
+            "title": "Enterprise APIs and databases",
+            "file": "lesson-ai-engineering-m05-l02.html"
+          },
+          {
+            "title": "SharePoint, SAP and CRM integration",
+            "file": "lesson-ai-engineering-m05-l03.html"
+          },
+          {
+            "title": "Service platforms and legacy systems",
+            "file": "lesson-ai-engineering-m05-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Solution Architecture and Forward Deployment",
+        "evidence": "Architecture decision record and forward-deployment portfolio.",
+        "lessons": [
+          {
+            "title": "RAG vs fine-tuning vs SLM",
+            "file": "lesson-ai-engineering-m06-l01.html"
+          },
+          {
+            "title": "Agent vs deterministic workflow",
+            "file": "lesson-ai-engineering-m06-l02.html"
+          },
+          {
+            "title": "Customer discovery and value case",
+            "file": "lesson-ai-engineering-m06-l03.html"
+          },
+          {
+            "title": "Forward-deployment capstone",
+            "file": "lesson-ai-engineering-m06-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-leadership",
+    "version": "3e0181c8cf80",
+    "modules": [
+      {
+        "title": "AI Reality for Leaders",
+        "evidence": "Capability assessment and decision-boundary map.",
+        "lessons": [
+          {
+            "title": "LLM capability and limitations",
+            "file": "lesson-ai-leadership.html"
+          },
+          {
+            "title": "RAG, fine-tuning and SLMs",
+            "file": "lesson-ai-leadership-m01-l02.html"
+          },
+          {
+            "title": "Agents and autonomous workflows",
+            "file": "lesson-ai-leadership-m01-l03.html"
+          },
+          {
+            "title": "Voice, vision and multimodal opportunities",
+            "file": "lesson-ai-leadership-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Prioritize and Fund",
+        "evidence": "Opportunity portfolio and assumption-based business case.",
+        "lessons": [
+          {
+            "title": "Opportunity discovery",
+            "file": "lesson-ai-leadership-m02-l01.html"
+          },
+          {
+            "title": "Data and permission readiness",
+            "file": "lesson-ai-leadership-m02-l02.html"
+          },
+          {
+            "title": "Build vs buy vs partner",
+            "file": "lesson-ai-leadership-m02-l03.html"
+          },
+          {
+            "title": "AI economics and ROI",
+            "file": "lesson-ai-leadership-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Govern and Operate",
+        "evidence": "Governance charter, access matrix and adoption plan.",
+        "lessons": [
+          {
+            "title": "Risk and human control",
+            "file": "lesson-ai-leadership-m03-l01.html"
+          },
+          {
+            "title": "Security and auditability",
+            "file": "lesson-ai-leadership-m03-l02.html"
+          },
+          {
+            "title": "Operating model",
+            "file": "lesson-ai-leadership-m03-l03.html"
+          },
+          {
+            "title": "Adoption and change",
+            "file": "lesson-ai-leadership-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "90-Day Execution Blueprint",
+        "evidence": "90-day execution blueprint and executive review deck.",
+        "lessons": [
+          {
+            "title": "Select priority use cases",
+            "file": "lesson-ai-leadership-m04-l01.html"
+          },
+          {
+            "title": "Define pilot and metrics",
+            "file": "lesson-ai-leadership-m04-l02.html"
+          },
+          {
+            "title": "Set governance checkpoints",
+            "file": "lesson-ai-leadership-m04-l03.html"
+          },
+          {
+            "title": "Present the 90-day plan",
+            "file": "lesson-ai-leadership-m04-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "applied-ml-engineering",
+    "version": "e59dc8e78205",
+    "modules": [
+      {
+        "title": "Data, Math and Python Bridge",
+        "evidence": "Dataset contract and leakage review.",
+        "lessons": [
+          {
+            "title": "Python for data",
+            "file": "lesson-applied-ml-engineering.html"
+          },
+          {
+            "title": "Statistics essentials",
+            "file": "lesson-applied-ml-engineering-m01-l02.html"
+          },
+          {
+            "title": "Data preparation",
+            "file": "lesson-applied-ml-engineering-m01-l03.html"
+          },
+          {
+            "title": "SQL and visualization",
+            "file": "lesson-applied-ml-engineering-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Classical Machine Learning",
+        "evidence": "Model comparison and evaluation memo.",
+        "lessons": [
+          {
+            "title": "Regression and classification",
+            "file": "lesson-applied-ml-engineering-m02-l01.html"
+          },
+          {
+            "title": "Feature engineering",
+            "file": "lesson-applied-ml-engineering-m02-l02.html"
+          },
+          {
+            "title": "Clustering",
+            "file": "lesson-applied-ml-engineering-m02-l03.html"
+          },
+          {
+            "title": "Metrics and model selection",
+            "file": "lesson-applied-ml-engineering-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Deep Learning",
+        "evidence": "Training notebook, shape diagram and learning curves.",
+        "lessons": [
+          {
+            "title": "Neural network foundations",
+            "file": "lesson-applied-ml-engineering-m03-l01.html"
+          },
+          {
+            "title": "Optimization",
+            "file": "lesson-applied-ml-engineering-m03-l02.html"
+          },
+          {
+            "title": "CNNs",
+            "file": "lesson-applied-ml-engineering-m03-l03.html"
+          },
+          {
+            "title": "Sequence and transformer foundations",
+            "file": "lesson-applied-ml-engineering-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Computer Vision, NLP and Multimodal",
+        "evidence": "Perception evaluation and error analysis.",
+        "lessons": [
+          {
+            "title": "Classification and detection",
+            "file": "lesson-applied-ml-engineering-m04-l01.html"
+          },
+          {
+            "title": "Segmentation, tracking and OCR",
+            "file": "lesson-applied-ml-engineering-m04-l02.html"
+          },
+          {
+            "title": "NLP and transformers",
+            "file": "lesson-applied-ml-engineering-m04-l03.html"
+          },
+          {
+            "title": "Voice and multimodal workflows",
+            "file": "lesson-applied-ml-engineering-m04-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "LLM and SLM Engineering",
+        "evidence": "Adaptation experiment and model card.",
+        "lessons": [
+          {
+            "title": "Dataset preparation and evaluation",
+            "file": "lesson-applied-ml-engineering-m05-l01.html"
+          },
+          {
+            "title": "Supervised fine-tuning",
+            "file": "lesson-applied-ml-engineering-m05-l02.html"
+          },
+          {
+            "title": "PEFT, LoRA and QLoRA",
+            "file": "lesson-applied-ml-engineering-m05-l03.html"
+          },
+          {
+            "title": "Quantization and distillation",
+            "file": "lesson-applied-ml-engineering-m05-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Educational Transformer and MLOps",
+        "evidence": "Educational model, serving prototype and MLOps report.",
+        "lessons": [
+          {
+            "title": "Tokenizer and embeddings",
+            "file": "lesson-applied-ml-engineering-m06-l01.html"
+          },
+          {
+            "title": "Transformer blocks and training loop",
+            "file": "lesson-applied-ml-engineering-m06-l02.html"
+          },
+          {
+            "title": "Model serving",
+            "file": "lesson-applied-ml-engineering-m06-l03.html"
+          },
+          {
+            "title": "Monitoring, drift and capstone",
+            "file": "lesson-applied-ml-engineering-m06-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "full-stack",
+    "version": "1ea6195cf16d",
+    "modules": [
+      {
+        "title": "Web Foundations",
+        "evidence": "Responsive page and accessibility checklist.",
+        "lessons": [
+          {
+            "title": "Semantic HTML",
+            "file": "lesson-full-stack.html"
+          },
+          {
+            "title": "Modern CSS",
+            "file": "lesson-full-stack-m01-l02.html"
+          },
+          {
+            "title": "JavaScript and TypeScript",
+            "file": "lesson-full-stack-m01-l03.html"
+          },
+          {
+            "title": "Accessibility and responsive design",
+            "file": "lesson-full-stack-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Frontend Engineering",
+        "evidence": "Component interface, state diagram and UI tests.",
+        "lessons": [
+          {
+            "title": "React or Angular foundations",
+            "file": "lesson-full-stack-m02-l01.html"
+          },
+          {
+            "title": "State and forms",
+            "file": "lesson-full-stack-m02-l02.html"
+          },
+          {
+            "title": "Data fetching",
+            "file": "lesson-full-stack-m02-l03.html"
+          },
+          {
+            "title": "Frontend testing",
+            "file": "lesson-full-stack-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Backend Specialization",
+        "evidence": "API specification and permission regression tests.",
+        "lessons": [
+          {
+            "title": "API design",
+            "file": "lesson-full-stack-m03-l01.html"
+          },
+          {
+            "title": "Authentication and authorization",
+            "file": "lesson-full-stack-m03-l02.html"
+          },
+          {
+            "title": "Validation and errors",
+            "file": "lesson-full-stack-m03-l03.html"
+          },
+          {
+            "title": "Backend testing",
+            "file": "lesson-full-stack-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Data and Production",
+        "evidence": "Full-stack capstone and deployment runbook.",
+        "lessons": [
+          {
+            "title": "SQL modeling",
+            "file": "lesson-full-stack-m04-l01.html"
+          },
+          {
+            "title": "NoSQL patterns",
+            "file": "lesson-full-stack-m04-l02.html"
+          },
+          {
+            "title": "Docker and CI/CD",
+            "file": "lesson-full-stack-m04-l03.html"
+          },
+          {
+            "title": "Full-stack capstone",
+            "file": "lesson-full-stack-m04-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "data-analytics",
+    "version": "a9c2753d2db8",
+    "modules": [
+      {
+        "title": "Analytics Foundations",
+        "evidence": "Metric dictionary and reconciled analysis.",
+        "lessons": [
+          {
+            "title": "Business questions and KPIs",
+            "file": "lesson-data-analytics.html"
+          },
+          {
+            "title": "Excel analysis",
+            "file": "lesson-data-analytics-m01-l02.html"
+          },
+          {
+            "title": "Data quality",
+            "file": "lesson-data-analytics-m01-l03.html"
+          },
+          {
+            "title": "Analytical thinking",
+            "file": "lesson-data-analytics-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "SQL and Data Preparation",
+        "evidence": "SQL queries, cardinality checks and dataset contract.",
+        "lessons": [
+          {
+            "title": "SQL foundations",
+            "file": "lesson-data-analytics-m02-l01.html"
+          },
+          {
+            "title": "Joins and aggregation",
+            "file": "lesson-data-analytics-m02-l02.html"
+          },
+          {
+            "title": "Cleaning workflows",
+            "file": "lesson-data-analytics-m02-l03.html"
+          },
+          {
+            "title": "Reusable analysis datasets",
+            "file": "lesson-data-analytics-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Python and Statistics",
+        "evidence": "Notebook, exploratory plots and interpretation memo.",
+        "lessons": [
+          {
+            "title": "Pandas workflows",
+            "file": "lesson-data-analytics-m03-l01.html"
+          },
+          {
+            "title": "Exploratory analysis",
+            "file": "lesson-data-analytics-m03-l02.html"
+          },
+          {
+            "title": "Practical statistics",
+            "file": "lesson-data-analytics-m03-l03.html"
+          },
+          {
+            "title": "Experiment interpretation",
+            "file": "lesson-data-analytics-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "BI and Storytelling",
+        "evidence": "Dashboard, source queries and stakeholder memo.",
+        "lessons": [
+          {
+            "title": "Visualization principles",
+            "file": "lesson-data-analytics-m04-l01.html"
+          },
+          {
+            "title": "Dashboard design",
+            "file": "lesson-data-analytics-m04-l02.html"
+          },
+          {
+            "title": "Stakeholder narrative",
+            "file": "lesson-data-analytics-m04-l03.html"
+          },
+          {
+            "title": "Analytics capstone",
+            "file": "lesson-data-analytics-m04-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cybersecurity",
+    "version": "5a6358f7f518",
+    "modules": [
+      {
+        "title": "Security Foundations",
+        "evidence": "Threat model and authorized test plan.",
+        "lessons": [
+          {
+            "title": "Security principles",
+            "file": "lesson-cybersecurity.html"
+          },
+          {
+            "title": "Threat actors and attack surfaces",
+            "file": "lesson-cybersecurity-m01-l02.html"
+          },
+          {
+            "title": "Threat modeling",
+            "file": "lesson-cybersecurity-m01-l03.html"
+          },
+          {
+            "title": "Security controls",
+            "file": "lesson-cybersecurity-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Identity and Networks",
+        "evidence": "Access matrix and boundary test evidence.",
+        "lessons": [
+          {
+            "title": "Authentication and authorization",
+            "file": "lesson-cybersecurity-m02-l01.html"
+          },
+          {
+            "title": "IAM and least privilege",
+            "file": "lesson-cybersecurity-m02-l02.html"
+          },
+          {
+            "title": "Network security",
+            "file": "lesson-cybersecurity-m02-l03.html"
+          },
+          {
+            "title": "Cloud security basics",
+            "file": "lesson-cybersecurity-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Application Security",
+        "evidence": "Application review and remediation report.",
+        "lessons": [
+          {
+            "title": "OWASP risks",
+            "file": "lesson-cybersecurity-m03-l01.html"
+          },
+          {
+            "title": "Web and API security",
+            "file": "lesson-cybersecurity-m03-l02.html"
+          },
+          {
+            "title": "Secrets and data protection",
+            "file": "lesson-cybersecurity-m03-l03.html"
+          },
+          {
+            "title": "Secure development lifecycle",
+            "file": "lesson-cybersecurity-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Monitoring and Response",
+        "evidence": "Security event plan, tabletop record and capstone report.",
+        "lessons": [
+          {
+            "title": "Security logging",
+            "file": "lesson-cybersecurity-m04-l01.html"
+          },
+          {
+            "title": "Detection concepts",
+            "file": "lesson-cybersecurity-m04-l02.html"
+          },
+          {
+            "title": "Incident response",
+            "file": "lesson-cybersecurity-m04-l03.html"
+          },
+          {
+            "title": "Security review capstone",
+            "file": "lesson-cybersecurity-m04-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "space-tech",
+    "version": "a1025f02c3f4",
+    "modules": [
+      {
+        "title": "Space Systems Foundations",
+        "evidence": "Mission brief, orbit calculation with units, and a requirements/verification matrix.",
+        "lessons": [
+          {
+            "title": "Space mission lifecycle",
+            "file": "lesson-space-tech.html"
+          },
+          {
+            "title": "Orbital mechanics",
+            "file": "lesson-space-tech-m01-l02.html"
+          },
+          {
+            "title": "Space environment",
+            "file": "lesson-space-tech-m01-l03.html"
+          },
+          {
+            "title": "Systems engineering",
+            "file": "lesson-space-tech-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Spacecraft Subsystems",
+        "evidence": "Power and eclipse budgets, a thermal/load-path sketch, and an interface-control record.",
+        "lessons": [
+          {
+            "title": "Power systems",
+            "file": "lesson-space-tech-m02-l01.html"
+          },
+          {
+            "title": "Thermal and structures",
+            "file": "lesson-space-tech-m02-l02.html"
+          },
+          {
+            "title": "ADCS",
+            "file": "lesson-space-tech-m02-l03.html"
+          },
+          {
+            "title": "Subsystem interfaces",
+            "file": "lesson-space-tech-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Avionics and Communications",
+        "evidence": "Telemetry schema, packet-loss test log, ground display and recovery-state diagram.",
+        "lessons": [
+          {
+            "title": "Embedded systems",
+            "file": "lesson-space-tech-m03-l01.html"
+          },
+          {
+            "title": "Sensors and telemetry",
+            "file": "lesson-space-tech-m03-l02.html"
+          },
+          {
+            "title": "RF and ground stations",
+            "file": "lesson-space-tech-m03-l03.html"
+          },
+          {
+            "title": "Flight software concepts",
+            "file": "lesson-space-tech-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Autonomy and Mission Project",
+        "evidence": "Mission demonstrator, traceable verification report, operations runbook and final review presentation.",
+        "lessons": [
+          {
+            "title": "AI and autonomy",
+            "file": "lesson-space-tech-m04-l01.html"
+          },
+          {
+            "title": "Simulation and testing",
+            "file": "lesson-space-tech-m04-l02.html"
+          },
+          {
+            "title": "Mission operations",
+            "file": "lesson-space-tech-m04-l03.html"
+          },
+          {
+            "title": "CubeSat/CanSat-style capstone",
+            "file": "lesson-space-tech-m04-l04.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "entrepreneurship",
+    "version": "cb6bb39d8fe4",
+    "modules": [
+      {
+        "title": "Idea and Opportunity",
+        "evidence": "Problem brief and assumption register.",
+        "lessons": [
+          {
+            "title": "Opportunity framing",
+            "file": "lesson-entrepreneurship.html"
+          },
+          {
+            "title": "Problem clarity",
+            "file": "lesson-entrepreneurship-m01-l02.html"
+          },
+          {
+            "title": "Target customer",
+            "file": "lesson-entrepreneurship-m01-l03.html"
+          },
+          {
+            "title": "Mentor selection review",
+            "file": "lesson-entrepreneurship-m01-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Customer Validation",
+        "evidence": "Interview guide, evidence synthesis and validation memo.",
+        "lessons": [
+          {
+            "title": "Interview planning",
+            "file": "lesson-entrepreneurship-m02-l01.html"
+          },
+          {
+            "title": "Customer discovery",
+            "file": "lesson-entrepreneurship-m02-l02.html"
+          },
+          {
+            "title": "Validation evidence",
+            "file": "lesson-entrepreneurship-m02-l03.html"
+          },
+          {
+            "title": "Mentor validation gate",
+            "file": "lesson-entrepreneurship-m02-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Business Model",
+        "evidence": "Business-model canvas and assumption-based unit-economics worksheet.",
+        "lessons": [
+          {
+            "title": "Value proposition",
+            "file": "lesson-entrepreneurship-m03-l01.html"
+          },
+          {
+            "title": "Revenue and pricing",
+            "file": "lesson-entrepreneurship-m03-l02.html"
+          },
+          {
+            "title": "Unit economics",
+            "file": "lesson-entrepreneurship-m03-l03.html"
+          },
+          {
+            "title": "Business model review",
+            "file": "lesson-entrepreneurship-m03-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "MVP Build",
+        "evidence": "Prototype, architecture sketch and test plan.",
+        "lessons": [
+          {
+            "title": "MVP scope",
+            "file": "lesson-entrepreneurship-m04-l01.html"
+          },
+          {
+            "title": "Prototype and architecture",
+            "file": "lesson-entrepreneurship-m04-l02.html"
+          },
+          {
+            "title": "Test plan",
+            "file": "lesson-entrepreneurship-m04-l03.html"
+          },
+          {
+            "title": "MVP readiness review",
+            "file": "lesson-entrepreneurship-m04-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Pilot Launch",
+        "evidence": "Pilot plan, acquisition experiment and launch-readiness review.",
+        "lessons": [
+          {
+            "title": "Pilot design",
+            "file": "lesson-entrepreneurship-m05-l01.html"
+          },
+          {
+            "title": "Go-to-market experiment",
+            "file": "lesson-entrepreneurship-m05-l02.html"
+          },
+          {
+            "title": "Launch checklist",
+            "file": "lesson-entrepreneurship-m05-l03.html"
+          },
+          {
+            "title": "Launch gate",
+            "file": "lesson-entrepreneurship-m05-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Traction and Learning",
+        "evidence": "Metric dictionary, feedback log and traction review.",
+        "lessons": [
+          {
+            "title": "Metrics",
+            "file": "lesson-entrepreneurship-m06-l01.html"
+          },
+          {
+            "title": "Feedback loops",
+            "file": "lesson-entrepreneurship-m06-l02.html"
+          },
+          {
+            "title": "Experiment results",
+            "file": "lesson-entrepreneurship-m06-l03.html"
+          },
+          {
+            "title": "Traction review",
+            "file": "lesson-entrepreneurship-m06-l04.html"
+          }
+        ]
+      },
+      {
+        "title": "Scale and Production",
+        "evidence": "Operating plan, scale scenario and final course showcase.",
+        "lessons": [
+          {
+            "title": "Operating model",
+            "file": "lesson-entrepreneurship-m07-l01.html"
+          },
+          {
+            "title": "Security and compliance readiness",
+            "file": "lesson-entrepreneurship-m07-l02.html"
+          },
+          {
+            "title": "Scale plan",
+            "file": "lesson-entrepreneurship-m07-l03.html"
+          },
+          {
+            "title": "Final showcase",
+            "file": "lesson-entrepreneurship-m07-l04.html"
+          }
+        ]
+      }
+    ]
+  }
+]

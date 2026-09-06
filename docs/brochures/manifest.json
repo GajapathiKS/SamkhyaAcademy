@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "c-programming-fundamentals",
+    "title": "C Programming Fundamentals",
+    "pdf": "brochures/c-programming-fundamentals.pdf",
+    "pages": 6,
+    "version": "af957354f851",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "cpp-essentials",
+    "title": "C++ Essentials",
+    "pdf": "brochures/cpp-essentials.pdf",
+    "pages": 6,
+    "version": "4762cadb8eb6",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "javascript-foundations",
+    "title": "JavaScript Foundations",
+    "pdf": "brochures/javascript-foundations.pdf",
+    "pages": 6,
+    "version": "90a82d1739f7",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "data-structures-algorithms",
+    "title": "Data Structures & Algorithms",
+    "pdf": "brochures/data-structures-algorithms.pdf",
+    "pages": 6,
+    "version": "ccd5d40f7a42",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "ai-engineering",
+    "title": "Forward Deployed AI Engineering",
+    "pdf": "brochures/ai-engineering.pdf",
+    "pages": 6,
+    "version": "32454006c70b",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "ai-leadership",
+    "title": "Forward Deployed AI Leadership",
+    "pdf": "brochures/ai-leadership.pdf",
+    "pages": 6,
+    "version": "3e0181c8cf80",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "applied-ml-engineering",
+    "title": "Applied Machine Learning Engineer Path",
+    "pdf": "brochures/applied-ml-engineering.pdf",
+    "pages": 6,
+    "version": "e59dc8e78205",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "full-stack",
+    "title": "Full-Stack Developer Path",
+    "pdf": "brochures/full-stack.pdf",
+    "pages": 6,
+    "version": "1ea6195cf16d",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "data-analytics",
+    "title": "Data Analytics Path",
+    "pdf": "brochures/data-analytics.pdf",
+    "pages": 6,
+    "version": "a9c2753d2db8",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "cybersecurity",
+    "title": "Cybersecurity Foundations",
+    "pdf": "brochures/cybersecurity.pdf",
+    "pages": 6,
+    "version": "5a6358f7f518",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "space-tech",
+    "title": "Space Tech Program",
+    "pdf": "brochures/space-tech.pdf",
+    "pages": 6,
+    "version": "a1025f02c3f4",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  },
+  {
+    "slug": "entrepreneurship",
+    "title": "Entrepreneurship & Venture Builder",
+    "pdf": "brochures/entrepreneurship.pdf",
+    "pages": 6,
+    "version": "cb6bb39d8fe4",
+    "layout": {
+      "badImages": [],
+      "overflow": []
+    }
+  }
+]

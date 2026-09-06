@@ -966,9 +966,9 @@ const professionalPrograms: CatalogCourse[] = [
     slug: "entrepreneurship",
     title: "Entrepreneurship & Venture Builder",
     shortDescription:
-      "Build a real venture from idea to validation, MVP, pilot, traction and scale readiness.",
+      "Learn opportunity discovery, validation, business models, MVPs, pilots and scaling through practical course assignments.",
     description:
-      "A mentor-led execution program with persisted stage gates, evidence, versioned artifacts and measurable launch readiness.",
+      "A structured entrepreneurship course with seven modules, worked case studies and practical assignments. Study using a case study or your own business question; idea submission and venture admission are separate journeys.",
     category: "Entrepreneurship",
     deliveryMode: "COHORT",
     contentType: "HYBRID_OFFLINE_ONLINE",
@@ -993,7 +993,7 @@ const professionalPrograms: CatalogCourse[] = [
       "Professionals transitioning into entrepreneurship",
       "Founder teams preparing to launch",
     ],
-    prerequisites: ["A problem or opportunity worth exploring"],
+    prerequisites: ["No submitted idea is required; use a course case study or your own business question"],
     tools: [
       "Opportunity brief",
       "Customer interviews",

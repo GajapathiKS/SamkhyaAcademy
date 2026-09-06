@@ -1,0 +1,147 @@
+[
+  {
+    "course": "c-programming-fundamentals",
+    "modules": 4,
+    "lessons": 16,
+    "pages": 6,
+    "version": "af957354f851",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/086.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-c-programming-fundamentals.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "cpp-essentials",
+    "modules": 4,
+    "lessons": 16,
+    "pages": 6,
+    "version": "4762cadb8eb6",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/088.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-cpp-essentials.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "javascript-foundations",
+    "modules": 4,
+    "lessons": 16,
+    "pages": 6,
+    "version": "90a82d1739f7",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/015.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-javascript-foundations.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "data-structures-algorithms",
+    "modules": 5,
+    "lessons": 20,
+    "pages": 6,
+    "version": "ccd5d40f7a42",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/090.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-data-structures-algorithms.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "ai-engineering",
+    "modules": 6,
+    "lessons": 24,
+    "pages": 6,
+    "version": "32454006c70b",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/004.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-ai-engineering.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "ai-leadership",
+    "modules": 4,
+    "lessons": 16,
+    "pages": 6,
+    "version": "3e0181c8cf80",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/011.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-ai-leadership.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "applied-ml-engineering",
+    "modules": 6,
+    "lessons": 24,
+    "pages": 6,
+    "version": "e59dc8e78205",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/005.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-applied-ml-engineering.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "full-stack",
+    "modules": 4,
+    "lessons": 16,
+    "pages": 6,
+    "version": "1ea6195cf16d",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/006.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-full-stack.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "data-analytics",
+    "modules": 4,
+    "lessons": 16,
+    "pages": 6,
+    "version": "a9c2753d2db8",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/013.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-data-analytics.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "cybersecurity",
+    "modules": 4,
+    "lessons": 16,
+    "pages": 6,
+    "version": "5a6358f7f518",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/014.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-cybersecurity.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "space-tech",
+    "modules": 4,
+    "lessons": 16,
+    "pages": 6,
+    "version": "a1025f02c3f4",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/012.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-space-tech.html"
+    ],
+    "passed": true
+  },
+  {
+    "course": "entrepreneurship",
+    "modules": 7,
+    "lessons": 28,
+    "pages": 6,
+    "version": "cb6bb39d8fe4",
+    "links": [
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/009.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/lesson-entrepreneurship.html",
+      "https://gajapathiks.github.io/SamkhyaAcademy/pages/010.html"
+    ],
+    "passed": true
+  }
+]

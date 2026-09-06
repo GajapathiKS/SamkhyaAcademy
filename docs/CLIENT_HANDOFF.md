@@ -1,5 +1,7 @@
 # Client UX handoff
 
+Latest addition: [complete module and lesson directory](MODULE_LESSON_INDEX.html) and [curriculum alignment report](CURRICULUM_ALIGNMENT_REPORT.md). Course learning and optional venture applications are separate journeys.
+
 Client review index, separate from the product UI. These are static interactive prototypes, not a production LMS. Video is storyboard media; local demo data and approvals are not server-authorized. This handoff uses the public GitHub Pages preview. Do not enter confidential information in this demonstration.
 
 Public preview URL: https://gajapathiks.github.io/SamkhyaAcademy/
