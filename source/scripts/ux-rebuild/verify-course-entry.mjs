@@ -1,6 +1,8 @@
 import {chromium} from 'playwright';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
+import {courseIds} from './data.mjs';
+import {lessonUrl} from './course-lesson-routes.mjs';
 const root=path.resolve(process.argv[2]),browser=await chromium.launch(),page=await browser.newPage({viewport:{width:1440,height:1000}});
 const go=n=>page.goto(pathToFileURL(path.join(root,'pages',String(n).padStart(3,'0')+'.html')).href);
 const examples={86:[87],88:[89],6:[82],90:[91]};
@@ -19,7 +21,8 @@ for(const n of [4,5,11,12,13,14,15,16,17,86,88,90,6,102]){
  if(await page.locator('.rich-hero').getByRole('link',{name:'Go to lesson',exact:true}).count()!==1)throw Error('Expected neutral lesson label '+n);
  if(n!==86&&n!==88&&n!==90&&n!==6&&n!==102){
   await page.getByRole('link',{name:'Go to lesson',exact:true}).click();
-  if(!page.url().endsWith('#teaching-example'))throw Error('Missing sample');
+  if(!page.url().endsWith(lessonUrl(courseIds[n])))throw Error('Missing dedicated lesson');
+  await go(n);
  }
  await page.screenshot({path:path.join(root,'screens',String(n).padStart(3,'0')+'.png'),fullPage:true});
  await page.setViewportSize({width:390,height:844});

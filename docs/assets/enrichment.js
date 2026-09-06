@@ -1,4 +1,7 @@
 (()=>{
+ const toggle=document.querySelector('.nav-toggle'),nav=document.querySelector('#primary-nav');
+ toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav.dataset.open=String(open);});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&toggle?.getAttribute('aria-expanded')==='true'){toggle.setAttribute('aria-expanded','false');nav.dataset.open='false';toggle.focus();}});
  const menus=[...document.querySelectorAll('.nav-dropdown')];
  menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.forEach(other=>{if(other!==menu)other.open=false;});}));
  document.addEventListener('click',e=>{if(!e.target.closest('.nav-dropdown'))menus.forEach(m=>m.open=false);const action=e.target.closest('[data-action]')?.dataset.action;
