@@ -1,0 +1,1163 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("LMS_DATABASE_URL")
+  schemas  = ["lms"]
+}
+
+enum UserStatus {
+  INVITED
+  ACTIVE
+  SUSPENDED
+  DISABLED
+  @@schema("lms")
+}
+
+enum PlatformRole {
+  PLATFORM_ADMIN
+  CONTENT_ADMIN
+  SALES_COUNSELLOR
+  VENTURE_MENTOR
+  SUPPORT
+  @@schema("lms")
+}
+
+enum OrgRole {
+  ORG_OWNER
+  ORG_ADMIN
+  MANAGER
+  LEARNER
+  @@schema("lms")
+}
+
+enum CourseStatus {
+  DRAFT
+  REVIEW
+  PUBLISHED
+  ARCHIVED
+  @@schema("lms")
+}
+
+enum EnrollmentStatus {
+  INVITED
+  ACTIVE
+  COMPLETED
+  CANCELLED
+  @@schema("lms")
+}
+
+enum LessonType {
+  VIDEO
+  ARTICLE
+  LIVE_SESSION
+  QUIZ
+  ASSIGNMENT
+  LAB
+  DOWNLOAD
+  @@schema("lms")
+}
+
+enum ExamStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+  @@schema("lms")
+}
+
+enum AttemptStatus {
+  IN_PROGRESS
+  SUBMITTED
+  PASSED
+  FAILED
+  @@schema("lms")
+}
+
+enum LeadType {
+  BROCHURE
+  WEBINAR
+  CONTACT
+  DEMO
+  @@schema("lms")
+}
+
+
+enum CrmLeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  COUNSELLING
+  APPLICATION
+  PAYMENT_PENDING
+  ENROLLED
+  LOST
+  @@schema("lms")
+}
+
+enum CrmActivityType {
+  NOTE
+  CALL
+  EMAIL
+  WHATSAPP
+  MEETING
+  WEBINAR
+  BROCHURE
+  OFFER_SENT
+  PAYMENT
+  ENROLLMENT
+  @@schema("lms")
+}
+
+enum OpportunityStage {
+  NEW
+  DISCOVERY
+  DEMO
+  PROPOSAL
+  NEGOTIATION
+  WON
+  LOST
+  @@schema("lms")
+}
+
+enum DiscountType {
+  PERCENT
+  FIXED
+  CUSTOM_PRICE
+  @@schema("lms")
+}
+
+enum OfferStatus {
+  DRAFT
+  ACTIVE
+  REDEEMED
+  EXPIRED
+  CANCELLED
+  @@schema("lms")
+}
+
+enum PaymentStatus {
+  CREATED
+  PENDING
+  PAID
+  FAILED
+  CANCELLED
+  REFUNDED
+  @@schema("lms")
+}
+
+enum PaymentProvider {
+  RAZORPAY
+  @@schema("lms")
+}
+
+
+enum CommunicationChannel {
+  EMAIL
+  WHATSAPP
+  @@schema("lms")
+}
+
+enum ConsentState {
+  UNKNOWN
+  OPTED_IN
+  OPTED_OUT
+  @@schema("lms")
+}
+
+enum MarketingTemplateStatus {
+  DRAFT
+  ACTIVE
+  PAUSED
+  ARCHIVED
+  @@schema("lms")
+}
+
+enum CampaignStatus {
+  DRAFT
+  SCHEDULED
+  SENDING
+  COMPLETED
+  PAUSED
+  CANCELLED
+  @@schema("lms")
+}
+
+enum DeliveryStatus {
+  QUEUED
+  SENT
+  DELIVERED
+  READ
+  FAILED
+  SKIPPED
+  BOUNCED
+  OPTED_OUT
+  @@schema("lms")
+}
+
+enum VentureWorkspaceStatus {
+  DRAFT
+  ACTIVE
+  COMPLETED
+  ARCHIVED
+  @@schema("lms")
+}
+
+enum VentureStageStatus {
+  LOCKED
+  NOT_STARTED
+  IN_PROGRESS
+  MENTOR_REVIEW
+  CHANGES_REQUESTED
+  APPROVED
+  @@schema("lms")
+}
+
+enum VentureArtifactStatus {
+  DRAFT
+  SUBMITTED
+  APPROVED
+  @@schema("lms")
+}
+
+enum MentorReviewDecision {
+  APPROVED
+  CHANGES_REQUESTED
+  COMMENT_ONLY
+  @@schema("lms")
+}
+
+enum DeliveryMode {
+  SELF_PACED
+  LIVE_ONLINE
+  OFFLINE
+  HYBRID
+  COHORT
+  @@schema("lms")
+}
+
+enum CourseAccessType {
+  FREE
+  PAID
+  PRIVATE
+  ORGANIZATION_ONLY
+  @@schema("lms")
+}
+
+enum CoursePricingCategory {
+  FREE
+  FREEMIUM
+  PRICING
+  @@schema("lms")
+}
+
+enum CourseContentType {
+  FULL_ONLINE_VIDEOS
+  HYBRID_OFFLINE_ONLINE
+  FULL_OFFLINE
+  @@schema("lms")
+}
+
+enum EnrollmentAccessTier {
+  PREVIEW
+  FULL
+  @@schema("lms")
+}
+
+enum VentureIdeaStatus {
+  DRAFT
+  SUBMITTED
+  SHORTLISTED
+  REJECTED
+  CONVERTED_TO_WORKSPACE
+  @@schema("lms")
+}
+
+enum CertificateStatus {
+  ISSUED
+  REVOKED
+  @@schema("lms")
+}
+
+enum OutboxStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  @@schema("lms")
+}
+
+model User {
+  id             String     @id @default(cuid())
+  email          String     @unique
+  name           String
+  mobile         String?
+  passwordHash   String?
+  status         UserStatus @default(ACTIVE)
+  platformRole   PlatformRole?
+  avatarUrl      String?
+  emailVerifiedAt DateTime?
+  lastLoginAt    DateTime?
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+
+  memberships    OrganizationMembership[]
+  enrollments    Enrollment[]
+  lessonProgress LessonProgress[]
+  examAttempts   ExamAttempt[]
+  certificates   Certificate[]
+  comments       LessonComment[]
+  reactions      LessonReaction[]
+  auditEvents    AuditLog[] @relation("AuditActor")
+  notifications  UserNotification[]
+  communicationConsents CommunicationConsent[]
+  campaignRecipients CampaignRecipient[]
+  ventureWorkspaces VentureWorkspace[]
+  ventureMentorReviews VentureMentorReview[] @relation("VentureMentor")
+  ventureIdeaSubmissions VentureIdeaSubmission[]
+  ventureMentorAssignments VentureMentorAssignment[] @relation("AssignedVentureMentor")
+
+  @@schema("lms")
+}
+
+model Organization {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  domain       String?
+  logoUrl      String?
+  active       Boolean  @default(true)
+  settings     Json?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  memberships  OrganizationMembership[]
+  enrollments  Enrollment[]
+  learningPaths LearningPath[]
+  ventureWorkspaces VentureWorkspace[]
+
+  @@schema("lms")
+}
+
+model OrganizationMembership {
+  id             String   @id @default(cuid())
+  organizationId String
+  userId         String
+  role           OrgRole
+  invitedAt      DateTime @default(now())
+  acceptedAt     DateTime?
+  createdAt      DateTime @default(now())
+
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId, userId])
+  @@index([userId, role])
+  @@schema("lms")
+}
+
+/// LMS read-model identity for a Payload-authored course.
+model Course {
+  id                    String       @id @default(cuid())
+  cmsCourseId           String?      @unique
+  cmsRevision           String?
+  slug                  String       @unique
+  title                 String
+  shortDescription      String
+  category              String
+  deliveryMode          DeliveryMode
+  accessType            CourseAccessType @default(PAID)
+  pricingCategory       CoursePricingCategory @default(PRICING)
+  contentType           CourseContentType @default(FULL_ONLINE_VIDEOS)
+  listPricePaise        Int?
+  salePricePaise        Int?
+  pricePaise            Int? // legacy/effective price kept for offer/payment compatibility
+  freePreviewLessonCount Int @default(0)
+  currency              String @default("INR")
+  level                 String
+  brochurePath          String?
+  coverImage            String?
+  status                CourseStatus @default(DRAFT)
+  currentDraftVersionId String?
+  publishedVersionId    String?
+  publishedAt           DateTime?
+  createdById           String?
+  createdAt             DateTime     @default(now())
+  updatedAt             DateTime     @updatedAt
+
+  versions              CourseVersion[]
+  enrollments           Enrollment[]
+  learningPathItems     LearningPathItem[]
+  publishedProjection   PublishedCourseProjection?
+  ventureWorkspaces     VentureWorkspace[]
+
+  @@schema("lms")
+}
+
+/// Normalized read projection of an immutable Payload publish.
+model CourseVersion {
+  id            String       @id @default(cuid())
+  cmsVersionKey String?
+  courseId      String
+  version       Int
+  title         String
+  description   String
+  outcomes      Json
+  audience      Json
+  tools         Json
+  status        CourseStatus @default(PUBLISHED)
+  createdAt     DateTime     @default(now())
+  publishedAt   DateTime?
+
+  course        Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  modules       CourseModule[]
+  exams         Exam[]
+
+  @@unique([courseId, version])
+  @@schema("lms")
+}
+
+model CourseModule {
+  id              String @id @default(cuid())
+  cmsModuleId     String?
+  courseVersionId String
+  title           String
+  description     String?
+  position        Int
+
+  courseVersion   CourseVersion @relation(fields: [courseVersionId], references: [id], onDelete: Cascade)
+  lessons         Lesson[]
+
+  @@unique([courseVersionId, position])
+  @@index([cmsModuleId])
+  @@schema("lms")
+}
+
+model Lesson {
+  id           String     @id @default(cuid())
+  cmsLessonId  String?
+  moduleId     String
+  title        String
+  slug         String
+  type         LessonType
+  position     Int
+  durationSec  Int        @default(0)
+  contentJson  Json
+  videoUrl     String?
+  thumbnailUrl String?
+  isFreePreview Boolean @default(false)
+
+  module       CourseModule     @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  progress     LessonProgress[]
+  comments     LessonComment[]
+  reactions    LessonReaction[]
+
+  @@unique([moduleId, position])
+  @@index([cmsLessonId])
+  @@schema("lms")
+}
+
+model PublishedCourseProjection {
+  id          String   @id @default(cuid())
+  courseId    String   @unique
+  versionId   String
+  projection  Json
+  checksum    String
+  publishedAt DateTime @default(now())
+
+  course      Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@index([versionId])
+  @@schema("lms")
+}
+
+model Enrollment {
+  id             String           @id @default(cuid())
+  userId         String
+  courseId       String
+  organizationId String?
+  versionId      String?
+  status         EnrollmentStatus @default(ACTIVE)
+  progressPct    Float            @default(0)
+  accessTier     EnrollmentAccessTier @default(FULL)
+  enrolledAt     DateTime         @default(now())
+  completedAt    DateTime?
+
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course         Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  organization   Organization? @relation(fields: [organizationId], references: [id])
+  ventureWorkspace VentureWorkspace?
+
+  @@unique([userId, courseId, organizationId])
+  @@index([courseId, status])
+  @@schema("lms")
+}
+
+model LessonProgress {
+  id              String   @id @default(cuid())
+  userId          String
+  lessonId        String
+  completed       Boolean  @default(false)
+  progressPct     Float    @default(0)
+  lastPositionSec Int      @default(0)
+  startedAt       DateTime @default(now())
+  completedAt     DateTime?
+  updatedAt       DateTime @updatedAt
+
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson          Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId])
+  @@index([userId, completed])
+  @@schema("lms")
+}
+
+model Exam {
+  id              String     @id @default(cuid())
+  cmsExamId       String?
+  courseVersionId String
+  title           String
+  description     String?
+  passPercent     Float      @default(70)
+  timeLimitMin    Int?
+  maxAttempts     Int        @default(3)
+  randomize       Boolean    @default(true)
+  status          ExamStatus @default(PUBLISHED)
+
+  courseVersion   CourseVersion @relation(fields: [courseVersionId], references: [id], onDelete: Cascade)
+  questions       ExamQuestion[]
+  attempts        ExamAttempt[]
+
+  @@index([cmsExamId])
+  @@schema("lms")
+}
+
+model ExamQuestion {
+  id            String  @id @default(cuid())
+  cmsQuestionId String?
+  examId        String
+  type          String
+  prompt        String
+  options       Json?
+  answerKey     Json
+  explanation   String?
+  points        Float   @default(1)
+  position      Int
+
+  exam          Exam    @relation(fields: [examId], references: [id], onDelete: Cascade)
+
+  @@unique([examId, position])
+  @@index([cmsQuestionId])
+  @@schema("lms")
+}
+
+model ExamAttempt {
+  id          String        @id @default(cuid())
+  examId      String
+  userId      String
+  attemptNo   Int
+  status      AttemptStatus @default(IN_PROGRESS)
+  score       Float?
+  percentage  Float?
+  startedAt   DateTime      @default(now())
+  submittedAt DateTime?
+
+  exam        Exam          @relation(fields: [examId], references: [id], onDelete: Cascade)
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  answers     ExamAnswer[]
+
+  @@unique([examId, userId, attemptNo])
+  @@index([userId, status])
+  @@schema("lms")
+}
+
+model ExamAnswer {
+  id         String  @id @default(cuid())
+  attemptId  String
+  questionId String
+  answer     Json
+  correct    Boolean?
+  score      Float?
+
+  attempt    ExamAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+
+  @@unique([attemptId, questionId])
+  @@schema("lms")
+}
+
+model Certificate {
+  id               String            @id @default(cuid())
+  userId           String
+  courseId         String
+  certificateNo    String            @unique
+  verificationCode String            @unique
+  status           CertificateStatus @default(ISSUED)
+  issuedAt         DateTime          @default(now())
+  expiresAt        DateTime?
+  pdfUrl           String?
+  metadata         Json?
+
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([courseId])
+  @@schema("lms")
+}
+
+model LearningPath {
+  id             String @id @default(cuid())
+  organizationId String?
+  title          String
+  slug           String @unique
+  description    String?
+  published      Boolean @default(false)
+
+  organization   Organization?      @relation(fields: [organizationId], references: [id])
+  items          LearningPathItem[]
+
+  @@schema("lms")
+}
+
+model LearningPathItem {
+  id             String @id @default(cuid())
+  learningPathId String
+  courseId       String
+  position       Int
+  required       Boolean @default(true)
+
+  learningPath   LearningPath @relation(fields: [learningPathId], references: [id], onDelete: Cascade)
+  course         Course       @relation(fields: [courseId], references: [id])
+
+  @@unique([learningPathId, position])
+  @@schema("lms")
+}
+
+model LessonComment {
+  id        String   @id @default(cuid())
+  lessonId  String
+  userId    String
+  body      String
+  parentId  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  lesson    Lesson          @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  user      User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  parent    LessonComment?  @relation("CommentReplies", fields: [parentId], references: [id])
+  replies   LessonComment[] @relation("CommentReplies")
+
+  @@index([lessonId, createdAt])
+  @@schema("lms")
+}
+
+model LessonReaction {
+  id       String @id @default(cuid())
+  lessonId String
+  userId   String
+  kind     String
+
+  lesson   Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([lessonId, userId, kind])
+  @@schema("lms")
+}
+
+model Lead {
+  id               String        @id @default(cuid())
+  type             LeadType
+  status           CrmLeadStatus @default(NEW)
+  name             String
+  email            String
+  mobile           String
+  company          String?
+  designation      String?
+  programSlug      String?
+  source           String?
+  assignedToUserId String?
+  nextFollowUpAt   DateTime?
+  consent          Boolean       @default(false)
+  metadata         Json?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  @@index([email, createdAt])
+  @@index([status, nextFollowUpAt])
+  communicationConsents CommunicationConsent[]
+  campaignRecipients CampaignRecipient[]
+
+  @@index([assignedToUserId, status])
+  @@schema("lms")
+}
+
+model CrmActivity {
+  id          String          @id @default(cuid())
+  leadId      String?
+  opportunityId String?
+  actorUserId String?
+  type        CrmActivityType
+  subject     String
+  notes       String?
+  metadata    Json?
+  occurredAt  DateTime        @default(now())
+  createdAt   DateTime        @default(now())
+
+  @@index([leadId, occurredAt])
+  @@index([opportunityId, occurredAt])
+  @@schema("lms")
+}
+
+model Opportunity {
+  id              String           @id @default(cuid())
+  leadId          String?
+  organizationId  String?
+  courseId        String?
+  ownerUserId     String?
+  title           String
+  stage           OpportunityStage @default(NEW)
+  estimatedValuePaise Int?
+  expectedCloseAt DateTime?
+  notes           String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([stage, expectedCloseAt])
+  @@index([ownerUserId, stage])
+  @@schema("lms")
+}
+
+model Offer {
+  id                    String       @id @default(cuid())
+  token                 String       @unique
+  code                  String?      @unique
+  leadId                String?
+  opportunityId         String?
+  organizationId        String?
+  courseId              String
+  createdByUserId       String
+  status                OfferStatus  @default(ACTIVE)
+  discountType          DiscountType
+  originalAmountPaise   Int
+  discountValue         Int?
+  finalAmountPaise      Int
+  currency              String       @default("INR")
+  allowedEmail          String?
+  allowedMobile         String?
+  startsAt              DateTime     @default(now())
+  expiresAt             DateTime?
+  maxRedemptions        Int          @default(1)
+  redemptionCount       Int          @default(0)
+  notes                 String?
+  createdAt             DateTime     @default(now())
+  updatedAt             DateTime     @updatedAt
+
+  @@index([courseId, status])
+  @@index([leadId, status])
+  @@schema("lms")
+}
+
+model PaymentLink {
+  id                     String          @id @default(cuid())
+  provider               PaymentProvider @default(RAZORPAY)
+  offerId                String?
+  leadId                 String?
+  courseId               String
+  createdByUserId        String
+  providerPaymentLinkId  String?         @unique
+  providerReferenceId    String          @unique
+  shortUrl               String?
+  amountPaise            Int
+  currency               String          @default("INR")
+  status                 PaymentStatus   @default(CREATED)
+  expiresAt              DateTime?
+  providerPayload        Json?
+  createdAt              DateTime        @default(now())
+  updatedAt              DateTime        @updatedAt
+
+  @@index([offerId, status])
+  @@index([leadId, status])
+  @@schema("lms")
+}
+
+model Payment {
+  id                String          @id @default(cuid())
+  provider          PaymentProvider @default(RAZORPAY)
+  paymentLinkId     String?
+  offerId           String?
+  leadId            String?
+  courseId          String?
+  userId            String?
+  providerPaymentId String          @unique
+  providerOrderId   String?
+  amountPaise       Int
+  currency          String          @default("INR")
+  status            PaymentStatus
+  method            String?
+  email             String?
+  mobile            String?
+  providerPayload   Json?
+  paidAt            DateTime?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  @@index([leadId, createdAt])
+  @@index([userId, createdAt])
+  @@schema("lms")
+}
+
+model Webinar {
+  id          String   @id @default(cuid())
+  cmsWebinarId String? @unique
+  slug        String   @unique
+  title       String
+  startsAt    DateTime
+  durationMin Int
+  meetingUrl  String?
+  capacity    Int?
+  active      Boolean  @default(true)
+
+  @@schema("lms")
+}
+
+/// Learner/team workspace for the entrepreneurship program.
+/// This is an LMS transactional workflow, not CMS content.
+model VentureWorkspace {
+  id             String                 @id @default(cuid())
+  enrollmentId   String                 @unique
+  userId         String
+  courseId       String
+  organizationId String?
+  ventureName    String
+  problemStatement String?
+  targetCustomer String?
+  ideaSubmissionId String? @unique
+  cohortName     String?
+  teamName       String?
+  readinessScore Int @default(0)
+  status         VentureWorkspaceStatus @default(DRAFT)
+  currentStageKey String                @default("IDEA")
+  createdAt      DateTime               @default(now())
+  updatedAt      DateTime               @updatedAt
+
+  enrollment     Enrollment             @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  user           User                   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course         Course                 @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  organization   Organization?          @relation(fields: [organizationId], references: [id])
+  stages         VentureStageProgress[]
+  artifacts      VentureArtifact[]
+  reviews        VentureMentorReview[]
+  ideaSubmission VentureIdeaSubmission? @relation(fields: [ideaSubmissionId], references: [id])
+  mentorAssignments VentureMentorAssignment[]
+  milestones     VentureMilestone[]
+
+  @@index([userId, status])
+  @@index([courseId, status])
+  @@schema("lms")
+}
+
+model VentureStageProgress {
+  id           String             @id @default(cuid())
+  workspaceId  String
+  stageKey     String
+  stageOrder   Int
+  title        String
+  status       VentureStageStatus @default(NOT_STARTED)
+  startedAt    DateTime?
+  submittedAt  DateTime?
+  approvedAt   DateTime?
+  checkpointNotes String?
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+
+  workspace    VentureWorkspace   @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  reviews      VentureMentorReview[]
+
+  @@unique([workspaceId, stageKey])
+  @@index([workspaceId, stageOrder])
+  @@schema("lms")
+}
+
+model VentureArtifact {
+  id           String                @id @default(cuid())
+  workspaceId  String
+  stageKey     String
+  artifactType String
+  title        String
+  contentJson  Json?
+  fileObjectKey String?
+  status       VentureArtifactStatus @default(DRAFT)
+  submittedAt  DateTime?
+  approvedAt   DateTime?
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime              @updatedAt
+
+  workspace    VentureWorkspace      @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  reviews      VentureMentorReview[]
+
+  @@index([workspaceId, stageKey])
+  @@schema("lms")
+}
+
+model VentureMentorReview {
+  id             String                @id @default(cuid())
+  workspaceId    String
+  stageProgressId String?
+  artifactId     String?
+  mentorUserId   String
+  decision       MentorReviewDecision
+  feedback       String
+  createdAt      DateTime              @default(now())
+
+  workspace      VentureWorkspace      @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  stageProgress  VentureStageProgress? @relation(fields: [stageProgressId], references: [id], onDelete: Cascade)
+  artifact       VentureArtifact?      @relation(fields: [artifactId], references: [id], onDelete: Cascade)
+  mentor         User                  @relation("VentureMentor", fields: [mentorUserId], references: [id])
+  scores         VentureReviewScore[]
+
+  @@index([workspaceId, createdAt])
+  @@index([mentorUserId, createdAt])
+  @@schema("lms")
+}
+
+model VentureIdeaSubmission {
+  id                  String            @id @default(cuid())
+  userId              String
+  ventureName         String
+  ideaSummary         String
+  problemStatement    String
+  whyNow              String?
+  businessCategory    String?
+  problemSeverity     String?
+  geographicScope     String?
+  targetCustomer      String
+  customerSize        String?
+  initialSolution     String
+  differentiators     String?
+  expectedImpact      String?
+  existingAlternatives String?
+  founderBackground   String?
+  linkedinUrl         String?
+  pitchObjectKey      String?
+  supportNeeds        Json?
+  evaluationSnapshot  Json?
+  status              VentureIdeaStatus @default(DRAFT)
+  submittedAt         DateTime?
+  reviewedAt          DateTime?
+  reviewNotes         String?
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+
+  user                User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  workspace           VentureWorkspace?
+
+  @@index([userId, status])
+  @@index([status, submittedAt])
+  @@schema("lms")
+}
+
+model VentureMentorAssignment {
+  id          String   @id @default(cuid())
+  workspaceId String
+  mentorUserId String
+  leadMentor  Boolean  @default(false)
+  active      Boolean  @default(true)
+  assignedAt  DateTime @default(now())
+  endedAt     DateTime?
+
+  workspace   VentureWorkspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  mentor      User @relation("AssignedVentureMentor", fields: [mentorUserId], references: [id], onDelete: Cascade)
+
+  @@unique([workspaceId, mentorUserId])
+  @@index([mentorUserId, active])
+  @@schema("lms")
+}
+
+model VentureReviewScore {
+  id          String @id @default(cuid())
+  reviewId    String
+  criterion   String
+  score       Int
+  maxScore    Int @default(20)
+  notes       String?
+  createdAt   DateTime @default(now())
+
+  review      VentureMentorReview @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+
+  @@unique([reviewId, criterion])
+  @@schema("lms")
+}
+
+model VentureMilestone {
+  id          String   @id @default(cuid())
+  workspaceId String
+  title       String
+  stageKey    String?
+  dueAt       DateTime?
+  completedAt DateTime?
+  metadata    Json?
+  createdAt   DateTime @default(now())
+
+  workspace   VentureWorkspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, dueAt])
+  @@schema("lms")
+}
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  actorUserId String?
+  action      String
+  entityType  String
+  entityId    String?
+  payload     Json?
+  ipAddress   String?
+  createdAt   DateTime @default(now())
+
+  actor       User?    @relation("AuditActor", fields: [actorUserId], references: [id])
+
+  @@index([entityType, entityId, createdAt])
+  @@schema("lms")
+}
+
+model OutboxEvent {
+  id            String       @id @default(cuid())
+  aggregateType String
+  aggregateId   String
+  eventType     String
+  payload       Json
+  status        OutboxStatus @default(PENDING)
+  attempts      Int          @default(0)
+  availableAt   DateTime     @default(now())
+  processedAt   DateTime?
+  lastError     String?
+  createdAt     DateTime     @default(now())
+
+  @@index([status, availableAt])
+  @@schema("lms")
+}
+
+
+model CommunicationConsent {
+  id          String               @id @default(cuid())
+  leadId      String?
+  userId      String?
+  channel     CommunicationChannel
+  state       ConsentState         @default(UNKNOWN)
+  source      String
+  consentText String?
+  consentedAt DateTime?
+  optedOutAt  DateTime?
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+
+  lead        Lead? @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  user        User? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([leadId, channel])
+  @@unique([userId, channel])
+  @@index([channel, state])
+  @@schema("lms")
+}
+
+model MarketingTemplate {
+  id                   String                  @id @default(cuid())
+  name                 String
+  key                  String                  @unique
+  channel              CommunicationChannel
+  status               MarketingTemplateStatus @default(DRAFT)
+  subject              String?
+  bodyText             String
+  bodyHtml             String?
+  providerTemplateName String?
+  providerLanguage     String?                 @default("en")
+  variables            Json?
+  createdByUserId      String
+  createdAt            DateTime                @default(now())
+  updatedAt            DateTime                @updatedAt
+
+  campaigns            MarketingCampaign[]
+
+  @@index([channel, status])
+  @@schema("lms")
+}
+
+model MarketingCampaign {
+  id              String               @id @default(cuid())
+  name            String
+  channel         CommunicationChannel
+  templateId      String
+  status          CampaignStatus       @default(DRAFT)
+  segment         Json
+  scheduledAt     DateTime?
+  startedAt       DateTime?
+  completedAt     DateTime?
+  createdByUserId String
+  stats           Json?
+  createdAt       DateTime             @default(now())
+  updatedAt       DateTime             @updatedAt
+
+  template        MarketingTemplate    @relation(fields: [templateId], references: [id])
+  recipients      CampaignRecipient[]
+
+  @@index([status, scheduledAt])
+  @@index([channel, createdAt])
+  @@schema("lms")
+}
+
+model CampaignRecipient {
+  id                String         @id @default(cuid())
+  campaignId        String
+  leadId            String?
+  userId            String?
+  destination       String
+  status            DeliveryStatus @default(QUEUED)
+  providerMessageId String?        @unique
+  renderedSubject   String?
+  renderedBody      String?
+  error             String?
+  sentAt            DateTime?
+  deliveredAt       DateTime?
+  readAt            DateTime?
+  clickedAt         DateTime?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+
+  campaign          MarketingCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  lead              Lead? @relation(fields: [leadId], references: [id], onDelete: SetNull)
+  user              User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@unique([campaignId, destination])
+  @@index([campaignId, status])
+  @@index([leadId, createdAt])
+  @@index([userId, createdAt])
+  @@schema("lms")
+}
+
+model CommunicationSuppression {
+  id          String               @id @default(cuid())
+  channel     CommunicationChannel
+  destination String
+  reason      String
+  source      String
+  createdAt   DateTime             @default(now())
+
+  @@unique([channel, destination])
+  @@index([channel, createdAt])
+  @@schema("lms")
+}
+
+model UserNotification {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  title     String
+  body      String?
+  readAt    DateTime?
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, readAt, createdAt])
+  @@schema("lms")
+}

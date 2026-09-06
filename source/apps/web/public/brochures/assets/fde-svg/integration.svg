@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" role="img" aria-label="Enterprise integration">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#19efe0"/><stop offset="1" stop-color="#72ff9b"/></linearGradient></defs>
+  <rect width="240" height="100" rx="16" fill="#04172a"/><g fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="19" y="18" width="58" height="64" rx="7"/><path d="M32 34h32M32 50h32M32 66h20"/>
+    <circle cx="120" cy="50" r="19"/><path d="M77 50h24m38 0h24"/><rect x="163" y="18" width="58" height="64" rx="7"/><path d="m178 52 9 9 19-22"/>
+  </g><circle cx="120" cy="50" r="6" fill="#72ff9b"/>
+</svg>

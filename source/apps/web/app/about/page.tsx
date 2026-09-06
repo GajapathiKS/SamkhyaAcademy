@@ -1,0 +1,5 @@
+export const metadata = { title: 'About | SamkhyaAcademy' }
+
+export default function AboutPage() {
+  return <main><section className="hero"><div className="shell"><span className="pill">ABOUT SAMKHYAACADEMY</span><h1>Applied learning that connects knowledge to delivery.</h1><p>SamkhyaAcademy brings structured content, practical work, assessment, mentoring and measurable progress into one learning experience for individuals and organizations.</p></div></section><section><div className="shell"><div className="grid"><div className="card"><h3>Practice first</h3><p className="muted">Programs are organized around things learners can build, evaluate, explain and improve.</p></div><div className="card"><h3>Clear progression</h3><p className="muted">Free foundations, previews and guided programs provide visible next steps.</p></div><div className="card"><h3>Internal quality control</h3><p className="muted">Academy content is authored and published by scoped internal teams.</p></div><div className="card"><h3>Responsible claims</h3><p className="muted">We do not publish unsupported learner, placement, partner or outcome claims.</p></div></div></div></section></main>
+}

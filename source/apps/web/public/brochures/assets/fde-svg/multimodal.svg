@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" role="img" aria-label="Voice and multimodal AI">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#19efe0"/><stop offset="1" stop-color="#72ff9b"/></linearGradient></defs>
+  <rect width="240" height="100" rx="16" fill="#04172a"/><g fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="21" y="22" width="60" height="56" rx="8"/><path d="m28 68 16-17 12 11 9-10 10 16"/><circle cx="63" cy="38" r="5"/>
+    <path d="M105 57h8m7-18v36m8-48v60m8-38v23m8-36v48m8-29v16m7-22v28m9-38v36"/>
+    <path d="M194 35c13 0 24 7 24 16s-11 16-24 16h-7l-10 9 3-12c-6-3-10-8-10-13 0-9 11-16 24-16Z"/>
+  </g>
+</svg>

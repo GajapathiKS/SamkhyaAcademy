@@ -1,0 +1,11 @@
+(()=>{
+ const menus=[...document.querySelectorAll('.nav-dropdown')];
+ menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.forEach(other=>{if(other!==menu)other.open=false;});}));
+ document.addEventListener('click',e=>{if(!e.target.closest('.nav-dropdown'))menus.forEach(m=>m.open=false);const action=e.target.closest('[data-action]')?.dataset.action;
+ if(action==='accept-idea'){localStorage.setItem('samkhya-idea-decision',JSON.stringify({idea:'AgriPulse',status:'accepted',stage:1,note:document.querySelector('#idea-review-note').value}));location.href='155.html';}
+ if(action==='accept-introduction'||action==='decline-introduction'){const accepted=action==='accept-introduction';document.querySelector('#introduction-status').textContent=accepted?'Introduction accepted locally. No message was sent; private files remain locked.':'Request declined locally. No information has been shared.';localStorage.setItem('samkhya-introduction-decision',accepted?'accepted':'declined');}
+ const road=e.target.closest('.course-roadmap a');if(road){const el=document.querySelector(road.getAttribute('href'));if(el)el.open=true;}
+ });
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'){const open=menus.find(m=>m.open);if(open){open.open=false;open.querySelector('summary').focus();}}});
+})();
+document.addEventListener("click",e=>{const button=e.target.closest("[data-lesson-title]");if(!button)return;let dialog=document.querySelector("#curriculum-preview");if(!dialog){dialog=document.createElement("dialog");dialog.id="curriculum-preview";dialog.innerHTML='<form method="dialog"><button class="button small">Close preview</button></form><p class="eyebrow section" data-course></p><h2 data-title></h2><p class="section" data-description></p><div class="callout purple section"><b>Curriculum preview</b><p>This is the course outline, not a completed learner lesson. Review the brochure for outcomes, delivery and enrollment details.</p></div>';document.body.append(dialog);}dialog.querySelector("[data-course]").textContent=button.dataset.courseTitle;dialog.querySelector("[data-title]").textContent=button.dataset.lessonTitle;dialog.querySelector("[data-description]").textContent=button.dataset.moduleDescription;dialog.showModal();});

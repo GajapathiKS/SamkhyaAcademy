@@ -1,0 +1,72 @@
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN}
+    volumes:
+      - ./infra/lightsail/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on: [web]
+    mem_limit: 96m
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    restart: unless-stopped
+    env_file: ${PRODUCTION_ENV_FILE:-.env.production}
+    environment:
+      LMS_DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?schema=lms
+      PAYLOAD_DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      REDIS_URL: redis://redis:6379
+      FASTAPI_URL: http://ai-api:8000
+      NODE_OPTIONS: --max-old-space-size=1024
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    mem_limit: 1400m
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    env_file: ${PRODUCTION_ENV_FILE:-.env.production}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./infra/postgres/init.sql:/docker-entrypoint-initdb.d/001-schemas.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    mem_limit: 1000m
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --save 60 1 --loglevel warning --maxmemory 96mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redisdata:/data
+    mem_limit: 160m
+
+  ai-api:
+    build: ./services/ai-api
+    restart: unless-stopped
+    env_file: ${PRODUCTION_ENV_FILE:-.env.production}
+    environment:
+      REDIS_URL: redis://redis:6379
+      APP_ENV: production
+    depends_on: [redis]
+    mem_limit: 512m
+
+volumes:
+  pgdata:
+  redisdata:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,6 @@
+import { z } from 'zod'
+import { requireUser } from '@/lib/auth'
+import { reviewVentureStage } from '@/lib/venture-builder'
+
+const schema=z.object({decision:z.enum(['APPROVED','CHANGES_REQUESTED','COMMENT_ONLY']),feedback:z.string().min(2).max(5000),scores:z.array(z.object({criterion:z.string().min(2).max(120),score:z.number().int().min(0).max(100),maxScore:z.number().int().min(1).max(100).optional(),notes:z.string().max(1000).optional()})).max(20).optional()})
+export async function POST(req:Request,{params}:{params:Promise<{workspaceId:string;stageKey:string}>}){try{const user=await requireUser();if(!['PLATFORM_ADMIN','CONTENT_ADMIN','VENTURE_MENTOR'].includes(String(user.platformRole)))return Response.json({error:'FORBIDDEN'},{status:403});const {workspaceId,stageKey}=await params;const parsed=schema.safeParse(await req.json());if(!parsed.success)return Response.json({error:'VALIDATION_FAILED',details:parsed.error.flatten()},{status:400});const out=await reviewVentureStage(user.id,workspaceId,stageKey,parsed.data.decision,parsed.data.feedback,parsed.data.scores);return Response.json(out)}catch(e:any){const m=String(e?.message||e);return Response.json({error:m},{status:m.includes('UNAUTHORIZED')?401:500})}}

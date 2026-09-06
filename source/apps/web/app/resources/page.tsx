@@ -1,0 +1,5 @@
+import Link from 'next/link'
+
+export default function ResourcesPage() {
+  return <main><section className="hero compact"><div className="shell"><span className="pill">LEARNING RESOURCES</span><h1>Insights, webinars and free foundations.</h1><p>Use public resources to understand a field, test your interest and choose a practical next step.</p></div></section><section><div className="shell"><div className="grid"><Link className="card" href="/blog"><h3>Insights</h3><p className="muted">CMS-published articles connected to relevant programs and webinars.</p></Link><Link className="card" href="/webinars"><h3>Webinars</h3><p className="muted">Live briefings and practitioner-led learning sessions.</p></Link><Link className="card" href="/courses"><h3>Free courses</h3><p className="muted">C, C++ and JavaScript foundations with tracked learning.</p></Link><Link className="card" href="/learning-paths"><h3>Learning paths</h3><p className="muted">Compare role-based progressions and outcomes.</p></Link></div></div></section></main>
+}

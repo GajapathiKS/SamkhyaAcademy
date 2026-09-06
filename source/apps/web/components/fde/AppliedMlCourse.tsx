@@ -1,0 +1,13 @@
+import BrochureGate from '@/components/BrochureGate'
+import EnrollButton from '@/components/EnrollButton'
+const stages=[
+ ['1','Data & ML Foundations','Python bridge, statistics, data preparation, supervised and unsupervised learning.'],
+ ['2','Deep Learning','Neural networks, optimization, CNNs, sequence models and transformer foundations.'],
+ ['3','Computer Vision, NLP & Multimodal AI','Object detection, OCR/document AI, NLP, multimodal models, speech-to-text and text-to-speech use cases.'],
+ ['4','LLM / SLM Engineering','Transformers, fine-tuning, PEFT, LoRA/QLoRA, quantization, distillation and training a small educational language model.'],
+ ['5','Production ML / MLOps','Model serving, pipelines, monitoring, drift, deployment, security, performance and cost optimization.'],
+]
+export default function AppliedMlCourse({course}:{course:any}){
+ const price=course.salePricePaise??course.pricePaise??course.listPricePaise
+ return <><section className="fde-hero"><div className="shell fde-hero-grid"><div><span className="fde-kicker">APPLIED MACHINE LEARNING • ENGINEER PATH</span><h1>From ML fundamentals to production ML, CV, NLP and LLM/SLM engineering.</h1><p className="fde-lead">Built for students, analysts and software developers who want to understand models deeply enough to build, fine-tune, optimize, serve and operate them.</p><div className="fde-chip-row">{['Machine Learning','Deep Learning','Computer Vision','NLP','LLM Fine-tuning','SLMs','MLOps'].map(x=><span className="fde-chip" key={x}>{x}</span>)}</div><div className="actions"><EnrollButton courseId={course.id} accessType={course.accessType} pricingCategory={course.pricingCategory} pricePaise={price} currency={course.currency}/>{course.brochurePath&&<BrochureGate slug={course.slug} brochure={course.brochurePath}/>}</div><p className="fde-note">Freemium can be enabled by the academy: foundational lessons are free, while advanced labs, projects, fine-tuning and certification unlock after upgrade.</p></div><div className="fde-formula-card"><span className="fde-mini">CAREER OUTCOME</span><h2>Applied ML Engineer</h2><ul><li>Build classical ML systems</li><li>Train deep learning models</li><li>Build CV/NLP solutions</li><li>Fine-tune LLMs</li><li>Build educational SLMs</li><li>Deploy with MLOps</li></ul></div></div></section><section className="fde-section"><div className="shell"><div className="fde-section-head"><span className="fde-kicker">LEARNING JOURNEY</span><h2>Learn the model layer properly — then productionize it.</h2></div><div className="fde-journey">{stages.map(x=><article className="fde-stage" key={x[0]}><span className="fde-stage-num">{x[0]}</span><h3>{x[1]}</h3><p>{x[2]}</p></article>)}</div></div></section></>
+}

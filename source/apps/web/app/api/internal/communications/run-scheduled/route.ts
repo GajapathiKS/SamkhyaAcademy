@@ -1,0 +1,3 @@
+import {prisma} from '@samkhya/db'
+import {sendCampaign} from '@/src/communications/marketing'
+export async function POST(req:Request){const auth=req.headers.get('authorization');if(!process.env.CRON_SECRET||auth!==`Bearer ${process.env.CRON_SECRET}`)return Response.json({error:'Forbidden'},{status:403});const due=await prisma.marketingCampaign.findMany({where:{status:'SCHEDULED',scheduledAt:{lte:new Date()}},select:{id:true},take:10});const results=[] as any[];for(const c of due){try{results.push({id:c.id,...await sendCampaign(c.id)})}catch(e:any){results.push({id:c.id,error:String(e?.message||e)})}}return Response.json({processed:results.length,results})}

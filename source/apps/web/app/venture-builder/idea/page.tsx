@@ -1,0 +1,7 @@
+import { requireUser } from '@/lib/auth'
+import { VentureNav } from '@/components/venture/VentureNav'
+import { IdeaSubmissionForm } from '@/components/venture/IdeaSubmissionForm'
+import { VENTURE_REVIEW_CRITERIA } from '@/lib/venture-builder'
+
+export const dynamic='force-dynamic'
+export default async function IdeaPage(){await requireUser();return <main className="venture-page"><section className="venture-hero"><div className="venture-shell"><div className="venture-kicker">Entrepreneurship Venture Builder</div><h1>Idea Submission & Opportunity Intake</h1><p>Share your idea. Get expert feedback. Take the first step toward building impact.</p></div></section><div className="venture-shell"><div className="venture-layout"><VentureNav active="idea"/><div className="venture-main"><div className="venture-grid-2" style={{gridTemplateColumns:'minmax(0,1fr) 300px'}}><IdeaSubmissionForm/><aside><div className="venture-panel"><h3 style={{marginTop:0}}>Evaluation Criteria</h3><div className="venture-eval">{VENTURE_REVIEW_CRITERIA.map(c=><div className="venture-eval-row" key={c.key}><div><strong>{c.label}</strong><div className="muted" style={{fontSize:12}}>Structured review signal</div></div><span className="venture-score">20%</span></div>)}</div></div><div className="venture-panel" style={{marginTop:14,background:'#f0fdf9'}}><h3>What happens next?</h3><p className="muted">Submitted ideas can be reviewed, shortlisted and converted into a live Venture Builder workspace after enrollment.</p></div></aside></div></div></div></div></main>}

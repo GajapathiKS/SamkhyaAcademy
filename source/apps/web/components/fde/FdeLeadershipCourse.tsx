@@ -1,0 +1,27 @@
+import Link from 'next/link'
+import BrochureGate from '@/components/BrochureGate'
+import EnrollButton from '@/components/EnrollButton'
+
+export default function FdeLeadershipCourse({course, projection}:{course:any;projection:any}) {
+  const journey = Array.isArray(projection?.programJourney)&&projection.programJourney.length ? projection.programJourney : [
+    {stage:'1',title:'Understand the AI Delivery Chain',description:'AI engineering, production readiness, enterprise integration and architecture—at decision depth, not coding depth.'},
+    {stage:'2',title:'Prioritize',description:'Select initiatives using value, feasibility, data readiness, risk and organizational readiness.'},
+    {stage:'3',title:'Govern',description:'Define accountability, permissions, approvals, auditability and proportionate risk controls.'},
+    {stage:'4',title:'Fund & Partner',description:'Build-vs-buy, vendor choices, cost drivers, internal capability and the role of forward-deployed teams.'},
+    {stage:'5',title:'Adopt & Scale',description:'Operating model, workflow change, adoption, KPI ownership and scale criteria.'},
+    {stage:'6',title:'90-Day Execution Blueprint',description:'Prioritized portfolio, pilot definition, governance checkpoints, success metrics and roadmap.'},
+  ]
+  return <>
+    <section className="fde-leadership-hero"><div className="shell fde-hero-grid">
+      <div><span className="fde-kicker">FORWARD DEPLOYED AI • LEADERSHIP TRACK</span><h1>Turn AI ambition into enterprise outcomes.</h1><p className="fde-lead">A practical executive program for leaders who must understand enough of the AI delivery chain to prioritize, govern, fund, adopt and measure AI initiatives without becoming AI engineers. Leaders learn when hosted LLMs, RAG, fine-tuning, SLMs, voice AI, computer vision or multimodal approaches are appropriate.</p><div className="actions"><EnrollButton courseId={course.id} accessType={course.accessType} pricingCategory={course.pricingCategory} pricePaise={course.salePricePaise ?? course.pricePaise ?? course.listPricePaise} currency={course.currency}/>{course.brochurePath&&<BrochureGate slug={course.slug} brochure={course.brochurePath}/>}<Link className="btn" href="/ai-academy">Explore AI Academy</Link></div></div>
+      <div className="fde-exec-card"><span className="fde-mini">EXECUTIVE FDE LENS</span><h2>Prioritize → Govern → Fund → Pilot → Adopt → Scale</h2><p>The leadership challenge is not “How do we use AI?” It is where AI should make a decision, assist a human, or stay out entirely.</p></div>
+    </div></section>
+    <section className="fde-section"><div className="shell">
+      <div className="fde-section-head"><span className="fde-kicker">ENGINEERING EVOLUTION</span><h2>Understand how software teams evolve into FDE capability.</h2><p>Full-Stack / Backend Developer → GenAI Developer → Production AI Engineer → AI FDE. The leadership program helps sponsors understand what capability, investment and governance each layer requires.</p></div>
+      <div className="fde-progression-strip">{['Software Engineer','GenAI Developer','Production AI Engineer','AI FDE'].map((x,i)=><div className="fde-progression-step" key={x}><span>{i+1}</span><strong>{x}</strong>{i<3&&<b>→</b>}</div>)}</div>
+    </div></section>
+
+    <section className="fde-section fde-dark"><div className="shell"><div className="fde-section-head light"><span className="fde-kicker mint">MODEL & SOLUTION CHOICES</span><h2>Not every AI problem needs the same answer.</h2><p>Executives learn how to challenge proposals across RAG, fine-tuning, smaller models, voice, vision and agentic workflows by asking about value, data, risk, latency and cost.</p></div><div className="fde-track-grid">{['Hosted LLM / API','RAG / Enterprise Knowledge','Fine-tuning / PEFT','Small Language Models','Voice / Conversational AI','Computer Vision / Multimodal'].map(x=><article className="fde-track" key={x}><h3>{x}</h3><p>When it fits, what it costs, what data it needs and how it should be governed.</p></article>)}</div></div></section><section className="fde-section"><div className="shell"><div className="fde-section-head"><span className="fde-kicker">WHY THIS MATTERS</span><h2>Leaders need fluency across the whole delivery chain.</h2><p>Enough technical fluency to sponsor and challenge proposals; enough business clarity to own outcomes.</p></div><div className="fde-journey">{journey.map((x:any)=><article className="fde-stage exec" key={x.title}><span className="fde-stage-num">{x.stage}</span><h3>{x.title}</h3><p>{x.description}</p></article>)}</div></div></section>
+    <section className="fde-section fde-soft"><div className="shell fde-two-col"><div><span className="fde-kicker">LEADERSHIP OUTCOME</span><h2>Connect business ambition with engineering reality.</h2><p className="fde-big-quote">AI engineering builds the capability. Forward-deployed delivery makes it work in the enterprise. Leadership decides where it belongs and how success is measured.</p></div><div className="fde-outcome-card">{['Prioritize the right AI opportunities','Challenge architecture and vendor proposals','Design human accountability and governance','Understand AI economics and production readiness','Align business leaders with FDE/engineering teams','Leave with a 90-day execution blueprint'].map(x=><div className="fde-check" key={x}>✓ <span>{x}</span></div>)}</div></div></section>
+  </>
+}

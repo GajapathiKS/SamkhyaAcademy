@@ -1,0 +1,26 @@
+{
+  "name": "@samkhya/db",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.15.0",
+    "@samkhya/catalog": "*",
+    "dotenv": "^17.2.2"
+  },
+  "devDependencies": {
+    "prisma": "^6.15.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "bcryptjs": "^3.0.2"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}

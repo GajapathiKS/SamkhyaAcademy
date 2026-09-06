@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" role="img" aria-label="RAG and enterprise knowledge">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#19efe0"/><stop offset="1" stop-color="#72ff9b"/></linearGradient></defs>
+  <rect width="240" height="100" rx="16" fill="#04172a"/><g fill="none" stroke="url(#g)" stroke-width="3">
+    <ellipse cx="48" cy="25" rx="28" ry="10"/><path d="M20 25v36c0 6 13 10 28 10s28-4 28-10V25M20 43c0 6 13 10 28 10s28-4 28-10"/>
+    <circle cx="142" cy="49" r="24"/><path d="m159 66 19 18M92 49h24m76 0h28"/><circle cx="220" cy="49" r="7"/>
+  </g><path d="M130 49h24m-12-12v24" stroke="#72ff9b" stroke-width="3"/>
+</svg>

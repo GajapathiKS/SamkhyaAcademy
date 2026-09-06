@@ -1,0 +1,28 @@
+{
+  "name": "samkhyaacademy-lms",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "npm run dev -w @samkhya/web",
+    "build": "npm run build -w @samkhya/web",
+    "start": "npm run start -w @samkhya/web",
+    "cms:generate-types": "npm run cms:generate-types -w @samkhya/web",
+    "cms:generate-importmap": "npm run cms:generate-importmap -w @samkhya/web",
+    "cms:migrate": "npm run cms:migrate -w @samkhya/web",
+    "db:generate": "npm run prisma:generate -w @samkhya/db",
+    "db:migrate": "npm run prisma:migrate -w @samkhya/db",
+    "db:seed": "npm run prisma:seed -w @samkhya/db",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "brochures:generate": "tsx scripts/generate-brochures.ts",
+    "brochures:qa": "tsx scripts/qa-brochures.ts"
+  },
+  "engines": {"node": ">=20.11.0 <23"},
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "tsx": "^4.20.0",
+    "vitest": "^3.2.0"
+  }
+}

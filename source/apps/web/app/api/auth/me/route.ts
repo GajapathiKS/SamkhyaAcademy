@@ -1,0 +1,1 @@
+import {requireUser} from '@/lib/auth';export async function GET(){try{const u=await requireUser();return Response.json({id:u.id,name:u.name,email:u.email,platformRole:u.platformRole,memberships:u.memberships.map(m=>({organizationId:m.organizationId,organization:m.organization.name,role:m.role}))})}catch{return Response.json({error:'Unauthorized'},{status:401})}}

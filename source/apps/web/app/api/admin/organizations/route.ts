@@ -1,0 +1,3 @@
+import { prisma } from '@samkhya/db';import {requirePlatformAdmin} from '@/lib/auth';
+export async function GET(){try{await requirePlatformAdmin();return Response.json(await prisma.organization.findMany({include:{_count:{select:{memberships:true}}},orderBy:{name:'asc'}}))}catch(e){return Response.json({error:String(e)},{status:403})}}
+export async function POST(req:Request){try{const actor=await requirePlatformAdmin();const {name,slug,domain}=await req.json();const org=await prisma.organization.create({data:{name,slug,domain}});await prisma.auditLog.create({data:{actorUserId:actor.id,action:'ORG_CREATED',entityType:'Organization',entityId:org.id}});return Response.json(org,{status:201})}catch(e){return Response.json({error:String(e)},{status:403})}}

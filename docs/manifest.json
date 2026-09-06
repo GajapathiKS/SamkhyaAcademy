@@ -1,0 +1,1832 @@
+[
+  {
+    "n": 1,
+    "name": "Academy Homepage",
+    "area": "Public",
+    "family": "home",
+    "page": "pages/001.html",
+    "screenshot": "screens/001.png",
+    "next": 2,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 2,
+    "name": "Course Catalog",
+    "area": "Public",
+    "family": "catalog",
+    "page": "pages/002.html",
+    "screenshot": "screens/002.png",
+    "next": 4,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 3,
+    "name": "Learning Paths",
+    "area": "Public",
+    "family": "paths",
+    "page": "pages/003.html",
+    "screenshot": "screens/003.png",
+    "next": 101,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 4,
+    "name": "FDE Engineering Program",
+    "area": "Program",
+    "family": "program",
+    "page": "pages/004.html",
+    "screenshot": "screens/004.png",
+    "next": 43,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 5,
+    "name": "Applied ML Engineer Program",
+    "area": "Program",
+    "family": "program",
+    "page": "pages/005.html",
+    "screenshot": "screens/005.png",
+    "next": 161,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 6,
+    "name": "Full Stack Program",
+    "area": "Program",
+    "family": "program",
+    "page": "pages/006.html",
+    "screenshot": "screens/006.png",
+    "next": 163,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 7,
+    "name": "Video Lesson Experience",
+    "area": "Learner",
+    "family": "lesson",
+    "page": "pages/007.html",
+    "screenshot": "screens/007.png",
+    "next": 84,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 8,
+    "name": "Practice / Quiz Experience",
+    "area": "Learner",
+    "family": "lesson",
+    "page": "pages/008.html",
+    "screenshot": "screens/008.png",
+    "next": 67,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 9,
+    "name": "Entrepreneurship Landing",
+    "area": "Venture",
+    "family": "venture-landing",
+    "page": "pages/009.html",
+    "screenshot": "screens/009.png",
+    "next": 171,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 10,
+    "name": "Idea Submission & Intake",
+    "area": "Venture",
+    "family": "intake",
+    "page": "pages/010.html",
+    "screenshot": "screens/010.png",
+    "next": 116,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 11,
+    "name": "FDE Leadership Program",
+    "area": "Program",
+    "family": "program",
+    "page": "pages/011.html",
+    "screenshot": "screens/011.png",
+    "next": 159,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 12,
+    "name": "Space Tech Program",
+    "area": "Program",
+    "family": "program",
+    "page": "pages/012.html",
+    "screenshot": "screens/012.png",
+    "next": 169,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 13,
+    "name": "Data Analytics Program",
+    "area": "Program",
+    "family": "program",
+    "page": "pages/013.html",
+    "screenshot": "screens/013.png",
+    "next": 165,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 14,
+    "name": "Cybersecurity Program",
+    "area": "Program",
+    "family": "program",
+    "page": "pages/014.html",
+    "screenshot": "screens/014.png",
+    "next": 167,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 15,
+    "name": "Free Course Access State",
+    "area": "Commercial",
+    "family": "program",
+    "page": "pages/015.html",
+    "screenshot": "screens/015.png",
+    "next": 177,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 16,
+    "name": "Freemium Preview State",
+    "area": "Commercial",
+    "family": "program",
+    "page": "pages/016.html",
+    "screenshot": "screens/016.png",
+    "next": 53,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 17,
+    "name": "Paid Course Pricing State",
+    "area": "Commercial",
+    "family": "program",
+    "page": "pages/017.html",
+    "screenshot": "screens/017.png",
+    "next": 51,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 18,
+    "name": "Learner Dashboard",
+    "area": "Learner",
+    "family": "learner",
+    "page": "pages/018.html",
+    "screenshot": "screens/018.png",
+    "next": 7,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 19,
+    "name": "Course Progress Dashboard",
+    "area": "Learner",
+    "family": "learner",
+    "page": "pages/019.html",
+    "screenshot": "screens/019.png",
+    "next": 109,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 20,
+    "name": "Lesson Resources / Comments / Notes",
+    "area": "Learner",
+    "family": "lesson",
+    "page": "pages/020.html",
+    "screenshot": "screens/020.png",
+    "next": 7,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 21,
+    "name": "Exam Start / Instructions",
+    "area": "Exam",
+    "family": "exam",
+    "page": "pages/021.html",
+    "screenshot": "screens/021.png",
+    "next": 22,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 22,
+    "name": "Exam Question Taking",
+    "area": "Exam",
+    "family": "exam",
+    "page": "pages/022.html",
+    "screenshot": "screens/022.png",
+    "next": 23,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 23,
+    "name": "Exam Result",
+    "area": "Exam",
+    "family": "exam",
+    "page": "pages/023.html",
+    "screenshot": "screens/023.png",
+    "next": 24,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 24,
+    "name": "Certificate + Verification",
+    "area": "Certificate",
+    "family": "exam",
+    "page": "pages/024.html",
+    "screenshot": "screens/024.png",
+    "next": 18,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 25,
+    "name": "Venture Stage Workflow",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/025.html",
+    "screenshot": "screens/025.png",
+    "next": 26,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 26,
+    "name": "Venture Artifacts & Launch Readiness",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/026.html",
+    "screenshot": "screens/026.png",
+    "next": 77,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 27,
+    "name": "Mentor Review & Feedback",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/027.html",
+    "screenshot": "screens/027.png",
+    "next": 79,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 28,
+    "name": "Venture Milestones / Traction",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/028.html",
+    "screenshot": "screens/028.png",
+    "next": 80,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 29,
+    "name": "Venture Cohort Admin Dashboard",
+    "area": "Mentor/Admin",
+    "family": "admin",
+    "page": "pages/029.html",
+    "screenshot": "screens/029.png",
+    "next": 124,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 30,
+    "name": "Platform Admin Dashboard",
+    "area": "Admin",
+    "family": "admin",
+    "page": "pages/030.html",
+    "screenshot": "screens/030.png",
+    "next": 31,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 31,
+    "name": "CMS Course Management List",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/031.html",
+    "screenshot": "screens/031.png",
+    "next": 32,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 32,
+    "name": "Create/Edit Course",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/032.html",
+    "screenshot": "screens/032.png",
+    "next": 33,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 33,
+    "name": "Course Pricing Category Admin",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/033.html",
+    "screenshot": "screens/033.png",
+    "next": 94,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 34,
+    "name": "Content Type Admin",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/034.html",
+    "screenshot": "screens/034.png",
+    "next": 35,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 35,
+    "name": "Module & Lesson Builder",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/035.html",
+    "screenshot": "screens/035.png",
+    "next": 61,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 36,
+    "name": "Exam & Question Bank Management",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/036.html",
+    "screenshot": "screens/036.png",
+    "next": 21,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 37,
+    "name": "Blog CMS Editor",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/037.html",
+    "screenshot": "screens/037.png",
+    "next": 60,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 38,
+    "name": "Webinar CMS Management",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/038.html",
+    "screenshot": "screens/038.png",
+    "next": 44,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 39,
+    "name": "Faculty & Media Library",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/039.html",
+    "screenshot": "screens/039.png",
+    "next": 123,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 40,
+    "name": "Organization Dashboard",
+    "area": "Organization",
+    "family": "organization",
+    "page": "pages/040.html",
+    "screenshot": "screens/040.png",
+    "next": 41,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 41,
+    "name": "Organization Learner Onboarding",
+    "area": "Organization",
+    "family": "organization",
+    "page": "pages/041.html",
+    "screenshot": "screens/041.png",
+    "next": 126,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 42,
+    "name": "Organization Assignments & Progress",
+    "area": "Organization",
+    "family": "organization",
+    "page": "pages/042.html",
+    "screenshot": "screens/042.png",
+    "next": 129,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 43,
+    "name": "Brochure Lead Gate",
+    "area": "Lead",
+    "family": "commercial",
+    "page": "pages/043.html",
+    "screenshot": "screens/043.png",
+    "next": 143,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 44,
+    "name": "Webinar Registration",
+    "area": "Lead",
+    "family": "commercial",
+    "page": "pages/044.html",
+    "screenshot": "screens/044.png",
+    "next": 142,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 45,
+    "name": "CRM Leads Dashboard",
+    "area": "Operations",
+    "family": "operations",
+    "page": "pages/045.html",
+    "screenshot": "screens/045.png",
+    "next": 46,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 46,
+    "name": "CRM Lead Detail & Follow-up",
+    "area": "Operations",
+    "family": "operations",
+    "page": "pages/046.html",
+    "screenshot": "screens/046.png",
+    "next": 50,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 47,
+    "name": "Campaigns Dashboard",
+    "area": "Operations",
+    "family": "operations",
+    "page": "pages/047.html",
+    "screenshot": "screens/047.png",
+    "next": 49,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 48,
+    "name": "WhatsApp Operation Screen",
+    "area": "Operations",
+    "family": "operations",
+    "page": "pages/048.html",
+    "screenshot": "screens/048.png",
+    "next": 141,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 49,
+    "name": "Email Campaign Screen",
+    "area": "Operations",
+    "family": "operations",
+    "page": "pages/049.html",
+    "screenshot": "screens/049.png",
+    "next": 140,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 50,
+    "name": "Private Discount Offer",
+    "area": "Offer",
+    "family": "commercial",
+    "page": "pages/050.html",
+    "screenshot": "screens/050.png",
+    "next": 51,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 51,
+    "name": "Razorpay Payment Handoff",
+    "area": "Payment",
+    "family": "commercial",
+    "page": "pages/051.html",
+    "screenshot": "screens/051.png",
+    "next": 52,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 52,
+    "name": "Payment Success + Enrollment",
+    "area": "Payment",
+    "family": "commercial",
+    "page": "pages/052.html",
+    "screenshot": "screens/052.png",
+    "next": 7,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 53,
+    "name": "Text Lesson Reader",
+    "area": "Learner",
+    "family": "lesson",
+    "page": "pages/053.html",
+    "screenshot": "screens/053.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 54,
+    "name": "Interactive Browser Code Lab",
+    "area": "Learner",
+    "family": "lesson",
+    "page": "pages/054.html",
+    "screenshot": "screens/054.png",
+    "next": 55,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 55,
+    "name": "Practice Checkpoint",
+    "area": "Learner",
+    "family": "lesson",
+    "page": "pages/055.html",
+    "screenshot": "screens/055.png",
+    "next": 67,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 56,
+    "name": "Code Snippet Library",
+    "area": "Learner",
+    "family": "lesson",
+    "page": "pages/056.html",
+    "screenshot": "screens/056.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 57,
+    "name": "Downloadable Project Library",
+    "area": "Learner",
+    "family": "lesson",
+    "page": "pages/057.html",
+    "screenshot": "screens/057.png",
+    "next": 58,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 58,
+    "name": "Project Package Detail",
+    "area": "Learner",
+    "family": "lesson",
+    "page": "pages/058.html",
+    "screenshot": "screens/058.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 59,
+    "name": "Insights and Blog Index",
+    "area": "Public",
+    "family": "blog",
+    "page": "pages/059.html",
+    "screenshot": "screens/059.png",
+    "next": 60,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 60,
+    "name": "Rich Blog Article",
+    "area": "Public",
+    "family": "blog",
+    "page": "pages/060.html",
+    "screenshot": "screens/060.png",
+    "next": 144,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 61,
+    "name": "Lesson Experience Selector",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/061.html",
+    "screenshot": "screens/061.png",
+    "next": 62,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 62,
+    "name": "Text Lesson Authoring",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/062.html",
+    "screenshot": "screens/062.png",
+    "next": 131,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 63,
+    "name": "Code Lab Authoring",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/063.html",
+    "screenshot": "screens/063.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 64,
+    "name": "Project Package Authoring",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/064.html",
+    "screenshot": "screens/064.png",
+    "next": 58,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 65,
+    "name": "Code Lab Hint Open",
+    "area": "Learner Continuation",
+    "family": "lesson",
+    "page": "pages/065.html",
+    "screenshot": "screens/065.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 66,
+    "name": "Practice Checks Failed",
+    "area": "Learner Continuation",
+    "family": "lesson",
+    "page": "pages/066.html",
+    "screenshot": "screens/066.png",
+    "next": 72,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 67,
+    "name": "Practice Completion Success",
+    "area": "Learner Continuation",
+    "family": "lesson",
+    "page": "pages/067.html",
+    "screenshot": "screens/067.png",
+    "next": 57,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 68,
+    "name": "Mobile Code Preview",
+    "area": "Learner Continuation",
+    "family": "lesson",
+    "page": "pages/068.html",
+    "screenshot": "screens/068.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 69,
+    "name": "Lesson Notes Drawer",
+    "area": "Learner Continuation",
+    "family": "lesson",
+    "page": "pages/069.html",
+    "screenshot": "screens/069.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 70,
+    "name": "Lesson Discussion Drawer",
+    "area": "Learner Continuation",
+    "family": "lesson",
+    "page": "pages/070.html",
+    "screenshot": "screens/070.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 71,
+    "name": "Resource Preview Drawer",
+    "area": "Learner Continuation",
+    "family": "lesson",
+    "page": "pages/071.html",
+    "screenshot": "screens/071.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 72,
+    "name": "Practice Correction State",
+    "area": "Learner Continuation",
+    "family": "lesson",
+    "page": "pages/072.html",
+    "screenshot": "screens/072.png",
+    "next": 67,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 73,
+    "name": "Idea Intake Validation",
+    "area": "Venture Continuation",
+    "family": "intake",
+    "page": "pages/073.html",
+    "screenshot": "screens/073.png",
+    "next": 116,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 74,
+    "name": "Idea Submission Receipt",
+    "area": "Venture Continuation",
+    "family": "venture",
+    "page": "pages/074.html",
+    "screenshot": "screens/074.png",
+    "next": 81,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 75,
+    "name": "Active Venture Stage",
+    "area": "Venture Continuation",
+    "family": "venture",
+    "page": "pages/075.html",
+    "screenshot": "screens/075.png",
+    "next": 26,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 76,
+    "name": "Artifact Library and Upload",
+    "area": "Venture Continuation",
+    "family": "venture",
+    "page": "pages/076.html",
+    "screenshot": "screens/076.png",
+    "next": 77,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 77,
+    "name": "Mentor Review Pending",
+    "area": "Venture Continuation",
+    "family": "venture",
+    "page": "pages/077.html",
+    "screenshot": "screens/077.png",
+    "next": 27,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 78,
+    "name": "Mentor Changes Requested",
+    "area": "Venture Continuation",
+    "family": "venture",
+    "page": "pages/078.html",
+    "screenshot": "screens/078.png",
+    "next": 79,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 79,
+    "name": "Venture Stage Resubmission",
+    "area": "Venture Continuation",
+    "family": "venture",
+    "page": "pages/079.html",
+    "screenshot": "screens/079.png",
+    "next": 77,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 80,
+    "name": "Venture Stage Unlocked",
+    "area": "Venture Continuation",
+    "family": "venture",
+    "page": "pages/080.html",
+    "screenshot": "screens/080.png",
+    "next": 75,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 81,
+    "name": "Venture Workspace Overview",
+    "area": "Venture Golden Master",
+    "family": "venture",
+    "page": "pages/081.html",
+    "screenshot": "screens/081.png",
+    "next": 26,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 82,
+    "name": "Unified Video Course Lesson",
+    "area": "Course Experience",
+    "family": "lesson",
+    "page": "pages/082.html",
+    "screenshot": "screens/082.png",
+    "next": 83,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 83,
+    "name": "Unified Text Course Lesson",
+    "area": "Course Experience",
+    "family": "lesson",
+    "page": "pages/083.html",
+    "screenshot": "screens/083.png",
+    "next": 84,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 84,
+    "name": "Unified Mixed Example Lesson",
+    "area": "Course Experience",
+    "family": "lesson",
+    "page": "pages/084.html",
+    "screenshot": "screens/084.png",
+    "next": 54,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 85,
+    "name": "Programming Foundations Catalog",
+    "area": "Free Acquisition",
+    "family": "catalog",
+    "page": "pages/085.html",
+    "screenshot": "screens/085.png",
+    "next": 86,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 86,
+    "name": "Free C Course Detail",
+    "area": "Free Acquisition",
+    "family": "program",
+    "page": "pages/086.html",
+    "screenshot": "screens/086.png",
+    "next": 173,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 87,
+    "name": "Free C Text Lesson",
+    "area": "Free Learning",
+    "family": "lesson",
+    "page": "pages/087.html",
+    "screenshot": "screens/087.png",
+    "next": 112,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 88,
+    "name": "Free C Plus Plus Course Detail",
+    "area": "Free Acquisition",
+    "family": "program",
+    "page": "pages/088.html",
+    "screenshot": "screens/088.png",
+    "next": 175,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 89,
+    "name": "Free C++ Video Lesson",
+    "area": "Free Learning",
+    "family": "lesson",
+    "page": "pages/089.html",
+    "screenshot": "screens/089.png",
+    "next": 113,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 90,
+    "name": "Paid DSA Course Detail",
+    "area": "Paid Learning",
+    "family": "program",
+    "page": "pages/090.html",
+    "screenshot": "screens/090.png",
+    "next": 179,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 91,
+    "name": "DSA Graph Traversal Simulation",
+    "area": "Interactive Simulation",
+    "family": "lesson",
+    "page": "pages/091.html",
+    "screenshot": "screens/091.png",
+    "next": 114,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 92,
+    "name": "DSA Linked List Simulation",
+    "area": "Interactive Simulation",
+    "family": "lesson",
+    "page": "pages/092.html",
+    "screenshot": "screens/092.png",
+    "next": 115,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 93,
+    "name": "Simulation Lesson Authoring",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/093.html",
+    "screenshot": "screens/093.png",
+    "next": 131,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 94,
+    "name": "Protected Setting Approval Queue",
+    "area": "Super Admin",
+    "family": "admin",
+    "page": "pages/094.html",
+    "screenshot": "screens/094.png",
+    "next": 133,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 95,
+    "name": "Immutable Publishing Queue",
+    "area": "Super Admin",
+    "family": "admin",
+    "page": "pages/095.html",
+    "screenshot": "screens/095.png",
+    "next": 135,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 96,
+    "name": "Create a learner account",
+    "area": "Authentication",
+    "family": "auth",
+    "page": "pages/096.html",
+    "screenshot": "screens/096.png",
+    "next": 99,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 97,
+    "name": "Log in and resume",
+    "area": "Authentication",
+    "family": "auth",
+    "page": "pages/097.html",
+    "screenshot": "screens/097.png",
+    "next": 18,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 98,
+    "name": "Reset password request",
+    "area": "Authentication",
+    "family": "auth",
+    "page": "pages/098.html",
+    "screenshot": "screens/098.png",
+    "next": 97,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 99,
+    "name": "Email verification confirmation",
+    "area": "Authentication",
+    "family": "auth",
+    "page": "pages/099.html",
+    "screenshot": "screens/099.png",
+    "next": 103,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 100,
+    "name": "Catalog filtered results",
+    "area": "Discovery",
+    "family": "catalog",
+    "page": "pages/100.html",
+    "screenshot": "screens/100.png",
+    "next": 4,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 101,
+    "name": "Compare learning paths",
+    "area": "Discovery",
+    "family": "paths",
+    "page": "pages/101.html",
+    "screenshot": "screens/101.png",
+    "next": 6,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 102,
+    "name": "Full Stack curriculum and delivery",
+    "area": "Program",
+    "family": "program",
+    "page": "pages/102.html",
+    "screenshot": "screens/102.png",
+    "next": 16,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 103,
+    "name": "Free enrollment confirmation",
+    "area": "Commercial",
+    "family": "commercial",
+    "page": "pages/103.html",
+    "screenshot": "screens/103.png",
+    "next": 87,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 104,
+    "name": "Preview limit and upgrade",
+    "area": "Commercial",
+    "family": "commercial",
+    "page": "pages/104.html",
+    "screenshot": "screens/104.png",
+    "next": 51,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 105,
+    "name": "Private course invitation",
+    "area": "Commercial",
+    "family": "commercial",
+    "page": "pages/105.html",
+    "screenshot": "screens/105.png",
+    "next": 103,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 106,
+    "name": "Organization course entitlement",
+    "area": "Commercial",
+    "family": "commercial",
+    "page": "pages/106.html",
+    "screenshot": "screens/106.png",
+    "next": 7,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 107,
+    "name": "Hybrid course schedule",
+    "area": "Learning",
+    "family": "lesson",
+    "page": "pages/107.html",
+    "screenshot": "screens/107.png",
+    "next": 108,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 108,
+    "name": "Offline session and attendance",
+    "area": "Learning",
+    "family": "lesson",
+    "page": "pages/108.html",
+    "screenshot": "screens/108.png",
+    "next": 53,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 109,
+    "name": "Course completion checklist",
+    "area": "Learning",
+    "family": "exam",
+    "page": "pages/109.html",
+    "screenshot": "screens/109.png",
+    "next": 21,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 110,
+    "name": "Exam retry and improvement plan",
+    "area": "Exam",
+    "family": "exam",
+    "page": "pages/110.html",
+    "screenshot": "screens/110.png",
+    "next": 22,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 111,
+    "name": "Certificate verification not found",
+    "area": "Certificate",
+    "family": "exam",
+    "page": "pages/111.html",
+    "screenshot": "screens/111.png",
+    "next": 24,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 112,
+    "name": "C exercise compile and run",
+    "area": "Learning",
+    "family": "lesson",
+    "page": "pages/112.html",
+    "screenshot": "screens/112.png",
+    "next": 67,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 113,
+    "name": "C++ vectors practice",
+    "area": "Learning",
+    "family": "lesson",
+    "page": "pages/113.html",
+    "screenshot": "screens/113.png",
+    "next": 67,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 114,
+    "name": "DSA breadth-first search completed",
+    "area": "Learning",
+    "family": "lesson",
+    "page": "pages/114.html",
+    "screenshot": "screens/114.png",
+    "next": 115,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 115,
+    "name": "DSA checkpoint explanation",
+    "area": "Learning",
+    "family": "lesson",
+    "page": "pages/115.html",
+    "screenshot": "screens/115.png",
+    "next": 92,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 116,
+    "name": "Idea intake audience step",
+    "area": "Venture",
+    "family": "intake",
+    "page": "pages/116.html",
+    "screenshot": "screens/116.png",
+    "next": 117,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 117,
+    "name": "Idea intake solution step",
+    "area": "Venture",
+    "family": "intake",
+    "page": "pages/117.html",
+    "screenshot": "screens/117.png",
+    "next": 118,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 118,
+    "name": "Idea intake market step",
+    "area": "Venture",
+    "family": "intake",
+    "page": "pages/118.html",
+    "screenshot": "screens/118.png",
+    "next": 119,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 119,
+    "name": "Idea intake team step",
+    "area": "Venture",
+    "family": "intake",
+    "page": "pages/119.html",
+    "screenshot": "screens/119.png",
+    "next": 120,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 120,
+    "name": "Idea intake review and submit",
+    "area": "Venture",
+    "family": "intake",
+    "page": "pages/120.html",
+    "screenshot": "screens/120.png",
+    "next": 74,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 121,
+    "name": "Artifact version history",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/121.html",
+    "screenshot": "screens/121.png",
+    "next": 122,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 122,
+    "name": "Artifact upload and validation",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/122.html",
+    "screenshot": "screens/122.png",
+    "next": 77,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 123,
+    "name": "Mentor assignment and availability",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/123.html",
+    "screenshot": "screens/123.png",
+    "next": 81,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 124,
+    "name": "Stage review decision",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/124.html",
+    "screenshot": "screens/124.png",
+    "next": 80,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 125,
+    "name": "Venture team invitation",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/125.html",
+    "screenshot": "screens/125.png",
+    "next": 81,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 126,
+    "name": "Organization invitation preview",
+    "area": "Organization",
+    "family": "organization",
+    "page": "pages/126.html",
+    "screenshot": "screens/126.png",
+    "next": 127,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 127,
+    "name": "Organization invitation accepted",
+    "area": "Organization",
+    "family": "organization",
+    "page": "pages/127.html",
+    "screenshot": "screens/127.png",
+    "next": 106,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 128,
+    "name": "Seat allocation and capacity",
+    "area": "Organization",
+    "family": "organization",
+    "page": "pages/128.html",
+    "screenshot": "screens/128.png",
+    "next": 41,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 129,
+    "name": "Learner progress detail",
+    "area": "Organization",
+    "family": "organization",
+    "page": "pages/129.html",
+    "screenshot": "screens/129.png",
+    "next": 130,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 130,
+    "name": "Organization report export",
+    "area": "Organization",
+    "family": "organization",
+    "page": "pages/130.html",
+    "screenshot": "screens/130.png",
+    "next": 40,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 131,
+    "name": "Content review submission",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/131.html",
+    "screenshot": "screens/131.png",
+    "next": 95,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 132,
+    "name": "Content returned with feedback",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/132.html",
+    "screenshot": "screens/132.png",
+    "next": 62,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 133,
+    "name": "Protected setting comparison",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/133.html",
+    "screenshot": "screens/133.png",
+    "next": 95,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 134,
+    "name": "Publish validation issues",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/134.html",
+    "screenshot": "screens/134.png",
+    "next": 62,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 135,
+    "name": "Published version receipt",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/135.html",
+    "screenshot": "screens/135.png",
+    "next": 7,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 136,
+    "name": "Employee roles and permissions",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/136.html",
+    "screenshot": "screens/136.png",
+    "next": 137,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 137,
+    "name": "Author and reviewer audit history",
+    "area": "CMS",
+    "family": "admin",
+    "page": "pages/137.html",
+    "screenshot": "screens/137.png",
+    "next": 94,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 138,
+    "name": "Payment failed and retry",
+    "area": "Payment",
+    "family": "commercial",
+    "page": "pages/138.html",
+    "screenshot": "screens/138.png",
+    "next": 51,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 139,
+    "name": "Private offer expired",
+    "area": "Payment",
+    "family": "commercial",
+    "page": "pages/139.html",
+    "screenshot": "screens/139.png",
+    "next": 4,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 140,
+    "name": "Campaign consent exclusions",
+    "area": "Operations",
+    "family": "operations",
+    "page": "pages/140.html",
+    "screenshot": "screens/140.png",
+    "next": 141,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 141,
+    "name": "Email preview and console receipt",
+    "area": "Operations",
+    "family": "operations",
+    "page": "pages/141.html",
+    "screenshot": "screens/141.png",
+    "next": 47,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 142,
+    "name": "Webinar registration confirmation",
+    "area": "Public",
+    "family": "commercial",
+    "page": "pages/142.html",
+    "screenshot": "screens/142.png",
+    "next": 18,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 143,
+    "name": "Brochure ready to download",
+    "area": "Public",
+    "family": "commercial",
+    "page": "pages/143.html",
+    "screenshot": "screens/143.png",
+    "next": 4,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 144,
+    "name": "Blog discussion reply",
+    "area": "Editorial",
+    "family": "blog",
+    "page": "pages/144.html",
+    "screenshot": "screens/144.png",
+    "next": 60,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 145,
+    "name": "Catalog no matching results",
+    "area": "Discovery",
+    "family": "catalog",
+    "page": "pages/145.html",
+    "screenshot": "screens/145.png",
+    "next": 2,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 146,
+    "name": "Investor network and founder introductions",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/146.html",
+    "screenshot": "screens/146.png",
+    "next": 147,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 147,
+    "name": "Investor profile and access request",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/147.html",
+    "screenshot": "screens/147.png",
+    "next": 148,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 148,
+    "name": "Investor application received",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/148.html",
+    "screenshot": "screens/148.png",
+    "next": 149,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 149,
+    "name": "Consented venture showcase",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/149.html",
+    "screenshot": "screens/149.png",
+    "next": 150,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 150,
+    "name": "Investor introduction request",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/150.html",
+    "screenshot": "screens/150.png",
+    "next": 151,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 151,
+    "name": "Introduction request receipt",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/151.html",
+    "screenshot": "screens/151.png",
+    "next": 157,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 152,
+    "name": "Founder pitch visibility and sharing",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/152.html",
+    "screenshot": "screens/152.png",
+    "next": 157,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 153,
+    "name": "Idea admissions review queue",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/153.html",
+    "screenshot": "screens/153.png",
+    "next": 154,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 154,
+    "name": "Idea review and decision",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/154.html",
+    "screenshot": "screens/154.png",
+    "next": 155,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 155,
+    "name": "Idea accepted and stage unlocked",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/155.html",
+    "screenshot": "screens/155.png",
+    "next": 181,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 156,
+    "name": "Idea changes requested and resubmission",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/156.html",
+    "screenshot": "screens/156.png",
+    "next": 74,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 157,
+    "name": "Founder introduction requests",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/157.html",
+    "screenshot": "screens/157.png",
+    "next": 152,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 158,
+    "name": "Course brochure library",
+    "area": "Public",
+    "family": "brochure",
+    "page": "pages/158.html",
+    "screenshot": "screens/158.png",
+    "next": 43,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 159,
+    "name": "ai leadership brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/159.html",
+    "screenshot": "screens/159.png",
+    "next": 160,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 160,
+    "name": "ai leadership PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/160.html",
+    "screenshot": "screens/160.png",
+    "next": 11,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 161,
+    "name": "applied ml engineering brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/161.html",
+    "screenshot": "screens/161.png",
+    "next": 162,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 162,
+    "name": "applied ml engineering PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/162.html",
+    "screenshot": "screens/162.png",
+    "next": 5,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 163,
+    "name": "full stack brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/163.html",
+    "screenshot": "screens/163.png",
+    "next": 164,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 164,
+    "name": "full stack PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/164.html",
+    "screenshot": "screens/164.png",
+    "next": 6,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 165,
+    "name": "data analytics brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/165.html",
+    "screenshot": "screens/165.png",
+    "next": 166,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 166,
+    "name": "data analytics PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/166.html",
+    "screenshot": "screens/166.png",
+    "next": 13,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 167,
+    "name": "cybersecurity brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/167.html",
+    "screenshot": "screens/167.png",
+    "next": 168,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 168,
+    "name": "cybersecurity PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/168.html",
+    "screenshot": "screens/168.png",
+    "next": 14,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 169,
+    "name": "space tech brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/169.html",
+    "screenshot": "screens/169.png",
+    "next": 170,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 170,
+    "name": "space tech PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/170.html",
+    "screenshot": "screens/170.png",
+    "next": 12,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 171,
+    "name": "entrepreneurship brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/171.html",
+    "screenshot": "screens/171.png",
+    "next": 172,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 172,
+    "name": "entrepreneurship PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/172.html",
+    "screenshot": "screens/172.png",
+    "next": 9,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 173,
+    "name": "c programming fundamentals brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/173.html",
+    "screenshot": "screens/173.png",
+    "next": 174,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 174,
+    "name": "c programming fundamentals PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/174.html",
+    "screenshot": "screens/174.png",
+    "next": 86,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 175,
+    "name": "cpp essentials brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/175.html",
+    "screenshot": "screens/175.png",
+    "next": 176,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 176,
+    "name": "cpp essentials PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/176.html",
+    "screenshot": "screens/176.png",
+    "next": 88,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 177,
+    "name": "javascript foundations brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/177.html",
+    "screenshot": "screens/177.png",
+    "next": 178,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 178,
+    "name": "javascript foundations PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/178.html",
+    "screenshot": "screens/178.png",
+    "next": 15,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 179,
+    "name": "data structures algorithms brochure request",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/179.html",
+    "screenshot": "screens/179.png",
+    "next": 180,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 180,
+    "name": "data structures algorithms PDF download",
+    "area": "Brochure",
+    "family": "brochure",
+    "page": "pages/180.html",
+    "screenshot": "screens/180.png",
+    "next": 90,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 181,
+    "name": "Accepted idea: Stage 1 workspace",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/181.html",
+    "screenshot": "screens/181.png",
+    "next": 182,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 182,
+    "name": "Stage 1 evidence submitted for review",
+    "area": "Venture",
+    "family": "venture",
+    "page": "pages/182.html",
+    "screenshot": "screens/182.png",
+    "next": 181,
+    "status": "Interactive front-end prototype; production services not connected"
+  },
+  {
+    "n": 183,
+    "name": "Learning formats, practice and certification hub",
+    "area": "Learning",
+    "family": "brochure",
+    "page": "pages/183.html",
+    "screenshot": "screens/183.png",
+    "next": 87,
+    "status": "Interactive front-end prototype; production services not connected"
+  }
+]
