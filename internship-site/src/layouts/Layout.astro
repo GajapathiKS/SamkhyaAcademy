@@ -1,0 +1,71 @@
+---
+import SiteLink from '../components/SiteLink.astro';
+import PageSharing from '../components/PageSharing.astro';
+import {pageSchema,socialSlug} from '../data/seo';
+import Icon from '../components/Icon.astro';
+import '../../src/styles/global.css';
+import '../styles/refresh.css';
+import '../styles/approved-theme.css';
+import ContactLinks from '../components/ContactLinks.astro';
+import Brand from '../components/Brand.astro';
+import BetaRibbon from '../components/BetaRibbon.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+import { site } from '../../site.config.mjs';
+interface Props { title: string; description: string; noindex?: boolean; enquiriesOpeningSoon?: boolean; canonicalPath?: string; }
+const { title, description, noindex = false, canonicalPath } = Astro.props;
+const path = Astro.url.pathname;
+const links = [['/programs/', 'Programs', 'compass'], ['/venture-studio/', 'Venture Launchpad', 'sparkles'], ['/about/', 'About', 'users'], ['/faqs/', 'FAQs', 'message'], ['/contact/', 'Contact us', 'mail']];
+const canonical = site.domain ? new URL(canonicalPath || path, site.domain).href : undefined;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} | {site.name}</title><meta name="description" content={description} />
+    <meta name="theme-color" content="#3531ad" />
+    {(noindex || !site.domain || site.staging || !site.indexingApproved) && <meta name="robots" content="noindex, nofollow" />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:title" content={`${title} | ${site.name}`} /><meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />{canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:site_name" content={site.name}/><meta property="og:locale" content="en_IN"/>
+    <meta property="og:image" content={`${site.domain}/images/social/${socialSlug(canonicalPath||path)}.jpg`}/><meta property="og:image:secure_url" content={`${site.domain}/images/social/${socialSlug(canonicalPath||path)}.jpg`}/><meta property="og:image:type" content="image/jpeg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={`${title} — ${site.name}`}/>
+    <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={`${title} | ${site.name}`}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={`${site.domain}/images/social/${socialSlug(canonicalPath||path)}.jpg`}/><meta name="twitter:image:alt" content={`${title} — ${site.name}`}/>
+    {!noindex && <script is:inline type="application/ld+json" set:html={JSON.stringify(pageSchema(path,title,description)).replace(/</g,'\\u003c')}/> }
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+    <SiteLink class="skip" href="#main">Skip to content</SiteLink>
+    <BetaRibbon />
+    <header class="site-header">
+      <div class="container header-inner">
+        <Brand />
+        <nav class="desktop-nav" aria-label="Main navigation">{links.map(([url, label, icon]) => <SiteLink href={url} aria-current={path === url ? 'page' : undefined}><Icon name={icon} />{label}</SiteLink>)}</nav>
+        <SiteLink class="button small header-cta" href={site.enquiriesEnabled?"/enquire/":"/contact/"}>{site.enquiriesEnabled?"Program enquiries":"Contact us"}<Icon name={site.enquiriesEnabled?"arrowUpRight":"mail"}/></SiteLink>
+        <details class="mobile-nav"><summary>Menu <Icon name="menu" /></summary><nav aria-label="Mobile navigation">{links.map(([url, label, icon]) => <SiteLink href={url} aria-current={path === url ? 'page' : undefined}><Icon name={icon} /><span>{label}</span></SiteLink>)}<SiteLink class="button mobile-enquiry" href={site.enquiriesEnabled?"/enquire/":"/contact/"}><span>{site.enquiriesEnabled?"Enquire about a program":"Contact the academy"}</span><Icon name="arrowUpRight"/></SiteLink></nav></details>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"><slot />{!noindex && <div class="container"><PageSharing title={title} path={path}/></div>}</main>
+    <footer><div class="container footer-grid"><div><Brand /><ContactLinks compact /><p>SamkhyaAcademy connects students, engineers and leaders with practical learning in software, AI and space technology. Explore a program around your goals, or develop an early business idea through Venture Launchpad’s startup advisory.</p></div><div><h2>Explore programs</h2><SiteLink href="/programs/"><Icon name="layers"/><span>All programs</span></SiteLink><SiteLink href="/programs/ai-engineering-internship/"><Icon name="code"/><span>AI Engineering Internship</span></SiteLink><SiteLink href="/programs/forward-deployment-engineer/"><Icon name="network"/><span>Forward Deployment Engineering</span></SiteLink><SiteLink href="/programs/machine-learning/"><Icon name="brain"/><span>Machine Learning</span></SiteLink><SiteLink href="/programs/full-stack-development/"><Icon name="layers"/><span>Full-Stack Development</span></SiteLink><SiteLink href="/programs/fde-for-leaders/"><Icon name="users"/><span>FDE for Leaders</span></SiteLink><SiteLink href="/programs/space-technology/"><Icon name="satellite"/><span>Space Technology</span></SiteLink><SiteLink href="/venture-studio/"><Icon name="rocket"/><span>Venture Launchpad</span></SiteLink></div><div><h2>Academy &amp; support</h2><SiteLink href="/about/"><Icon name="users"/><span>About the academy</span></SiteLink><SiteLink href="/enquire/"><Icon name="message"/><span>Program enquiries</span></SiteLink><SiteLink href="/faqs/"><Icon name="message"/><span>FAQs</span></SiteLink><SiteLink href="/contact/"><Icon name="mail"/><span>Contact us</span></SiteLink></div></div><div class="container footer-bottom"><span>© {new Date().getFullYear()} {site.name}</span><span>Built around learning. Driven by practice.</span><SiteLink href="/privacy/"><Icon name="shield"/><span>Privacy</span></SiteLink><SiteLink href="/terms/"><Icon name="file"/><span>Terms</span></SiteLink></div></footer>
+    <FloatingWhatsApp />
+  </body>
+</html>
+
+<script>
+const menu=document.querySelector<HTMLDetailsElement>('.mobile-nav');
+if(menu){
+ const summary=menu.querySelector('summary')!;
+ summary.setAttribute('aria-expanded',String(menu.open));
+ menu.addEventListener('toggle',()=>summary.setAttribute('aria-expanded',String(menu.open)));
+ menu.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.open){menu.open=false;summary.focus();event.preventDefault();}});
+ menu.addEventListener('focusout',event=>{if(event.relatedTarget instanceof Node&&!menu.contains(event.relatedTarget))menu.open=false;});
+ matchMedia('(min-width: 1101px)').addEventListener('change',event=>{if(event.matches)menu.open=false;});
+}
+</script>
+<style is:global>
+[aria-disabled="true"]{cursor:default;box-shadow:none}
+:focus-visible{outline:3px solid #6342ff;outline-offset:4px}
+footer .footer-grid>div:nth-child(n+2)>a,footer .footer-bottom>a{display:flex;align-items:flex-start;gap:12px;min-height:36px;line-height:1.7;padding-block:5px}footer .footer-grid>div:nth-child(n+2)>a>.icon,footer .footer-bottom>a>.icon{display:inline-flex;width:17px;height:17px;flex:0 0 17px;margin-top:3px;color:#3e648d}footer .footer-grid>div:nth-child(n+2)>a>span:not(.icon){min-width:0}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>

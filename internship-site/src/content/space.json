@@ -1,0 +1,290 @@
+{
+  "title": "Space Technology & Satellite Systems",
+  "headline": "Many disciplines. One mission.",
+  "intro": "Turn curiosity about space into a mission you can design, model and explain. Bring mechanical design, electronics, embedded software and AI together through mission analysis, telemetry and an educational space-system demonstrator.",
+  "modules": [
+    {
+      "title": "Space systems foundations",
+      "summary": "Turn an observation need into a measurable mission.",
+      "topics": [
+        "Mission lifecycle: concept, requirements, design reviews, verification and operations",
+        "Circular-orbit estimates, ground coverage and revisit as different questions",
+        "Space environment: thermal cycling, vacuum, radiation and design assumptions",
+        "Requirements, subsystem ownership and verification traceability"
+      ],
+      "tools": [
+        "Python / NumPy — calculations with explicit units",
+        "Jupyter — reproducible mission-analysis notebooks",
+        "Git — version mission assumptions and review evidence"
+      ],
+      "practice": "Scope a vegetation-monitoring mission. Estimate an ideal circular-orbit period and connect three mission requirements to subsystem responsibilities.",
+      "deliverables": [
+        "Mission brief and stakeholder need",
+        "Orbit notebook with assumptions",
+        "Requirement-to-verification matrix"
+      ],
+      "criteria": [
+        "Use orbital radius rather than altitude in the period calculation",
+        "Do not confuse orbit period with revisit time",
+        "Give each requirement a measurable verification method"
+      ],
+      "icon": "satellite"
+    },
+    {
+      "title": "Orbit, coverage & mission analysis",
+      "icon": "orbit",
+      "summary": "Connect an observation objective to an explicit mission model.",
+      "topics": [
+        "Orbital elements and circular-orbit approximations",
+        "Ground tracks, coverage and revisit tradeoffs",
+        "Eclipse and contact-window assumptions",
+        "Sensitivity to altitude and mission constraints",
+        "Units, reference frames and model limitations"
+      ],
+      "tools": [
+        "Python and NumPy — calculate and compare assumptions",
+        "Jupyter and Matplotlib — visualise orbital scenarios",
+        "GMAT or an equivalent teaching simulator — inspect a configured mission model"
+      ],
+      "practice": "Compare two illustrative mission concepts for monitoring an area. Estimate period, examine simulated coverage and document which conclusions the simplified model cannot support.",
+      "deliverables": [
+        "Mission comparison notebook",
+        "Ground-track or coverage visualisation",
+        "Assumption and sensitivity register"
+      ],
+      "criteria": [
+        "Keep period, coverage and revisit distinct",
+        "Label units and reference-frame assumptions",
+        "Present simulator output with its configuration and limitations"
+      ]
+    },
+    {
+      "title": "Spacecraft subsystems",
+      "summary": "Make the power, structure, thermal and control assumptions agree.",
+      "topics": [
+        "Peak power, average demand, eclipse energy and margins",
+        "Heat-flow and structural load paths",
+        "Attitude determination versus control; pointing and stability",
+        "Voltage, timing, data-format and fault-behaviour interfaces"
+      ],
+      "tools": [
+        "Spreadsheet / Python — power and mass budgets",
+        "FreeCAD — conceptual mechanical envelope and interface sketches",
+        "Diagram editor — heat paths, control loops and interface records"
+      ],
+      "practice": "Build a load table for an intermittent payload, onboard computer and radio. Explore how an eclipse or a changed payload duty cycle affects the design.",
+      "deliverables": [
+        "Peak and average load table",
+        "Eclipse-energy estimate and thermal sketch",
+        "Versioned subsystem interface record"
+      ],
+      "criteria": [
+        "Keep watts and watt-hours distinct",
+        "Document simultaneous loads, losses and assumptions",
+        "Identify cross-subsystem effects rather than analysing each part alone"
+      ],
+      "icon": "battery"
+    },
+    {
+      "title": "Structures, thermal thinking & payload interfaces",
+      "icon": "wrench",
+      "summary": "Bring mechanical and electronics decisions into one reviewable design.",
+      "topics": [
+        "Mechanical envelope, mass properties and access for assembly",
+        "Payload mounting and connector clearances",
+        "Conduction, radiation and simple thermal balances",
+        "Material choices, tolerances and environmental assumptions",
+        "Interface documentation and change control"
+      ],
+      "tools": [
+        "FreeCAD or equivalent CAD — model an educational assembly",
+        "Python spreadsheets or notebooks — track mass and thermal assumptions",
+        "Interface-control template — agree mechanical and electrical boundaries"
+      ],
+      "practice": "Create a non-flight educational payload enclosure and interface drawing. Track mass, connector access and a simple thermal scenario; review a design change with another subsystem team.",
+      "deliverables": [
+        "CAD concept and annotated interface drawing",
+        "Mass budget and thermal assumptions",
+        "Design-change review record"
+      ],
+      "criteria": [
+        "Identify model simplifications and unverified loads",
+        "Show how the assembly can be connected and inspected",
+        "Do not describe the model as flight-qualified hardware"
+      ]
+    },
+    {
+      "title": "Avionics and communications",
+      "summary": "Move trustworthy telemetry from a sensor model to a ground display.",
+      "topics": [
+        "Sampling, scheduling, watchdogs and safe startup",
+        "Telemetry sequence numbers, timestamps, units and validity",
+        "Link budgets and useful data volume during a contact",
+        "Normal, safe and recovery states; approved commands"
+      ],
+      "tools": [
+        "Python — sensor, packet-loss and ground-station simulation",
+        "C/C++ with a suitable microcontroller — optional supervised bench extension",
+        "JSON / CSV — documented telemetry interchange",
+        "pytest — repeatable timeout, duplicate and recovery checks"
+      ],
+      "practice": "Send synthetic sensor readings through a simulated link. Show missing and stale packets explicitly, and recover from a sensor timeout.",
+      "deliverables": [
+        "Telemetry schema and dashboard",
+        "Fault-injection log",
+        "Normal / safe / recovery state diagram"
+      ],
+      "criteria": [
+        "Never present missing telemetry as a real zero",
+        "Distinguish error detection from command authentication",
+        "Demonstrate a recovery path after a failed contact"
+      ],
+      "icon": "radio"
+    },
+    {
+      "title": "Flight-software concepts & fault management",
+      "icon": "cpu",
+      "summary": "Make state, timing and recovery visible in a simulated controller.",
+      "topics": [
+        "Boot, nominal, safe and recovery states",
+        "Sensor sampling, command validation and telemetry queues",
+        "Watchdogs, timeout handling and resource limits",
+        "Fault detection, isolation and recovery concepts",
+        "Repeatable simulation and software verification"
+      ],
+      "tools": [
+        "Python state-machine simulator — explore control logic",
+        "pytest — automate fault and recovery cases",
+        "Microcontroller tooling — optional supervised ground-hardware extension"
+      ],
+      "practice": "Build a simulated subsystem controller. Inject a missing sensor, delayed command and restart; demonstrate how the controller enters a safe state and reports the reason.",
+      "deliverables": [
+        "State diagram and controller simulation",
+        "Fault-injection test suite",
+        "Recovery and event-log evidence"
+      ],
+      "criteria": [
+        "Define safe-state entry and exit conditions explicitly",
+        "Reject malformed or out-of-sequence commands",
+        "Keep recovery bounded and observable"
+      ]
+    },
+    {
+      "title": "Ground operations, telemetry review & verification",
+      "icon": "radio",
+      "summary": "Show how a team will operate and review the demonstrator.",
+      "topics": [
+        "Telemetry schemas, timestamps and engineering units",
+        "Command approval, acknowledgements and stale data",
+        "Contact planning and simulated link loss",
+        "Verification matrices and acceptance evidence",
+        "Operations procedures and anomaly handover"
+      ],
+      "tools": [
+        "Python and Plotly — inspect replayed telemetry",
+        "CSV or SQLite — retain sample telemetry with schema metadata",
+        "Git — version procedures and verification evidence"
+      ],
+      "practice": "Run a simulated ground-operations rehearsal. Replay a telemetry stream, lose contact, recover state and hand the next operator a clear account of what happened.",
+      "deliverables": [
+        "Ground dashboard and replay dataset",
+        "Verification matrix with pass/fail evidence",
+        "Operations runbook and anomaly report"
+      ],
+      "criteria": [
+        "Clearly distinguish live, replayed and stale data",
+        "Trace each requirement to a test result",
+        "Keep all radio work simulated unless facilities and approvals are separately agreed"
+      ]
+    },
+    {
+      "title": "Autonomy and mission demonstrator",
+      "summary": "Integrate the evidence and explain what your prototype proves.",
+      "topics": [
+        "Rule-based autonomy, AI baselines and human override",
+        "Unit, integration and scenario testing",
+        "Contact plans, command approval and operations runbooks",
+        "CubeSat/CanSat-style educational mission review"
+      ],
+      "tools": [
+        "Python / scikit-learn — optional telemetry anomaly baseline",
+        "pytest and recorded fixtures — repeatable mission scenarios",
+        "Git and Markdown — reproducible review package and runbook"
+      ],
+      "practice": "Integrate a mission brief, budgets and telemetry chain. Inject low energy, invalid telemetry and a missed contact; present the evidence at a guided mission review.",
+      "deliverables": [
+        "Simulated or ground-based demonstrator",
+        "Traceable test report",
+        "Operations runbook and design-review presentation"
+      ],
+      "criteria": [
+        "Compare any AI component with a simple baseline",
+        "Bound autonomous actions and define a fallback",
+        "State model limitations and unresolved risks"
+      ],
+      "icon": "compass"
+    }
+  ],
+  "roles": [
+    [
+      "Mechanical & aerospace",
+      "Explore structures, packaging, materials, heat paths and physical interfaces."
+    ],
+    [
+      "Electronics & electrical",
+      "Connect power, sensing, embedded interfaces and communication budgets."
+    ],
+    [
+      "Computer science & embedded",
+      "Build telemetry software, ground displays, state machines and fault tests."
+    ],
+    [
+      "AI, ML & data",
+      "Investigate telemetry anomalies and observation data with measurable baselines."
+    ]
+  ],
+  "projects": [
+    {
+      "title": "Mission concept & subsystem budget",
+      "problem": "A team wants to observe environmental change but has not connected the data need to a feasible mission concept.",
+      "flow": [
+        "Observation need",
+        "Requirements",
+        "Orbit assumptions",
+        "Power & data budgets",
+        "Design review"
+      ],
+      "work": "Create an analysis notebook and interface matrix. Mechanical and electronics students own physical assumptions; software and data students connect the payload output to a useful data product.",
+      "failure": "A higher-duty payload exhausts the energy allowance; a useful orbit estimate is mistaken for a revisit guarantee.",
+      "evidence": "A mission brief, budget workbook, tradeoff log and verification matrix."
+    },
+    {
+      "title": "Ground-based telemetry demonstrator",
+      "problem": "A ground operator needs to understand whether received readings are fresh, valid and complete.",
+      "flow": [
+        "Sensor fixture",
+        "Packet encoder",
+        "Simulated link",
+        "Ground display",
+        "Operator review"
+      ],
+      "work": "Implement timestamped telemetry and a ground view. Start entirely in simulation; a supervised sensor-board extension can be scoped with the institution.",
+      "failure": "Duplicate packets, stale values, a reset mid-stream and missing sequence numbers must remain visible.",
+      "evidence": "A schema, runnable simulator, dashboard walkthrough and fault-test log."
+    },
+    {
+      "title": "Integrated educational mission MVP",
+      "problem": "Subsystems work separately but their combined behaviour has not been reviewed.",
+      "flow": [
+        "Mission plan",
+        "Approved commands",
+        "Subsystem simulator",
+        "Telemetry & alerts",
+        "Review evidence"
+      ],
+      "work": "Combine power assumptions, telemetry and mode transitions into a CubeSat/CanSat-style mission package. Compare a simple anomaly rule with an optional ML baseline.",
+      "failure": "Low-energy mode, invalid sensor input and a missed contact must trigger a documented safe response.",
+      "evidence": "A demonstrator, test report, operations runbook and team delivery case study."
+    }
+  ]
+}

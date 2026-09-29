@@ -1,0 +1,65 @@
+---
+import Icon from '../components/Icon.astro';
+
+import Art from '../components/Art.astro';
+import Layout from '../layouts/Layout.astro';
+
+import { site } from '../../site.config.mjs';
+const custom = site.enquiriesEnabled && site.enquiryMode === 'custom' && Boolean(site.customFormUrl);
+const customUrl = site.enquiriesEnabled ? site.customFormUrl : '';
+const hasForm = site.enquiriesEnabled && Boolean(site.formEmbedUrl && site.formResponderUrl);
+---
+<Layout title="Enquire about our programs" description="Enquire about AI engineering, machine learning, full-stack development, space technology or FDE leadership. Discuss your background and learning goals."><header class="container enquiry-heading"><h1>Let’s find your starting point.</h1><p>Ask about our programs, fees, and learning arrangements.</p></header>{site.customFormPrototype && <p class="container caption"><strong>Sample submission mode:</strong> use test details only. Live intake is not yet enabled in the connected service.</p>}<section class="container enquiry-layout"><div class="form-panel">{custom ? <><div class="enquiry-embed" data-loading="true" aria-busy="true"><div class="form-skeleton" aria-hidden="true"><span class="skeleton-heading shimmer"></span><span class="skeleton-line shimmer"></span><div class="skeleton-grid">{Array.from({length:8}, () => <div><span class="skeleton-label shimmer"></span><span class="skeleton-input shimmer"></span></div>)}</div><span class="skeleton-heading shimmer"></span><span class="skeleton-area shimmer"></span><span class="skeleton-button shimmer"></span></div><p class="form-loading-status" role="status">Loading the enquiry form…</p><iframe class="custom-enquiry-frame" data-src={customUrl} title="SamkhyaAcademy custom program enquiry form" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><noscript><p class="caption">Please enable JavaScript, or open the form using the link below.</p><style>.enquiry-embed{display:none}</style></noscript><p class="caption">If the embedded form is difficult to use, <a href={customUrl} target="_blank" rel="noopener noreferrer">open the form in a new tab <Icon name="arrowUpRight" /></a>.</p></> : hasForm ? <><div class="form-intro"><h2>Internship enquiry</h2><p>For this internship, select <strong>Other</strong> under course selection and enter <strong>AI Engineering Training Internship</strong> in the course name field.</p><p>This form is hosted by Google Forms. <a href={site.formResponderUrl} target="_blank" rel="noopener noreferrer">Open the form in a new tab <Icon name="arrowUpRight" /></a></p></div><iframe src={site.formEmbedUrl} title="SamkhyaAcademy internship enquiry form" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">Loading enquiry form…</iframe><p class="caption">If the form does not load, <a href={site.formResponderUrl} target="_blank" rel="noopener noreferrer">use the direct Google Form</a>. Google Forms displays confirmation after a successful submission.</p></> : <div class="form-unavailable"><span class="feature-icon"><Icon name="arrowUpRight" /></span><h2>Enquiries will open soon.</h2><p>The enquiry form is being prepared. In the meantime, explore the curriculum and the projects you’ll work towards.</p><a class="button" href="/programs/ai-engineering-internship/curriculum/">Explore what you’ll learn <Icon name="arrowRight" /></a></div>}<p class="privacy-note">Read our <a href="/privacy/">privacy notice</a> before sharing personal information. Please do not include passwords, identity documents, or sensitive information.</p></div><aside><Art name="learning-studio" alt="AI-generated conceptual learning illustration" class="enquiry-art" /><p class="eyebrow">A CONVERSATION, NOT A COMMITMENT</p><h2>Bring your questions.</h2><p>Explore AI engineering, machine learning, full-stack development, space technology or FDE leadership. Share your experience, goals and preferred learning path.</p><p>Have an early venture idea? <a class="text-link" href="/venture-studio/submit/">Use the idea brief <Icon name="arrowRight" /></a>.</p><p><a class="text-link" href="/faqs/">Read common questions <Icon name="arrowRight" /></a></p><p><a class="text-link" href="/contact/">Contact the academy <Icon name="arrowRight" /></a></p>{site.email && <p><a href={`mailto:${site.email}`}>{site.email}</a></p>}{site.phone && <p><a href={`tel:${site.phone.replace(/[^+\d]/g,'')}`}>{site.phone}</a></p>}</aside></section><dialog id="enquiry-success" aria-labelledby="success-title"><div class="success-icon"><Icon name="check" /></div><h2 id="success-title">Enquiry saved</h2><p id="success-copy"></p><p>Reference: <strong id="success-reference"></strong></p><div class="actions"><button class="button" id="success-close">Close</button><a class="button outline" href="/programs/">Explore programs</a></div></dialog></Layout>
+
+<style>#enquiry-success{max-width:480px;width:calc(100% - 32px);border:1px solid var(--border);border-radius:18px;padding:30px;color:var(--ink)}#enquiry-success::backdrop{background:#0b154899}.success-icon{color:#245d98;background:#e9f2ff;border-radius:50%;padding:16px;width:60px;margin-bottom:18px}#enquiry-success p{margin-block:14px;overflow-wrap:anywhere}.enquiry-heading{padding-block:24px 18px}.enquiry-heading h1{font-size:clamp(1.55rem,3vw,2.25rem);line-height:1.25;margin:0 0 8px}.enquiry-heading p{font-size:.88rem;margin:0}.enquiry-layout{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:36px;padding-bottom:40px}.enquiry-layout aside{grid-column:2;grid-row:1}.enquiry-layout .form-panel{grid-column:1;grid-row:1;min-width:0}.form-panel .custom-enquiry-frame{margin-top:0}.enquiry-layout aside h2{font-size:1.4rem}@media(max-width:850px){.enquiry-layout{grid-template-columns:minmax(0,1fr);gap:28px}.enquiry-layout .form-panel,.enquiry-layout aside{grid-column:1;grid-row:auto}.enquiry-heading{padding-block:20px 16px}}.form-panel:has(.custom-enquiry-frame){padding:0;background:white;overflow:hidden}.custom-enquiry-frame{height:1600px;width:100%;border:0;display:block}.form-panel:has(.custom-enquiry-frame)>.caption,.form-panel:has(.custom-enquiry-frame)>.privacy-note{margin:16px 22px}@media(max-width:560px){.custom-enquiry-frame{height:2050px}}</style>
+
+<script>
+import programOptions from '../content/program-options.json';
+const frame=document.querySelector<HTMLIFrameElement>('.custom-enquiry-frame');
+if(frame){
+ const surface=frame.closest<HTMLElement>('.enquiry-embed')!;
+ const status=surface.querySelector<HTMLElement>('.form-loading-status')!;
+ const reveal=()=>{surface.dataset.loading='false';surface.setAttribute('aria-busy','false');};
+ const ready=()=>{clearTimeout(loadingTimeout);reveal();status.hidden=true;};
+ const loadingTimeout=setTimeout(()=>{reveal();frame.style.height='480px';status.textContent='Taking longer than expected. ';const fallback=document.createElement('a');fallback.href=frame.dataset.src!;fallback.target='_blank';fallback.rel='noopener noreferrer';fallback.textContent='Open the secure form in a new tab ↗';status.append(fallback);},12000);
+ const embedId=crypto.randomUUID();
+ const selected=new URLSearchParams(location.search).get('program');
+ const url=new URL(frame.dataset.src!,location.href);url.searchParams.set('embedId',embedId);url.searchParams.set('parentOrigin',location.origin);
+ if(selected&&Object.prototype.hasOwnProperty.call(programOptions,selected))url.searchParams.set('program',selected);
+ frame.src=url.href;
+ const link=frame.closest('.form-panel')?.querySelector<HTMLAnchorElement>('.caption a');
+ if(link){const direct=new URL(url);direct.searchParams.delete('embedId');direct.searchParams.delete('parentOrigin');link.href=direct.href;}
+ let peer:Window|null=null;let previous:HTMLElement|null=null;
+ const dialog=document.querySelector<HTMLDialogElement>('#enquiry-success')!;
+ const receipt=document.createElement('p');receipt.tabIndex=-1;receipt.hidden=true;receipt.className='privacy-note';frame.after(receipt);
+ window.addEventListener('message',event=>{
+  const message=event.data;
+  if(!message||message.channel!=='samkhya-enquiry'||message.embedId!==embedId)return;
+  let hostname;try{hostname=new URL(event.origin).hostname;}catch{return;}
+  const allowed=event.origin===location.origin||event.origin==='https://script.google.com'||(event.origin.startsWith('https://')&&(hostname==='script.googleusercontent.com'||hostname.endsWith('-script.googleusercontent.com')));
+  if(!allowed||!event.source)return;
+  if(peer&&event.source!==peer)return;
+  if(message.type!=='resize'&&message.type!=='saved')return;
+  if(message.type==='resize'){
+   if(!Number.isFinite(message.height)||message.height<100||message.height>6000)return;
+   ready();peer=event.source as Window;frame.style.height=`${Math.ceil(message.height)+12}px`;
+  }else{
+   if(!/^[0-9a-f-]{36}$/i.test(message.reference))return;
+   ready();
+   peer=event.source as Window;
+   const copy=message.prototype?'Test enquiry saved in the prototype spreadsheet.':'Thank you. Your enquiry has been saved.';
+   receipt.textContent=copy+' Reference: '+message.reference;receipt.hidden=false;
+   document.querySelector('#success-copy')!.textContent=copy;
+   document.querySelector('#success-reference')!.textContent=message.reference;
+   previous=document.activeElement as HTMLElement;dialog.showModal();
+   (event.source as Window).postMessage({channel:'samkhya-enquiry',embedId,type:'ack'},event.origin);
+  }
+ });
+ document.querySelector('#success-close')?.addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('close',()=>{if(previous===frame)receipt.focus();else previous?.focus();});
+}
+</script>
+
+<style>
+.enquiry-embed{position:relative;background:#fff}.form-skeleton{display:none;padding:28px 24px}.enquiry-embed[data-loading=true]{min-height:680px}.enquiry-embed[data-loading=true] .form-skeleton{display:block}.enquiry-embed[data-loading=true] .custom-enquiry-frame{position:absolute;inset:0;visibility:hidden}.shimmer{display:block;background:#eaf0f7;border-radius:6px;position:relative;overflow:hidden}.shimmer::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,#ffffffc9 50%,transparent 80%);transform:translateX(-100%);animation:form-shimmer 1.8s ease-in-out infinite}.skeleton-heading{height:23px;width:45%;margin-bottom:15px}.skeleton-line{height:12px;width:75%;margin-bottom:32px}.skeleton-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 18px;margin-bottom:32px}.skeleton-label{height:11px;width:45%;margin-bottom:10px}.skeleton-input{height:45px}.skeleton-area{height:90px;margin:20px 0}.skeleton-button{height:44px;width:170px}.form-loading-status{margin:0;padding:12px 24px 24px;font-size:.8rem;color:#526580}.form-loading-status[hidden]{display:none}@keyframes form-shimmer{to{transform:translateX(100%)}}@media(max-width:480px){.skeleton-grid{grid-template-columns:1fr;gap:18px}.form-skeleton{padding:22px 16px}.enquiry-embed[data-loading=true]{min-height:1050px}.form-loading-status{padding-inline:16px}}@media(prefers-reduced-motion:reduce){.shimmer::after{animation:none;display:none}}
+</style>

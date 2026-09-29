@@ -1,0 +1,159 @@
+{
+  "stages": [
+    {
+      "title": "Idea & opportunity",
+      "summary": "Define a problem worth investigating.",
+      "work": "Describe the user, the situation, the existing workaround and the consequence of leaving the problem unsolved.",
+      "output": "Opportunity brief",
+      "question": "Is the problem specific enough to investigate?",
+      "icon": "lightbulb",
+      "topics": [
+        "Problem framing and opportunity statements",
+        "User segments, alternatives and current workarounds",
+        "Assumption mapping and falsifiable hypotheses"
+      ],
+      "tools": [
+        "Interview notes \u2014 capture observed problems",
+        "Assumption map \u2014 rank uncertainty and impact"
+      ],
+      "lab": "Choose a specific customer problem. Write three hypotheses and define what evidence would disprove each one.",
+      "criteria": [
+        "Problem describes a user and a situation",
+        "Hypothesis can be tested without building a product"
+      ]
+    },
+    {
+      "title": "Customer validation",
+      "summary": "Replace assumptions with observations.",
+      "work": "Prepare neutral interview questions, speak with potential users and separate evidence from enthusiasm. Record disconfirming feedback too.",
+      "output": "Interview guide and validation summary",
+      "question": "What changed after speaking with users?",
+      "icon": "users",
+      "topics": [
+        "Neutral interview questions and avoiding leading prompts",
+        "Observation, sampling limits and consent",
+        "Evidence synthesis and problem prioritisation"
+      ],
+      "tools": [
+        "Shared document \u2014 interview guide and anonymised notes",
+        "Spreadsheet \u2014 evidence matrix and recurring patterns"
+      ],
+      "lab": "Create a focused interview guide. Prepare for discovery conversations, then synthesise the evidence without turning opinions into demand claims.",
+      "criteria": [
+        "Separate quotes, observations and interpretations",
+        "Record contrary evidence and gaps in the sample"
+      ]
+    },
+    {
+      "title": "Business model",
+      "summary": "Explain who benefits and who may pay.",
+      "work": "Map the value proposition, alternatives, distribution channels, pricing hypothesis and early cost assumptions.",
+      "output": "Business model canvas",
+      "question": "Which commercial assumption is least tested?",
+      "icon": "chart",
+      "topics": [
+        "Value propositions and competing alternatives",
+        "Pricing hypotheses and distribution channels",
+        "Cost drivers and first-pass unit economics"
+      ],
+      "tools": [
+        "Business Model Canvas \u2014 connect users, value and operations",
+        "Spreadsheet \u2014 price, cost and sensitivity scenarios"
+      ],
+      "lab": "Compare two ways to deliver an agreed service. Change demand and support assumptions to see where each model stops making sense.",
+      "criteria": [
+        "Distinguish payer from user",
+        "Show assumptions and sensitivity, not unsupported revenue projections"
+      ]
+    },
+    {
+      "title": "MVP design & build",
+      "summary": "Test one useful promise.",
+      "work": "Choose the smallest prototype that answers a question. Define scope, a success signal and a short user-testing plan before adding features.",
+      "output": "Prototype and experiment plan",
+      "question": "What learning would justify the next build?",
+      "icon": "layers",
+      "topics": [
+        "Experiment design and MVP boundaries",
+        "User flows, acceptance criteria and technical feasibility",
+        "Prototype testing and accessible interaction"
+      ],
+      "tools": [
+        "Paper or Figma \u2014 test a workflow before coding",
+        "Python / React \u2014 optional working prototype",
+        "Git \u2014 document experiment changes"
+      ],
+      "lab": "Prototype the route from finding a slot to receiving confirmation. Give a participant a task and observe where they get stuck.",
+      "criteria": [
+        "Test one clear value hypothesis",
+        "Define a measurable success signal before running the test"
+      ]
+    },
+    {
+      "title": "Pilot & go-to-market",
+      "summary": "Find a small, relevant first audience.",
+      "work": "Prepare a controlled pilot, onboarding instructions and feedback collection. Define what a successful first use looks like.",
+      "output": "Pilot plan and onboarding checklist",
+      "question": "Can a first user reach value without the founder explaining every step?",
+      "icon": "rocket",
+      "topics": [
+        "Pilot scope and participant selection",
+        "Onboarding, support and feedback handling",
+        "Data boundaries, permissions and rollback planning"
+      ],
+      "tools": [
+        "Pilot checklist \u2014 responsibilities and stop conditions",
+        "Shared feedback log \u2014 issues and observed outcomes"
+      ],
+      "lab": "Prepare a small pilot plan with entry criteria, a contact person and a manual fallback when a booking cannot be completed.",
+      "criteria": [
+        "User expectations and support ownership are explicit",
+        "Pilot has a stop or rollback condition"
+      ]
+    },
+    {
+      "title": "Traction & learning",
+      "summary": "Measure what people actually do.",
+      "work": "Review adoption, repeat use, user feedback and costs. Use a decision log to choose whether to iterate, narrow the problem or stop.",
+      "output": "Evidence review and iteration backlog",
+      "question": "Are the signals stronger than vanity metrics?",
+      "icon": "flask",
+      "topics": [
+        "Activation, repeat use and meaningful metrics",
+        "Qualitative feedback alongside quantitative signals",
+        "Iteration, pivot and stop decisions"
+      ],
+      "tools": [
+        "Spreadsheet \u2014 simple funnel and cohort observations",
+        "Decision log \u2014 evidence behind the next experiment"
+      ],
+      "lab": "Review a pilot: 20 invitations, 8 first uses and 3 repeat users. Identify what you can conclude and what requires a follow-up conversation.",
+      "criteria": [
+        "Keep sample size and time window visible",
+        "Do not confuse interest, usage and willingness to pay"
+      ]
+    },
+    {
+      "title": "Readiness & next steps",
+      "summary": "Prepare a credible next conversation.",
+      "work": "Document the product, delivery risks, operating needs and learning to date. Shape a clear narrative for collaborators or potential supporters.",
+      "output": "Delivery case study and next-step brief",
+      "question": "What is demonstrated, what is assumed and what still needs work?",
+      "icon": "target",
+      "topics": [
+        "Product and technical readiness",
+        "Operational ownership and unresolved risks",
+        "Demo narratives and evidence-backed next steps"
+      ],
+      "tools": [
+        "Readiness checklist \u2014 gaps and ownership",
+        "Demo / brief \u2014 explain the problem, evidence and next ask"
+      ],
+      "lab": "Prepare a five-minute demonstration and a one-page next-step brief. Separate what works now from what needs resources or more validation.",
+      "criteria": [
+        "Claims are traceable to evidence",
+        "Next ask is specific, bounded and justified"
+      ]
+    }
+  ]
+}

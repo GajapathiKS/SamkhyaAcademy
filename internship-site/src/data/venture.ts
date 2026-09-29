@@ -1,0 +1,1 @@
+import {z} from 'astro/zod'; import data from '../content/venture.json'; export const venture=z.object({stages:z.array(z.object({title:z.string(),summary:z.string(),work:z.string(),output:z.string(),question:z.string(),icon:z.string(),topics:z.array(z.string()),tools:z.array(z.string()),lab:z.string(),criteria:z.array(z.string())})).length(7)}).parse(data);

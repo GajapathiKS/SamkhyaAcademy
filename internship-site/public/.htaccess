@@ -1,0 +1,28 @@
+# Directory pages provide extension-free URLs without an application server.
+DirectoryIndex index.html
+Options -Indexes
+ErrorDocument 404 /404.html
+
+# Canonical HTTPS address for the academy's main domain only.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?samkhyaacademy\.com$ [NC]
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\.samkhyaacademy\.com$ [NC]
+  RewriteRule ^ https://samkhyaacademy.com%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  SetEnvIfNoCase Host "^test\.samkhyaacademy\.com(?::[0-9]+)?$" staging_host
+  Header always set X-Robots-Tag "noindex, nofollow, noarchive" env=staging_host
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Keep bookmarks working after moving content into its program.
+RedirectMatch 301 ^/internship/?$ /programs/ai-engineering-internship/
+RedirectMatch 301 ^/curriculum/?$ /programs/ai-engineering-internship/curriculum/
+RedirectMatch 301 ^/projects/?$ /programs/ai-engineering-internship/projects/
+RedirectMatch 301 ^/career-preparation/?$ /programs/ai-engineering-internship/career-preparation/

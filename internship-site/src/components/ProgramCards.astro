@@ -1,0 +1,8 @@
+---
+import {getCollection} from 'astro:content';
+import {catalog,programOrder} from '../data/catalog';
+import Art from './Art.astro';
+import Icon from './Icon.astro';
+const programs=(await getCollection('programs',({data})=>data.status!=='draft')).sort((a,b)=>programOrder.indexOf(a.data.href)-programOrder.indexOf(b.data.href));
+---
+<div class="catalog-grid">{programs.map(({data:p})=><article class="catalog-card"><a class="catalog-image" href={p.href} tabindex="-1" aria-hidden="true"><Art name={p.image} alt="" /></a><div class="catalog-copy"><p class="eyebrow"><Icon name={p.status==='active'?'code':'network'} />{catalog[p.href].label}</p><h2><a href={p.href}>{p.title}</a></h2><p>{p.summary}</p><div class="catalog-facts"><span><Icon name="book" />{catalog[p.href].facts[0]}</span><span><Icon name="layers" />{catalog[p.href].facts[1]}</span></div><div class="tags">{catalog[p.href].tags.map(t=><span>{t}</span>)}</div><div class="catalog-status"><Icon name={p.status==='active'?'message':'clock'} /><span>{p.href==='/venture-studio/'?'Start with a non-confidential idea brief':'Discuss scope and teaching arrangements'}</span></div><a class="button" href={p.href}>Explore the program <Icon name="arrowRight" /></a></div></article>)}</div>

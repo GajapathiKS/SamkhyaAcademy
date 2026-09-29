@@ -1,0 +1,46 @@
+---
+import arrowRight from 'lucide-static/icons/arrow-right.svg?raw';
+import arrowUpRight from 'lucide-static/icons/arrow-up-right.svg?raw';
+import arrowDown from 'lucide-static/icons/arrow-down.svg?raw';
+import code from 'lucide-static/icons/code-xml.svg?raw';
+import database from 'lucide-static/icons/database.svg?raw';
+import brain from 'lucide-static/icons/brain-circuit.svg?raw';
+import layers from 'lucide-static/icons/layers.svg?raw';
+import network from 'lucide-static/icons/network.svg?raw';
+import book from 'lucide-static/icons/book-open.svg?raw';
+import folder from 'lucide-static/icons/folder-git-2.svg?raw';
+import check from 'lucide-static/icons/check.svg?raw';
+import shield from 'lucide-static/icons/shield-check.svg?raw';
+import message from 'lucide-static/icons/messages-square.svg?raw';
+import users from 'lucide-static/icons/users.svg?raw';
+import compass from 'lucide-static/icons/compass.svg?raw';
+import clock from 'lucide-static/icons/clock-3.svg?raw';
+import search from 'lucide-static/icons/search.svg?raw';
+import file from 'lucide-static/icons/file-text.svg?raw';
+import menu from 'lucide-static/icons/menu.svg?raw';
+import plus from 'lucide-static/icons/plus.svg?raw';
+import chevron from 'lucide-static/icons/chevron-right.svg?raw';
+import sparkles from 'lucide-static/icons/sparkles.svg?raw';
+import target from 'lucide-static/icons/target.svg?raw';
+import mail from 'lucide-static/icons/mail.svg?raw';
+import phone from 'lucide-static/icons/phone.svg?raw';
+import satellite from 'lucide-static/icons/satellite.svg?raw';
+import orbit from 'lucide-static/icons/orbit.svg?raw';
+import radio from 'lucide-static/icons/radio-tower.svg?raw';
+import battery from 'lucide-static/icons/battery-charging.svg?raw';
+import cpu from 'lucide-static/icons/cpu.svg?raw';
+import thermometer from 'lucide-static/icons/thermometer.svg?raw';
+import rocket from 'lucide-static/icons/rocket.svg?raw';
+import flask from 'lucide-static/icons/flask-conical.svg?raw';
+import chart from 'lucide-static/icons/chart-no-axes-combined.svg?raw';
+import lightbulb from 'lucide-static/icons/lightbulb.svg?raw';
+import wrench from 'lucide-static/icons/wrench.svg?raw';
+import share from 'lucide-static/icons/share-2.svg?raw';
+import copy from 'lucide-static/icons/copy.svg?raw';
+import chat from 'lucide-static/icons/message-circle.svg?raw';
+const icons: Record<string,string> = { share, copy, chat, satellite, orbit, radio, battery, cpu, thermometer, rocket, flask, chart, lightbulb, wrench, mail, phone, arrowRight, arrowUpRight, arrowDown, code, database, brain, layers, network, book, folder, check, shield, message, users, compass, clock, search, file, menu, plus, chevron, sparkles, target };
+interface Props { name: string; }
+const { name } = Astro.props;
+if (!icons[name]) throw new Error(`Unknown icon: ${name}`);
+---
+<span class="icon" aria-hidden="true" set:html={icons[name]} />

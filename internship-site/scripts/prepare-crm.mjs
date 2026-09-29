@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+const root='integrations/google-apps-script/';const core=await fs.readFile(root+'CrmCore.gs','utf8');const adapter=(await fs.readFile(root+'Crm.gs','utf8'))+'\n'+await fs.readFile(root+'CrmDashboard.gs','utf8');
+let bound=adapter.replace(/function crmKind_\(\)\{[^\n]+/,'function crmKind_(){return SpreadsheetApp.getActiveSpreadsheet().getName().includes("Venture")?"venture":"program";}').replace(/function crmBook_\(kind\)\{[^\n]+/,'function crmBook_(kind){return SpreadsheetApp.getActiveSpreadsheet();}').replace(/function crmSource_\(book,kind\)\{[^\n]+/,'function crmSource_(book,kind){var s=book.getSheetByName("Enquiries")||book.getSheetByName("Source Responses");if(!s)throw Error("Missing source");return s;}');
+bound='/** @OnlyCurrentDoc */\n'+core+'\n'+bound+'\nfunction safeCell_(v){var s=String(v==null?"":v);return /^[\\s]*[=+\\-@]/.test(s)?"\\\'"+s:s;}\nfunction onEdit(e){crmOnEdit(e);if(e&&e.source.getSheetByName("Dashboard")&&e.range.getSheet().getName()==="Pipeline")e.source.getSheetByName("Dashboard").getRange("A3").setValue("Pipeline updated — use Academy CRM → Refresh CRM");}\n';
+await fs.writeFile(root+'BoundCRM.gs',bound);
+let intake=core+'\n'+adapter;for(const name of ['onOpen','setupCrm','refreshCrm','crmOnEdit','reviewRetention'])intake=intake.replaceAll(new RegExp('\\b'+name+'\\b','g'),name+'_');await fs.writeFile(root+'IntakeCRM.gs',intake);
+const rollout=core+'\n'+adapter+'\n'+await fs.readFile(root+'CrmRollout.gs','utf8')+'\n'+await fs.readFile(root+'CrmSamples.gs','utf8');
+const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+for(const [name,code] of [['bound',bound],['review',rollout],['intake',intake]])await fs.writeFile('artifacts/crm-transfer/'+name+'.html','<!doctype html><meta charset="utf-8"><label>CRM source<textarea style="width:95vw;height:90vh">'+escape(code)+'</textarea></label>');
+console.log('Generated separate bound and private-only intake CRM packages.');

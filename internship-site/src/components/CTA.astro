@@ -1,0 +1,8 @@
+---
+import SiteLink from './SiteLink.astro';
+import Icon from './Icon.astro';
+import {tracks} from '../data/programs';
+const current=Object.values(tracks).find(p=>Astro.url.pathname.startsWith('/programs/'+p.slug+'/'));
+const enquiryHref=current?.enquiry.state==='open'?current.enquiry.href:'/enquire/';
+---
+<section class="container section"><div class="cta-panel"><div><p class="eyebrow light">YOUR NEXT CHAPTER</p><h2>Start with a question.<br />Leave with a direction.</h2><p>Choose a program, bring your questions and discuss the learning arrangements. For a college group or startup advisory, start with your goals and the support you need.</p></div><SiteLink class="button white" href={enquiryHref}>Enquire about a program <Icon name="arrowUpRight" /></SiteLink><SiteLink class="text-link" href="/contact/">Talk to the academy <Icon name="arrowRight" /></SiteLink></div></section>

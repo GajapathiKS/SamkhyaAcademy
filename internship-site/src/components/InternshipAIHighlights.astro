@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+const base='/programs/ai-engineering-internship/';
+const highlights=[
+ {icon:'search',title:'Build with RAG',label:'ANSWERS WITH EVIDENCE',description:'Turn sample documents into a searchable knowledge source. Retrieve relevant passages, generate a cited answer, and recognise when the evidence is not enough.',tools:'Embeddings · PostgreSQL · pgvector',href:'projects/#rag',link:'Explore the RAG project'},
+ {icon:'compass',title:'Give AI useful tools',label:'ACTIONS WITH HUMAN REVIEW',description:'Connect tool calling and state in a guided LangGraph workflow. Inspect the proposed action, handle failed calls, and keep a person in control.',tools:'Tool calling · LangGraph · Human approval',href:'curriculum/#module-6',link:'Explore agentic workflows'},
+ {icon:'network',title:'Coordinate AI roles',label:'COLLABORATION WITH LIMITS',description:'Connect researcher, writer, and reviewer roles over approved material. Trace the hand-offs and compare the result with a simpler approach.',tools:'Shared state · Bounded execution · Evaluation',href:'projects/#agents',link:'Explore the agent project'},
+];
+---
+<section class="container section internship-ai"><div class="section-heading"><div><p class="eyebrow">THE AI CAPABILITIES YOU’RE BUILDING TOWARDS</p><h2>Learn the foundations.<br />Build something intelligent.</h2></div><p>Explore ideas used in AI engineering through beginner-friendly projects. Python, full-stack practice, and DSA give you the foundation to understand what you build.</p></div><div class="three-grid">{highlights.map(h=><article class="feature"><span class="feature-icon"><Icon name={h.icon} /></span><p class="eyebrow">{h.label}</p><h3>{h.title}</h3><p>{h.description}</p><p class="ai-tools">{h.tools}</p><a class="text-link" href={base+h.href}>{h.link}<Icon name="arrowRight" /></a></article>)}</div><div class="inline-note"><Icon name="shield" /><p><strong>Build it. Check it. Explain it.</strong> Practise citations, unsupported questions, failed tools, and basic cost awareness as part of the projects. The 16-week journey builds towards a demonstrable capstone with evaluation notes and a portfolio case study.</p></div></section>
+<style>
+ .internship-ai .feature>.eyebrow{font-size:.6rem;margin:20px 0 10px}
+ .internship-ai .feature h3{margin-bottom:14px}
+ .internship-ai .ai-tools{font-size:.73rem;color:#4931ee;border-top:1px solid #e2e3ef;padding-top:17px;margin-top:20px}
+ .internship-ai .text-link{font-size:.78rem;margin-top:14px}
+</style>

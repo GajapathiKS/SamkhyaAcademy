@@ -1,0 +1,7 @@
+---
+import CoursePage from '../../../components/ExtendedCoursePage.astro';
+import {extendedPrograms} from '../../../data/extendedPrograms';
+export function getStaticPaths(){return extendedPrograms.map(course=>({params:{course:course.slug},props:{course}}));}
+const {course}=Astro.props;
+---
+<CoursePage course={course} section="overview" />

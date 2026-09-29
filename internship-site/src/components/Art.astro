@@ -1,0 +1,9 @@
+---
+interface Props { name: string; alt: string; priority?: boolean; class?: string; }
+const {name, alt, priority = false, class: className = ''} = Astro.props;
+---
+<div class={`art ${className}`}><picture>
+ <source type="image/avif" srcset={`/images/${name}-640.avif 640w, /images/${name}-1200.avif 1200w`} sizes="(max-width: 850px) 100vw, 50vw" />
+ <img src={`/images/${name}-1200.webp`} srcset={`/images/${name}-640.webp 640w, /images/${name}-1200.webp 1200w`} sizes="(max-width: 850px) 100vw, 50vw" width="1200" height="800" alt={alt} loading={priority ? 'eager' : 'lazy'} fetchpriority={priority ? 'high' : 'auto'} decoding="async" />
+</picture>
+</div>

@@ -1,0 +1,27 @@
+{
+  "name": "samkhya-internship-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "node scripts/prepare-enquiry.mjs && astro build && node scripts/prepare-social.mjs",
+    "build:test": "node scripts/build-test.mjs",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check",
+    "verify": "node scripts/verify.mjs",
+    "launch:check": "node scripts/launch-check.mjs",
+    "test:enquiry": "node scripts/test-enquiry.mjs",
+    "test:crm": "node scripts/test-crm.mjs && node scripts/test-crm-adapter.mjs",
+    "test:seo": "node scripts/test-seo.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.3.2",
+    "lucide-static": "^1.44.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.0",
+    "sharp": "^0.35.4",
+    "typescript": "^5.9.0"
+  }
+}

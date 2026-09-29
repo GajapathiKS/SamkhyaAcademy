@@ -1,0 +1,8 @@
+---
+import SiteLink from './SiteLink.astro';
+import Icon from './Icon.astro';
+import {tracks, programUrl, type Track} from '../data/programs';
+interface Props {track:Track;}
+const {track}=Astro.props; const p=tracks[track];
+---
+<section class="container section"><div class="cta-panel"><div><p class="eyebrow light">{p.shortTitle}</p><h2>Explore your next step.</h2><p>Read the audience, preparation and planned outputs. Online enquiries are unavailable.</p></div><div class="actions">{p.enquiry.state === 'open' ? <SiteLink class="button white" href={p.enquiry.href}>{track==='fde'?'Enquire about FDE':track==='space'?'Enquire about space tech':'Enquire about the internship'} <Icon name="arrowUpRight" /></SiteLink> : <SiteLink class="button white" href="/programs/">Explore all programs <Icon name="arrowRight" /></SiteLink>}<SiteLink class="text-link" href={programUrl(track,'curriculum')}>Explore the curriculum <Icon name="book" /></SiteLink></div></div></section>

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.astro/
+artifacts/
+# Local builds, validation captures, and delivery packages
+dist-test/
+outputs/
+docs/validation/
+# Private client operations and handover material (not for this public repository)
+integrations/crm-portal/
+scripts/test-portal.mjs
+integrations/google-apps-script/*HANDOVER.md
+LOCAL-REVIEW.md
+teaching/

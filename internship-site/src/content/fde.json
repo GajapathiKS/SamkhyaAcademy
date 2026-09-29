@@ -1,0 +1,467 @@
+{
+  "modules": [
+    {
+      "title": "Engineering readiness",
+      "icon": "code",
+      "label": "Optional readiness bridge",
+      "summary": "Bring your existing engineering experience into a common working environment.",
+      "topics": [
+        "API contracts, HTTP, JSON, and asynchronous requests",
+        "Relational data modelling and SQL",
+        "Git workflows, unit tests, and dependency isolation",
+        "Service configuration, containers, and cloud fundamentals"
+      ],
+      "tools": [
+        "Python — reference backend language",
+        "FastAPI + Pydantic — typed service contracts",
+        "PostgreSQL — application data",
+        "pytest + Git — repeatable checks and versioned work"
+      ],
+      "practice": "Connect a small React client to a Python service and a database. Introduce an unavailable dependency, return a useful error, and add a regression test.",
+      "deliverables": [
+        "A running service-integration exercise",
+        "A request/data-flow diagram",
+        "Setup instructions and boundary-case tests"
+      ],
+      "criteria": [
+        "Another engineer can run the exercise from its README",
+        "Invalid input is rejected at the API boundary",
+        "A failed dependency is handled and tested"
+      ],
+      "question": "What changes when a dependency is slow instead of unavailable?"
+    },
+    {
+      "title": "AI application engineering",
+      "icon": "brain",
+      "label": "Ground answers in evidence",
+      "summary": "Build applications that use model capabilities deliberately and retrieve the right evidence.",
+      "topics": [
+        "LLM behaviour, context windows, prompts, and context engineering",
+        "Validated structured outputs and tool arguments",
+        "Embeddings, chunking, metadata, and document ingestion",
+        "Retrieval quality, source citations, abstention, and updates"
+      ],
+      "tools": [
+        "Model API — generation and embeddings, called server-side",
+        "Pydantic — output validation",
+        "PostgreSQL + pgvector — permission-filtered retrieval",
+        "Python + pytest — ingestion and evaluation cases"
+      ],
+      "practice": "Build a document assistant over sample policies. Compare two chunking approaches on the same questions, then test an unsupported question and a restricted document.",
+      "deliverables": [
+        "An ingestion and retrieval pipeline",
+        "Cited answers and explicit insufficient-evidence responses",
+        "A small evaluation dataset and retrieval comparison"
+      ],
+      "criteria": [
+        "Citations refer to supporting source passages",
+        "Restricted evidence never reaches an unauthorised request",
+        "Unsupported questions do not produce invented answers"
+      ],
+      "question": "How would you tell whether a wrong answer began with retrieval or generation?"
+    },
+    {
+      "title": "Agents and multimodal applications",
+      "icon": "network",
+      "label": "Knowledge becomes supervised action",
+      "summary": "Coordinate tools and people, then extend the interaction beyond typed text.",
+      "topics": [
+        "State, tasks, memory, tool contracts, and bounded execution",
+        "MCP tools, resources, and integration boundaries",
+        "Human approval, retries, idempotency, and multi-agent tradeoffs",
+        "Speech-to-text, text-to-speech, vision, and document understanding"
+      ],
+      "tools": [
+        "LangGraph — stateful workflows, checkpoints, and approval",
+        "MCP — a standard interface to scoped tools and resources",
+        "Pydantic — validated tool inputs and outputs",
+        "Speech/vision model APIs — transcription and document interpretation"
+      ],
+      "practice": "Build a request workflow that prepares a proposed update and pauses for approval. Add a small speech or document-image input exercise, retaining a visible transcript or extracted evidence for review.",
+      "deliverables": [
+        "A workflow state diagram and approval demonstration",
+        "A scoped MCP adapter using a simulated tool",
+        "A multimodal exercise with uncertainty and fallback handling"
+      ],
+      "criteria": [
+        "A rejected action does not execute",
+        "Retries do not duplicate completed actions",
+        "Step limits stop a looping workflow",
+        "Low-confidence extracted content is surfaced for review"
+      ],
+      "question": "When does splitting a task across agents add value over a deterministic pipeline?"
+    },
+    {
+      "title": "Production AI engineering",
+      "icon": "shield",
+      "label": "Measure, operate, improve",
+      "summary": "Move beyond a convincing demo to a system whose behaviour you can inspect.",
+      "topics": [
+        "Evaluation datasets, regression checks, and failure analysis",
+        "Guardrails, prompt injection, privacy, and server-side secrets",
+        "Tracing, latency budgets, token cost, and operational signals",
+        "Docker, CI checks, release validation, and rollback"
+      ],
+      "tools": [
+        "Langfuse — traces and evaluation examples",
+        "pytest — regression tests and scoring assertions",
+        "Docker — repeatable application packaging",
+        "Git + CI workflow — tested changes and release checks"
+      ],
+      "practice": "Run two application versions against the same dataset. Diagnose a failing trace, compare quality and cost, and rehearse a failed release followed by rollback in a learning environment.",
+      "deliverables": [
+        "An evaluation report with observed results",
+        "Trace examples and an incident note",
+        "A containerised application and release checklist"
+      ],
+      "criteria": [
+        "Results can be reproduced on the same inputs",
+        "The report includes failures and limitations",
+        "Secrets are excluded from source and browser code",
+        "Rollback instructions are actionable"
+      ],
+      "question": "What evidence would make you hold a release even if its average answer quality improved?"
+    },
+    {
+      "title": "Enterprise integration",
+      "icon": "database",
+      "label": "Fit the systems already in place",
+      "summary": "Connect AI to identity, data, and operational systems without losing their boundaries.",
+      "topics": [
+        "OAuth/OIDC, identity propagation, and role-based access",
+        "REST APIs, databases, webhooks, and adapter contracts",
+        "SharePoint, CRM, ERP, and service-system integration patterns",
+        "Least privilege, audit events, rate limits, and legacy-system failures"
+      ],
+      "tools": [
+        "FastAPI — typed adapters and service boundaries",
+        "OAuth/OIDC + RBAC — identity and authorisation concepts",
+        "PostgreSQL — permitted records and audit receipts",
+        "MCP + fixture APIs — scoped enterprise integration exercises"
+      ],
+      "practice": "Implement a read-only adapter for a simulated enterprise service. Propagate identity, deny a restricted record, and prepare a write proposal that requires explicit approval before simulated execution.",
+      "deliverables": [
+        "An adapter contract and integration map",
+        "Allowed/denied access tests",
+        "An execution receipt and audit trail"
+      ],
+      "criteria": [
+        "Permissions are checked outside model-generated text",
+        "A denied request cannot disclose restricted content",
+        "Timeouts and rate limits have defined handling",
+        "A write requires authorised approval"
+      ],
+      "question": "Why is a valid tool argument not enough to authorise an action?"
+    },
+    {
+      "title": "Solution architecture and forward deployment",
+      "icon": "compass",
+      "label": "Own the delivery story",
+      "summary": "Frame the right problem, choose a defensible approach, and prepare another team to use it.",
+      "topics": [
+        "Customer discovery, workflow mapping, and a measurable value case",
+        "RAG vs fine-tuning vs smaller models",
+        "Agents vs deterministic workflows; build vs integrate",
+        "Pilot acceptance, adoption, handover, and iteration planning"
+      ],
+      "tools": [
+        "Architecture diagrams — components, trust boundaries, and data flow",
+        "Evaluation reports — evidence for a pilot decision",
+        "Runbooks — deployment, recovery, and ownership",
+        "Python-led capstone — one integrated delivery case"
+      ],
+      "practice": "Take an illustrative customer brief through discovery, architecture, an integrated pilot, evaluation, and handover. Explain a tradeoff to a technical reviewer and a non-technical stakeholder.",
+      "deliverables": [
+        "A scoped problem statement and acceptance criteria",
+        "An integrated pilot and delivery case study",
+        "A deployment runbook and handover presentation"
+      ],
+      "criteria": [
+        "Success criteria connect to the stated user problem",
+        "The design explains why simpler alternatives were rejected",
+        "The demo covers a failure as well as a successful path",
+        "The handover names limitations and next decisions"
+      ],
+      "question": "What would you measure before recommending that a pilot should expand?"
+    },
+    {
+      "title": "Retrieval quality & data operations",
+      "icon": "search",
+      "label": "Advanced retrieval lab",
+      "summary": "Keep a document assistant useful when its knowledge changes, access rules differ and retrieval is imperfect.",
+      "topics": [
+        "Document provenance, versioning, duplicate detection and incremental ingestion",
+        "Permission filters and deleted or outdated source material",
+        "Keyword and vector retrieval comparisons using a labelled question set",
+        "Retrieval recall, citation relevance, answer support and latency tradeoffs"
+      ],
+      "tools": [
+        "PostgreSQL + pgvector — compare filtered vector retrieval with a SQL baseline",
+        "Python + Pydantic — validate document metadata and ingestion contracts",
+        "pytest — regression checks for updates, deletions and permission boundaries",
+        "Langfuse — compare evaluation runs and inspect unsuccessful answers"
+      ],
+      "practice": "Extend the knowledge assistant with a versioned sample corpus. Update one document, remove another and restrict a third. Compare two retrieval strategies against a fixed question set, including questions the corpus cannot answer.",
+      "deliverables": [
+        "A repeatable ingestion and refresh command",
+        "A labelled retrieval dataset with expected sources and access context",
+        "A comparison report covering quality, unsupported answers and response time"
+      ],
+      "criteria": [
+        "Re-running ingestion does not create duplicate document versions",
+        "Deleted or restricted evidence is absent from relevant test answers",
+        "Reported improvements include failures and the evaluation sample size",
+        "Retrieval limitations are explained without treating a score as proof of correctness"
+      ],
+      "question": "How would you distinguish a retrieval failure from an answer-generation failure?"
+    },
+    {
+      "title": "Pilot delivery & operational handover",
+      "icon": "rocket",
+      "label": "Integrated delivery rehearsal",
+      "summary": "Bring the engineering work together in a small pilot that another team can evaluate, operate and improve.",
+      "topics": [
+        "Pilot success criteria, baseline measures and acceptance scenarios",
+        "Release checklists, configuration boundaries and rollback decisions",
+        "Incident triage, dependency failures and budget controls",
+        "User feedback, adoption checks and ownership after handover"
+      ],
+      "tools": [
+        "FastAPI + React — deliver the pilot workflow and explain its user experience",
+        "Docker — package a repeatable demonstration environment",
+        "pytest + Git — run acceptance checks and identify the reviewed release",
+        "Langfuse — inspect traces and compare the pilot against its evaluation baseline"
+      ],
+      "practice": "Run a simulated stakeholder review of the integrated capstone. Demonstrate its happy path, a denied action and an unavailable model service. Rehearse a rollback and ask another engineer to operate the pilot using only the handover pack.",
+      "deliverables": [
+        "A working pilot demonstration with explicit scope and exclusions",
+        "An acceptance report with evaluation results and known limitations",
+        "A deployment runbook, rollback checklist and ownership map",
+        "A delivery case study linking the original problem to decisions and evidence"
+      ],
+      "criteria": [
+        "Another engineer can reproduce the demonstration from the runbook",
+        "Failure paths are visible and actions remain within approval boundaries",
+        "The go / revise / pause decision is supported by measurable evidence",
+        "Handover separates completed work from future improvements and unresolved risks"
+      ],
+      "question": "What evidence would make you pause the pilot instead of recommending a wider rollout?"
+    }
+  ],
+  "tools": [
+    {
+      "icon": "code",
+      "title": "Python + FastAPI",
+      "purpose": "Build service boundaries",
+      "description": "Reference backend for APIs, integration adapters, and AI orchestration."
+    },
+    {
+      "icon": "check",
+      "title": "Pydantic + pytest",
+      "purpose": "Make contracts testable",
+      "description": "Validate structured output and check errors, permissions, and regressions."
+    },
+    {
+      "icon": "layers",
+      "title": "React",
+      "purpose": "Make the workflow usable",
+      "description": "Give users clear evidence, review states, and approval controls."
+    },
+    {
+      "icon": "database",
+      "title": "PostgreSQL + pgvector",
+      "purpose": "Connect data and knowledge",
+      "description": "Store application records and retrieve evidence with metadata filters."
+    },
+    {
+      "icon": "network",
+      "title": "LangGraph + MCP",
+      "purpose": "Coordinate tools and state",
+      "description": "Orchestrate bounded workflows and expose scoped integration interfaces."
+    },
+    {
+      "icon": "search",
+      "title": "Langfuse",
+      "purpose": "Inspect and evaluate",
+      "description": "Trace requests and compare behaviour using evaluation examples."
+    },
+    {
+      "icon": "folder",
+      "title": "Git + Docker",
+      "purpose": "Package repeatable work",
+      "description": "Version changes, run checks, and rehearse application deployment."
+    },
+    {
+      "icon": "brain",
+      "title": "Model APIs",
+      "purpose": "Language, speech, and vision",
+      "description": "Use server-side access; select provider versions before teaching."
+    }
+  ],
+  "projects": [
+    {
+      "id": "knowledge-assistant",
+      "title": "Permission-aware knowledge assistant",
+      "icon": "book",
+      "image": "ai-engineering",
+      "tag": "PROJECT 01 / KNOWLEDGE",
+      "summary": "Useful answers, grounded in the documents a person is allowed to see.",
+      "problem": "A service team searches scattered policies and ticket guidance. Some documents are restricted, sources disagree, and an unsupported answer can mislead the user.",
+      "user": "An internal service specialist looking for a sourced answer.",
+      "flow": [
+        "Request + identity",
+        "Permission-filtered retrieval",
+        "Evidence selection",
+        "Cited answer or abstention"
+      ],
+      "journey": [
+        "Ask a policy question in the application.",
+        "Retrieve only documents permitted for that user.",
+        "Read the answer with supporting source passages.",
+        "See an explicit limitation when evidence is missing or conflicting."
+      ],
+      "responsibilities": [
+        "React presents the question, citations, and limitation states.",
+        "FastAPI validates the request and applies authorisation.",
+        "PostgreSQL/pgvector retrieves permitted evidence.",
+        "The model composes an answer; evaluations inspect its grounding."
+      ],
+      "failures": [
+        "A restricted document is relevant but must remain inaccessible.",
+        "No passage supports the requested answer.",
+        "An ingested document contains instructions that attempt to override the application."
+      ],
+      "evidence": [
+        "A trust-boundary and retrieval diagram",
+        "Answerable, unanswerable, and restricted-source evaluation cases",
+        "A demo with citations and an insufficient-evidence response"
+      ],
+      "review": "No restricted evidence reaches an unauthorised request; answers cite sources and acknowledge missing support."
+    },
+    {
+      "id": "operations-workflow",
+      "title": "Approved operations workflow",
+      "icon": "network",
+      "image": "full-stack",
+      "tag": "PROJECT 02 / ACTION",
+      "summary": "Let AI prepare the next step. Keep authorisation explicit.",
+      "problem": "An operations request crosses several systems. A generated suggestion must not become an uncontrolled update, and retries must not duplicate an action.",
+      "user": "An operations reviewer deciding whether a proposed update should proceed.",
+      "flow": [
+        "Validated request",
+        "Scoped tool lookup",
+        "Proposed change",
+        "Human approval",
+        "Simulated execution + receipt"
+      ],
+      "journey": [
+        "Submit a request against a sample enterprise-system fixture.",
+        "Inspect the gathered records and proposed change.",
+        "Approve or reject the proposal.",
+        "Review the execution receipt or the reason no action was taken."
+      ],
+      "responsibilities": [
+        "LangGraph manages state, checkpoints, and the review boundary.",
+        "An MCP adapter exposes limited fixture tools.",
+        "Pydantic validates tool contracts; ordinary code enforces permissions.",
+        "A simulated service records idempotent execution and audit events."
+      ],
+      "failures": [
+        "The reviewer rejects the change.",
+        "A tool times out after execution; a retry must not duplicate it.",
+        "An unauthorised request attempts to use a write tool."
+      ],
+      "evidence": [
+        "A state diagram and approval walkthrough",
+        "Denied, rejected, timeout, and duplicate-request tests",
+        "A scoped adapter contract and execution receipts"
+      ],
+      "review": "Generated text is never treated as authorisation. A rejected action cannot execute and a retry cannot duplicate an approved update."
+    },
+    {
+      "id": "delivery-capstone",
+      "title": "From customer brief to AI pilot",
+      "icon": "compass",
+      "image": "knowledge-bridge",
+      "tag": "PROJECT 03 / DELIVERY CAPSTONE",
+      "summary": "Connect the system, the evidence, and the handover into one coherent delivery story.",
+      "problem": "A team has an AI idea but needs to know whether it helps a defined workflow and what operating it would require.",
+      "user": "A pilot sponsor and the engineers who would maintain the solution.",
+      "flow": [
+        "Discovery brief",
+        "Integrated pilot",
+        "Evaluation + traces",
+        "Deployment rehearsal",
+        "Handover + next decision"
+      ],
+      "journey": [
+        "Agree a narrow problem, user group, and acceptance criteria.",
+        "Demonstrate an integrated knowledge or action workflow.",
+        "Inspect quality, failure cases, latency, and cost evidence.",
+        "Rehearse deployment and recovery in a learning environment.",
+        "Present a recommendation with limitations and next steps."
+      ],
+      "responsibilities": [
+        "Python services and React deliver the user workflow.",
+        "PostgreSQL and scoped adapters provide application context.",
+        "Langfuse and test cases provide operational and quality evidence.",
+        "Docker, release notes, and a runbook support the handover."
+      ],
+      "failures": [
+        "The pilot misses one acceptance criterion.",
+        "A dependency becomes unavailable during the demonstration.",
+        "A proposed improvement adds cost without useful quality gains."
+      ],
+      "evidence": [
+        "A discovery brief and architecture decision record",
+        "Working demonstration and evaluation report",
+        "Deployment checklist, rollback notes, and delivery case study"
+      ],
+      "review": "The recommendation follows the evidence, including gaps. Another engineer can understand the deployment, recovery steps, and remaining limitations."
+    }
+  ],
+  "career": [
+    {
+      "icon": "compass",
+      "title": "Architecture interviews",
+      "subtitle": "Design under constraints",
+      "practice": "Compare retrieval, fine-tuning, smaller models, and deterministic workflows for a sample brief.",
+      "evidence": "A decision record with assumptions, alternatives, and tradeoffs."
+    },
+    {
+      "icon": "users",
+      "title": "Customer discovery",
+      "subtitle": "Ask before proposing",
+      "practice": "Practise a conversation that uncovers the user workflow, integration limits, and acceptance criteria.",
+      "evidence": "A scoped problem statement and questions that remain open."
+    },
+    {
+      "icon": "search",
+      "title": "Incident debugging",
+      "subtitle": "Follow the evidence",
+      "practice": "Trace a failed request across retrieval, model output, tools, and service boundaries.",
+      "evidence": "An incident note with a hypothesis, evidence, fix, and regression check."
+    },
+    {
+      "icon": "message",
+      "title": "Technical demonstrations",
+      "subtitle": "Explain to two audiences",
+      "practice": "Give a concise stakeholder walkthrough, then a deeper engineering explanation of the same system.",
+      "evidence": "A demo outline with a successful path, a failure path, and limitations."
+    },
+    {
+      "icon": "target",
+      "title": "Tradeoff conversations",
+      "subtitle": "Make a recommendation",
+      "practice": "Use evaluation results, latency, and cost to defend a pilot decision.",
+      "evidence": "A recommendation that shows why the evidence supports the next step."
+    },
+    {
+      "icon": "folder",
+      "title": "Delivery case studies",
+      "subtitle": "Present ownership",
+      "practice": "Connect discovery, architecture, implementation, evaluation, release, and handover.",
+      "evidence": "A portfolio case study that clearly separates your work from illustrative assumptions."
+    }
+  ]
+}

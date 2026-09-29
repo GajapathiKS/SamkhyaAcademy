@@ -1,0 +1,22 @@
+---
+import SiteLink from '../components/SiteLink.astro';
+import Layout from './Layout.astro';
+import Icon from '../components/Icon.astro';
+import LearningJourney from '../components/LearningJourney.astro';
+import CompletionRecognition from '../components/CompletionRecognition.astro';
+import { tracks, sections, programUrl, type Track } from '../data/programs';
+import '../styles/programs.css';
+interface Props { track:Track; section:string; title:string; description:string; }
+const {track, section, title, description} = Astro.props;
+const program = tracks[track];
+---
+<Layout title={title} description={description} enquiriesOpeningSoon={program.enquiry.state === 'closed'}>
+  <slot name="hero" />
+  <div class="program-context"><div class="container">
+    <div class="track-heading"><div><strong>{program.title}</strong></div><details class="track-picker"><summary><Icon name="layers" />Switch program<Icon name="chevron" /></summary><nav class="track-switch" aria-label="Choose your learning track">{(Object.keys(tracks) as Track[]).map(key=><SiteLink href={programUrl(key,section)} aria-current={key===track?'true':undefined}><Icon name={key==='leadership'?'users':key==='space'?'satellite':'code'}/>{tracks[key].shortTitle}</SiteLink>)}</nav></details></div>
+    <nav class="program-tabs" aria-label={`${program.shortTitle} sections`}>{sections.map(item=><SiteLink href={programUrl(track,item.id)} aria-current={section === item.id ? 'page' : undefined}><Icon name={item.icon} />{track==='leadership'&&item.id==='career-preparation'?'Leadership preparation':item.label}</SiteLink>)}</nav>
+  </div></div>
+  <div data-program={track}>{section === 'overview' && <LearningJourney />}<slot />{section === 'overview' && <CompletionRecognition programTitle={program.title} />}</div>
+</Layout>
+
+<style>.track-picker{position:relative;min-width:210px;z-index:5}.track-picker summary{display:flex;gap:10px;align-items:center;cursor:pointer;list-style:none;border:1px solid #e0e4ee;border-radius:9px;padding:10px 14px;font-size:.78rem;color:#23385d;background:#fff}.track-picker summary::-webkit-details-marker{display:none}.track-picker .track-switch{position:absolute;right:0;top:100%;width:320px;max-width:90vw;display:flex;flex-direction:column;align-items:stretch;background:white;box-shadow:0 12px 30px #16345b20;padding:10px;border:1px solid #e0e4ee;border-radius:10px}.track-picker .track-switch a{justify-content:flex-start;font-size:.75rem;padding:10px;min-height:42px}.track-picker summary:focus-visible{outline:3px solid #6550df;outline-offset:3px}@media(max-width:850px){.track-picker{width:100%}.track-picker .track-switch{position:static;width:100%;max-width:none;box-shadow:none;margin-top:8px}}</style>

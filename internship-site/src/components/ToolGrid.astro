@@ -1,0 +1,5 @@
+---
+import Icon from './Icon.astro';
+import {fde} from '../data/fde';
+---
+<div class="tool-grid">{fde.tools.map(t=><article class="tool-card"><span class="feature-icon"><Icon name={t.icon} /></span><div><h3>{t.title}</h3><p class="tool-purpose">{t.purpose}</p><p>{t.description}</p></div></article>)}</div>

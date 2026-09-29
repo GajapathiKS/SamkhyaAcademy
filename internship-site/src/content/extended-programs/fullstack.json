@@ -1,0 +1,404 @@
+{
+  "key": "fullstack",
+  "slug": "full-stack-development",
+  "title": "Full-Stack Development",
+  "shortTitle": "Full-Stack Development",
+  "image": "full-stack",
+  "headline": "Build the interface. Own the application.",
+  "intro": "Build complete web applications, from an engaging interface to APIs and data. Explore MEAN, MERN and Python-based development within one Full-Stack Development program, with a technology path shaped around your learning goals.",
+  "audience": "College students, graduates and developers changing stacks",
+  "bridge": "Beginners build web and programming foundations first. Working developers can use the readiness exercise to focus on unfamiliar layers, integration and production habits.",
+  "scope": "One program, multiple technology paths. Build with Angular or React on the frontend, and explore Node.js/Express, Python/FastAPI, .NET or Java on the backend. Put the shared foundations into practice through a focused project in your chosen stack. The learning path and project depth are agreed for the learner or group.",
+  "tags": [
+    "MEAN / MERN",
+    "Angular / React",
+    "APIs + databases",
+    "Python / .NET / Java"
+  ],
+  "paths": [
+    [
+      "MEAN: Angular + Node.js",
+      "Connect an Angular interface to Node.js and Express APIs with MongoDB. Build confidence across the complete JavaScript/TypeScript application."
+    ],
+    [
+      "MERN: React + Node.js",
+      "Build a React interface, connect Node.js and Express APIs, and model application data in MongoDB. Follow the same end-to-end engineering progression."
+    ],
+    [
+      "Python, .NET & Java backends",
+      "Explore Python/FastAPI, ASP.NET Core or Java/Spring Boot as backend paths. Connect an Angular or React frontend to clear API contracts and suitable application data storage."
+    ]
+  ],
+  "modules": [
+    {
+      "title": "Web & programming foundations",
+      "icon": "code",
+      "summary": "Understand the browser, the network and the language behind the interface.",
+      "topics": [
+        "Semantic HTML and responsive CSS",
+        "JavaScript variables, functions, arrays and async code",
+        "TypeScript types and errors",
+        "HTTP, JSON, Git and debugging"
+      ],
+      "tools": [
+        "Browser developer tools — inspect requests and layout",
+        "JavaScript + TypeScript — application logic",
+        "Git — versioned changes",
+        "VS Code — editing and debugging"
+      ],
+      "practice": "Build a responsive event-information page and a small interactive registration preview using sample data.",
+      "deliverables": [
+        "Accessible responsive page",
+        "Versioned repository",
+        "Browser-debugging notes"
+      ],
+      "criteria": [
+        "Forms have labels and keyboard access",
+        "Layouts work on small screens",
+        "Errors can be reproduced and explained"
+      ]
+    },
+    {
+      "title": "Interface design, accessibility & responsive layouts",
+      "icon": "layers",
+      "summary": "Build interfaces people can understand and operate across devices.",
+      "topics": [
+        "Semantic HTML and meaningful page structure",
+        "Responsive grids, typography and content hierarchy",
+        "Labels, validation messages, keyboard focus and status feedback",
+        "Loading, empty, success and failure states",
+        "Reusable components and design tokens"
+      ],
+      "tools": [
+        "HTML and CSS — create resilient responsive layouts",
+        "Browser accessibility tools — inspect names, roles and focus",
+        "Angular templates or React components — connect application state to clear feedback"
+      ],
+      "practice": "Design a course-search and application flow at mobile and desktop widths. Include an empty result, invalid form, slow request and successful submission without relying on colour alone.",
+      "deliverables": [
+        "Responsive interface and reusable component inventory",
+        "Keyboard walkthrough notes",
+        "Documented loading, empty and error states"
+      ],
+      "criteria": [
+        "Complete the core task with a keyboard",
+        "Keep text and controls usable at 320 pixels",
+        "Preserve entered values after recoverable validation errors"
+      ]
+    },
+    {
+      "title": "Frontend application development: Angular & React",
+      "icon": "layers",
+      "summary": "Compose a maintainable interface with real application states.",
+      "topics": [
+        "Component design with Angular templates or React JSX",
+        "Routing, forms and reusable interface patterns",
+        "Dependency injection in Angular; props, hooks and composition in React",
+        "HTTP integration and loading, empty, error and permission states"
+      ],
+      "tools": [
+        "Angular — components, routing, forms and dependency injection",
+        "React — components, props, hooks and composition",
+        "TypeScript — typed application models",
+        "Browser developer tools — network and runtime diagnosis"
+      ],
+      "practice": "Build a searchable opportunities interface with detail pages, validated forms and clearly differentiated loading and error states.",
+      "deliverables": [
+        "Frontend application in the chosen Angular or React path",
+        "Component and route map",
+        "UI behaviour checks"
+      ],
+      "criteria": [
+        "Routes can be opened directly",
+        "Invalid form input receives useful feedback",
+        "The interface handles slow or failed requests"
+      ]
+    },
+    {
+      "title": "State, asynchronous flows & client performance",
+      "icon": "network",
+      "summary": "Keep the screen consistent when requests are slow, repeated or cancelled.",
+      "topics": [
+        "Component state, shared state and clear ownership",
+        "Angular signals and observable streams; React state, effects and shared-state patterns",
+        "Debounced search and cancelling obsolete requests",
+        "Route loading, caching boundaries and stale data",
+        "Profiling rendering, bundle size and network requests"
+      ],
+      "tools": [
+        "Angular signals — model local and shared reactive state",
+        "RxJS — compose and cancel asynchronous streams",
+        "React hooks — manage state and synchronise with external systems",
+        "Browser performance and network panels — inspect bottlenecks"
+      ],
+      "practice": "Build searchable paginated results with loading feedback. Delay responses so older requests finish last and verify that the latest search still controls the screen.",
+      "deliverables": [
+        "Search and pagination implementation",
+        "State ownership diagram",
+        "Before-and-after performance observations"
+      ],
+      "criteria": [
+        "Prevent stale responses from replacing newer results",
+        "Clean up subscriptions, effects and repeated event handlers",
+        "Explain caching choices and invalidation behaviour"
+      ]
+    },
+    {
+      "title": "Node.js, Express & API contracts",
+      "icon": "network",
+      "summary": "Build the service behind the user experience.",
+      "topics": [
+        "Node.js runtime and asynchronous I/O",
+        "Express routes, middleware and validation",
+        "REST contracts, pagination and consistent errors",
+        "Configuration, secrets and integration tests"
+      ],
+      "tools": [
+        "Node.js + Express — HTTP service",
+        "TypeScript — request/response types",
+        "OpenAPI — documented contracts",
+        "API test client — inspect boundary cases"
+      ],
+      "practice": "Create an opportunities API with pagination, validation and a simulated unavailable dependency. Connect it to the chosen Angular or React frontend.",
+      "deliverables": [
+        "Documented API",
+        "Integration exercise",
+        "Regression tests"
+      ],
+      "criteria": [
+        "Server validation does not trust the browser",
+        "Errors avoid leaking internal details",
+        "Pagination and failure paths are tested"
+      ]
+    },
+    {
+      "title": "MongoDB, identity & secure workflows",
+      "icon": "database",
+      "summary": "Connect data and permissions to the application’s business rules.",
+      "topics": [
+        "Document modelling and relationships",
+        "Indexes, query patterns and update consistency",
+        "Authentication versus authorisation",
+        "Role checks, input safety and audit needs"
+      ],
+      "tools": [
+        "MongoDB — document storage and indexing",
+        "Express middleware — enforce access rules",
+        "Test fixtures — roles and permission cases",
+        "Git — review schema and API changes"
+      ],
+      "practice": "Add owner and reviewer roles to a sample request-management workflow. Enforce permissions on the server and investigate a slow query.",
+      "deliverables": [
+        "Data model and query rationale",
+        "Permission matrix",
+        "Role-based workflow tests"
+      ],
+      "criteria": [
+        "Changing a browser value cannot grant access",
+        "Indexes serve the demonstrated query patterns",
+        "Sensitive fields are not returned unnecessarily"
+      ]
+    },
+    {
+      "title": "Data modelling, queries & consistency",
+      "icon": "database",
+      "summary": "Choose data structures around real reads, updates and constraints.",
+      "topics": [
+        "MongoDB embedding versus references",
+        "Schema validation, indexes and query inspection",
+        "Pagination and bounded result sets",
+        "Atomic updates, transaction boundaries and repeated requests",
+        "Relational modelling and migrations in the Python backend path"
+      ],
+      "tools": [
+        "MongoDB — model document relationships and inspect queries",
+        "MongoDB Compass — explore sample data and indexes",
+        "PostgreSQL — compare relational constraints in the Python stream"
+      ],
+      "practice": "Model users, projects and applications for a sample opportunities portal. Compare two document designs, add an index for a frequent query and handle a repeated application safely.",
+      "deliverables": [
+        "Data model and example access patterns",
+        "Index rationale and query evidence",
+        "Duplicate-request and constraint tests"
+      ],
+      "criteria": [
+        "Tie each index to an actual query",
+        "Avoid unbounded data reads and growing embedded arrays",
+        "Explain which consistency guarantees the chosen operation provides"
+      ]
+    },
+    {
+      "title": "Authentication, authorisation & integration boundaries",
+      "icon": "shield",
+      "summary": "Connect accounts and external services without trusting the browser.",
+      "topics": [
+        "Authentication versus permission to act",
+        "Sessions, cookies and token lifecycle concepts",
+        "Object-level access checks and role boundaries",
+        "Input validation, output handling and safe database queries",
+        "External API timeouts, retries and server-side configuration"
+      ],
+      "tools": [
+        "Express middleware — enforce permissions on server routes",
+        "FastAPI dependencies — illustrate equivalent checks in the Python path",
+        "A test identity provider or fixtures — practise login without real credentials",
+        "HTTP test clients — exercise unauthorised and repeated requests"
+      ],
+      "practice": "Add member and reviewer roles to a sample request workflow. Attempt to access another user’s record, replay a request and call an unavailable service; make the server enforce each boundary.",
+      "deliverables": [
+        "Permission matrix and protected routes",
+        "Negative tests for cross-user access",
+        "Integration error and retry policy"
+      ],
+      "criteria": [
+        "Treat hidden UI controls as convenience, not authorisation",
+        "Keep secrets out of bundles and version control",
+        "Avoid duplicate side effects during retry"
+      ]
+    },
+    {
+      "title": "Python, .NET & Java backend paths",
+      "icon": "code",
+      "summary": "Explore backend choices while keeping the application contract clear.",
+      "topics": [
+        "Python functions, modules and exceptions",
+        "FastAPI request validation and SQL persistence",
+        "Relational modelling with PostgreSQL",
+        "Integration patterns for ASP.NET Core and Spring Boot"
+      ],
+      "tools": [
+        "Python + FastAPI + Pydantic — typed backend path",
+        "PostgreSQL — relational application data",
+        "pytest — Python service tests",
+        "ASP.NET Core / Spring Boot — .NET and Java backend paths"
+      ],
+      "practice": "Build an equivalent API feature in the chosen Python, .NET or Java path and connect an Angular or React frontend. Compare request validation, persistence and setup while keeping the user journey consistent.",
+      "deliverables": [
+        "Backend service-integration exercise in the chosen path",
+        "Backend comparison note",
+        "Chosen-stream learning plan"
+      ],
+      "criteria": [
+        "The client contract remains explicit",
+        "Credentials stay server-side",
+        "Explain the chosen stack and the transferable patterns across backend options"
+      ]
+    },
+    {
+      "title": "Testing, release & portfolio delivery",
+      "icon": "rocket",
+      "summary": "Finish with an application that another developer can run and review.",
+      "topics": [
+        "Unit, integration and browser-flow testing",
+        "Accessibility and responsive checks",
+        "Containers, configuration and release basics",
+        "Logging, rollback, documentation and demonstrations"
+      ],
+      "tools": [
+        "Browser automation — verify a complete user journey",
+        "Docker — repeatable setup",
+        "Git — reviewed release and README",
+        "Chosen backend test tools — regression coverage"
+      ],
+      "practice": "Deliver a complete application in the agreed stream. Rehearse invalid input, denied access and a database outage before presenting the normal workflow.",
+      "deliverables": [
+        "Working full-stack capstone",
+        "Test and accessibility report",
+        "Setup and release runbook"
+      ],
+      "criteria": [
+        "Another learner can run the application",
+        "No secrets are committed",
+        "The demo includes failures and known limitations"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Campus opportunities portal",
+      "icon": "book",
+      "problem": "Students need a clear way to discover events or opportunities and view relevant details.",
+      "flow": [
+        "Angular / React views",
+        "Express API",
+        "MongoDB",
+        "Search + detail"
+      ],
+      "practice": "Build search, filtering, routing and responsive pages with sample opportunities. Work from a user story to an Angular or React screen, Express route and MongoDB collection. Include search, pagination, validation and an empty state. Test a repeated application and make the interface explain what happened. Keep example users and opportunities clearly fictional.",
+      "failures": [
+        "Empty search results",
+        "Slow API",
+        "Malformed opportunity data"
+      ],
+      "evidence": [
+        "Responsive UI",
+        "API contract",
+        "Demonstration repository"
+      ]
+    },
+    {
+      "title": "Role-based request manager",
+      "icon": "shield",
+      "problem": "A team needs request submission, review and status visibility with clear permissions.",
+      "flow": [
+        "Signed-in user",
+        "Server role check",
+        "Request store",
+        "Reviewer action"
+      ],
+      "practice": "Build the workflow in the chosen stream, including validation, status transitions and a permission matrix. Define a permission matrix before adding roles to the interface. Implement checks on the server, then attempt cross-user reads, unauthorised transitions and repeated operations. Show the reviewer queue, approval decision and user-facing receipt with predictable error recovery.",
+      "failures": [
+        "Unauthorised status change",
+        "Duplicate submission",
+        "Stale update conflict"
+      ],
+      "evidence": [
+        "Permission tests",
+        "Data model",
+        "Failure walkthrough"
+      ]
+    },
+    {
+      "title": "A deployable full-stack product",
+      "icon": "rocket",
+      "problem": "A coherent application needs reliable setup and a clear engineering story.",
+      "flow": [
+        "User journey",
+        "Frontend",
+        "Chosen backend",
+        "Data + checks"
+      ],
+      "practice": "Integrate the portfolio features, document tradeoffs and rehearse deployment locally with containers. Prepare environment configuration, a repeatable build and a deployment checklist. Rehearse an unavailable dependency and show useful logs without exposing personal details or secrets. For the Python path, document the equivalent API contract; other backend variants depend on the agreed stream.",
+      "failures": [
+        "Missing configuration",
+        "Database unavailable",
+        "Mobile layout regression"
+      ],
+      "evidence": [
+        "Working demo",
+        "Tests and README",
+        "Release/rollback checklist"
+      ]
+    }
+  ],
+  "preparation": [
+    [
+      "Explain the whole request",
+      "Trace a browser action from an accessible Angular or React interface through validation, API logic, permissions and database access, then back to useful loading, success and failure states."
+    ],
+    [
+      "Practise problem solving",
+      "Use JavaScript/TypeScript and Python exercises to explain arrays, maps, complexity and debugging. Use arrays, strings, hash maps, searching and complexity analysis in practical exercises. Add a debugging walkthrough that separates a browser state problem from a server or database problem."
+    ],
+    [
+      "Present your chosen stack",
+      "Present your MEAN, MERN or chosen backend project. Explain frontend composition, API contracts, data modelling, authentication, testing and deployment decisions. Connect what you built to the shared practices across technology stacks."
+    ],
+    [
+      "Prepare a reviewable portfolio",
+      "Demonstrate a working app, useful commits, tests, accessible UI states and a reproducible README. Prepare a setup guide, architecture diagram, API examples, automated checks and a short demo. Include one meaningful tradeoff, a known limitation and the next change you would make."
+    ]
+  ],
+  "curriculumTitle": "Full-Stack Development curriculum: understand the whole application.",
+  "curriculumIntro": "Explore ten modules spanning web foundations, Angular or React interfaces, Node.js and Express APIs, MongoDB and relational data, authentication, validation, testing and deployment. Apply these skills through MEAN, MERN or a Python, .NET or Java backend path."
+}

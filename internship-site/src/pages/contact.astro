@@ -1,0 +1,11 @@
+---
+import SiteLink from '../components/SiteLink.astro';
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import ContactLinks from '../components/ContactLinks.astro';
+import Icon from '../components/Icon.astro';
+---
+<Layout title="Contact us" description="Connect with SamkhyaAcademy about programs, learning goals, and enquiry support.">
+<PageHero eyebrow="Contact us" title="A conversation can be your next step." description="Discuss software and AI learning, space-tech projects for a college team, executive learning goals or a startup advisory brief."/>
+<section class="container section"><ContactLinks cards/><div class="contact-next"><h2>Let’s find the right starting point.</h2><p>Call, email or WhatsApp the academy to discuss a program. Tell us your background, the skills you want to develop and any questions about fees or delivery. For college groups, include the disciplines, approximate group size and learning objectives.</p><SiteLink class="button" href="/enquire/">Enquire about a program <Icon name="arrowRight"/></SiteLink><SiteLink class="text-link" href="/venture-studio/">Explore startup advisory <Icon name="arrowRight"/></SiteLink><SiteLink class="text-link" href="/faqs/">Browse common questions <Icon name="arrowRight"/></SiteLink></div></section></Layout>
+<style>.contact-next{max-width:750px;margin-top:36px}.contact-next p{margin:18px 0}.contact-next .text-link{display:inline-flex;margin:18px;gap:8px}</style>

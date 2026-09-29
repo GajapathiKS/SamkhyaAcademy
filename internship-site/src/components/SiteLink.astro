@@ -1,0 +1,10 @@
+---
+import {site} from '../../site.config.mjs';
+import type { HTMLAttributes } from 'astro/types';
+interface Props extends HTMLAttributes<'a'> {}
+const {href, ...attributes}=Astro.props;
+const target=String(href||'');
+const intake=(target.startsWith('/enquire/') && !site.enquiriesEnabled) || (target.startsWith('/venture-studio/submit/') && !(site.ventureIntakeEnabled && site.ideaFormUrl));
+const label=target.startsWith('/venture-studio/submit/')?'Venture submissions unavailable':'Online enquiries unavailable';
+---
+{intake ? <span {...attributes} aria-disabled="true" title={label}>{label}</span> : <a href={href} {...attributes}><slot /></a>}

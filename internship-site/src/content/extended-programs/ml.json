@@ -1,0 +1,394 @@
+{
+  "key": "ml",
+  "slug": "machine-learning",
+  "title": "Machine Learning",
+  "shortTitle": "Machine Learning",
+  "image": "machine-learning",
+  "headline": "Turn data into decisions you can explain.",
+  "intro": "Build a complete machine-learning workflow: frame a question, prepare data, train a useful baseline, evaluate honestly and deliver a small prediction service.",
+  "audience": "College learners, graduates and experienced developers",
+  "bridge": "One course, two entry points. New learners start with a Python, data and statistics bridge. Experienced developers can demonstrate readiness and focus on deeper experiments, reproducibility and service integration.",
+  "scope": "This is a dedicated machine-learning program. Classical supervised and unsupervised learning form the core; neural networks are introduced after sound evaluation habits. It is distinct from the generative-AI internship.",
+  "tags": [
+    "Python",
+    "pandas",
+    "scikit-learn",
+    "Model evaluation"
+  ],
+  "paths": [
+    [
+      "Foundation entry",
+      "Practise Python functions, tables, visualisation and essential probability before the modelling labs."
+    ],
+    [
+      "Experienced-developer entry",
+      "Use the readiness exercise to identify gaps, then extend experiments with stronger validation and API delivery."
+    ]
+  ],
+  "modules": [
+    {
+      "title": "Python, data & statistical thinking",
+      "icon": "code",
+      "summary": "Build the language and reasoning needed to work with data.",
+      "topics": [
+        "Python functions, arrays and DataFrames",
+        "Distributions, sampling, uncertainty and correlation",
+        "Missing values, outliers and exploratory questions",
+        "Git, environments and reproducible notebooks"
+      ],
+      "tools": [
+        "Python + NumPy — numerical work",
+        "pandas — tabular data",
+        "Matplotlib — clear exploratory plots",
+        "Jupyter + Git — explain and version experiments"
+      ],
+      "practice": "Explore an openly licensed or synthetic dataset. Produce a short data-quality report and distinguish an observation from a causal claim.",
+      "deliverables": [
+        "A reproducible notebook",
+        "A data dictionary and quality report",
+        "Three evidence-backed questions"
+      ],
+      "criteria": [
+        "The notebook runs in a fresh environment",
+        "Plots label units and sample sizes",
+        "Limitations and missing data are visible"
+      ]
+    },
+    {
+      "title": "Problem framing & reliable datasets",
+      "icon": "database",
+      "summary": "Define the prediction target and protect evaluation from leakage.",
+      "topics": [
+        "Regression versus classification objectives",
+        "Train, validation and test boundaries",
+        "Time-based and group-aware splits",
+        "Feature availability at prediction time and preprocessing"
+      ],
+      "tools": [
+        "pandas — audit and split examples",
+        "scikit-learn Pipeline + ColumnTransformer — fit preprocessing on training data",
+        "pytest — data and split checks"
+      ],
+      "practice": "Create a prediction contract for a synthetic service dataset. Build a split strategy and deliberately expose a leaked feature before removing it.",
+      "deliverables": [
+        "Prediction contract",
+        "Versioned dataset/split manifest",
+        "Leakage and data checks"
+      ],
+      "criteria": [
+        "Test data remains untouched during model selection",
+        "Split choice matches the intended use",
+        "Unavailable-at-inference features are excluded"
+      ]
+    },
+    {
+      "title": "Feature engineering & reproducible pipelines",
+      "icon": "layers",
+      "summary": "Make the same transformations work reliably during training and prediction.",
+      "topics": [
+        "Missing-value strategies and missingness indicators",
+        "Categorical encoding, scaling and skewed distributions",
+        "Column-wise transformations and feature provenance",
+        "Train-only fitting and leakage checks",
+        "Pipeline persistence and feature-contract tests"
+      ],
+      "tools": [
+        "pandas — inspect values and categories",
+        "ColumnTransformer and Pipeline — join transformations with estimators",
+        "pytest — test feature contracts and unseen-category behaviour"
+      ],
+      "practice": "Build a reusable preprocessing pipeline for mixed numerical and categorical data. Introduce an unseen category and missing field, then document the intended prediction-time behaviour.",
+      "deliverables": [
+        "Feature dictionary with availability times",
+        "Reproducible preprocessing pipeline",
+        "Tests for missing and unfamiliar inputs"
+      ],
+      "criteria": [
+        "Fit learned transformations only on training folds",
+        "Explain what each feature means at prediction time",
+        "Keep validation data out of feature selection"
+      ]
+    },
+    {
+      "title": "Supervised learning & useful baselines",
+      "icon": "brain",
+      "summary": "Compare models against a baseline before chasing complexity.",
+      "topics": [
+        "Linear and logistic regression",
+        "Decision trees and ensemble methods",
+        "Feature encoding and regularisation",
+        "Class imbalance and threshold decisions"
+      ],
+      "tools": [
+        "scikit-learn — dummy, linear and tree models",
+        "pandas — inspect features and errors",
+        "Matplotlib — learning and comparison charts"
+      ],
+      "practice": "Compare a dummy baseline, a linear model and a tree ensemble. Explain where a more complex model improves results and where it does not.",
+      "deliverables": [
+        "Baseline comparison table",
+        "A fitted preprocessing/model pipeline",
+        "An error-analysis notebook"
+      ],
+      "criteria": [
+        "All candidates use the same validation protocol",
+        "Metrics match the problem and class balance",
+        "Training scores are not presented as deployment evidence"
+      ]
+    },
+    {
+      "title": "Regression, classification & model comparison",
+      "icon": "chart",
+      "summary": "Understand which model family is useful, and why its errors differ.",
+      "topics": [
+        "Linear and logistic regression, regularisation and decision boundaries",
+        "Decision trees, random forests and gradient boosting",
+        "Nearest neighbours and support-vector machines as comparison models",
+        "Bias–variance tradeoffs and learning curves",
+        "Probability estimates, thresholds and the cost of different errors"
+      ],
+      "tools": [
+        "scikit-learn estimators — compare model families",
+        "DummyRegressor and DummyClassifier — establish simple baselines",
+        "Matplotlib — inspect residuals, learning curves and confusion matrices"
+      ],
+      "practice": "Compare a linear model, a tree ensemble and a dummy baseline on the same fixed split. Explain a case where the most complex model is not the most useful choice.",
+      "deliverables": [
+        "Comparison table with identical evaluation conditions",
+        "Residual or error-slice analysis",
+        "A model-choice note with operational constraints"
+      ],
+      "criteria": [
+        "Use the same data split and metric definitions",
+        "Separate hyperparameter selection from final test evaluation",
+        "Explain errors and resource costs as well as headline scores"
+      ]
+    },
+    {
+      "title": "Evaluation, tuning & explanation",
+      "icon": "chart",
+      "summary": "Explain model performance, uncertainty and important failure cases.",
+      "topics": [
+        "Cross-validation and bounded parameter search",
+        "Precision, recall, F1, ROC/PR curves and regression errors",
+        "Calibration, thresholds and subgroup checks",
+        "Permutation importance and interpretation limits"
+      ],
+      "tools": [
+        "scikit-learn — validation, metrics and permutation importance",
+        "Jupyter — review experiment results",
+        "Git — preserve configuration and decisions"
+      ],
+      "practice": "Choose a threshold for a sample support-triage model. Show the tradeoff between missed urgent cases and unnecessary reviews, then evaluate once on held-out data.",
+      "deliverables": [
+        "Evaluation report",
+        "Threshold rationale",
+        "Model card with limitations"
+      ],
+      "criteria": [
+        "Validation and final-test results are distinguished",
+        "Error slices include minority groups or rare cases where relevant",
+        "Explanations do not imply causation"
+      ]
+    },
+    {
+      "title": "Time-aware prediction & forecasting",
+      "icon": "clock",
+      "summary": "Respect the order in which information becomes available.",
+      "topics": [
+        "Forecast horizons and seasonal or lag features",
+        "Time-based splits and rolling validation",
+        "Naive and seasonal baselines",
+        "Delayed labels, missing periods and changing patterns",
+        "Prediction intervals as an introductory uncertainty topic"
+      ],
+      "tools": [
+        "pandas datetime tools — align time-indexed observations",
+        "TimeSeriesSplit — run chronological validation",
+        "scikit-learn — compare lag-feature regression against a baseline"
+      ],
+      "practice": "Forecast a sample daily demand series. Hold out the latest period, construct features using past data only and compare performance across busy and quiet intervals.",
+      "deliverables": [
+        "Forecast notebook and chronological split diagram",
+        "Baseline comparison by forecast horizon",
+        "Limitations note for sparse history and unexpected events"
+      ],
+      "criteria": [
+        "Never use future observations to construct past features",
+        "Evaluate on the horizon the proposed user needs",
+        "Avoid presenting a forecast as a certain business outcome"
+      ]
+    },
+    {
+      "title": "Patterns, text & neural-network foundations",
+      "icon": "layers",
+      "summary": "Explore learning beyond labelled tabular predictions.",
+      "topics": [
+        "Clustering and scaling choices",
+        "PCA and dimensionality reduction",
+        "TF-IDF text features and classification",
+        "Neural-network concepts, overfitting and compute budgets"
+      ],
+      "tools": [
+        "scikit-learn — clustering, PCA and text pipelines",
+        "PyTorch — a small introductory neural-network exercise",
+        "Matplotlib — compare patterns and errors"
+      ],
+      "practice": "Group synthetic service requests and compare a text classifier with a simple neural baseline on a small approved dataset. Keep conclusions proportional to the evidence.",
+      "deliverables": [
+        "Cluster interpretation brief",
+        "Text-classification experiment",
+        "A documented neural-network exercise"
+      ],
+      "criteria": [
+        "Clusters are reviewed rather than treated as ground truth",
+        "Text preprocessing respects data splits",
+        "Compute and overfitting controls are recorded"
+      ]
+    },
+    {
+      "title": "Prediction services & model lifecycle",
+      "icon": "rocket",
+      "summary": "Make the experiment usable by another developer.",
+      "topics": [
+        "Saving preprocessing and model artifacts together",
+        "Typed inference requests and invalid-input handling",
+        "Training-serving consistency and drift awareness",
+        "Monitoring, versioning and retraining decisions"
+      ],
+      "tools": [
+        "FastAPI + Pydantic — prediction contract",
+        "Docker — repeatable local service",
+        "pytest — inference and failure tests",
+        "Git — reviewed artifact/version manifest"
+      ],
+      "practice": "Package the chosen model behind a small API and optional UI. Rehearse a schema change, an invalid request and a shifted sample dataset.",
+      "deliverables": [
+        "Prediction service",
+        "Model card and deployment notes",
+        "Monitoring and rollback checklist"
+      ],
+      "criteria": [
+        "The full transformation pipeline is reproduced at inference",
+        "Untrusted model artifacts are not loaded",
+        "Drift prompts investigation rather than automatic blind retraining"
+      ]
+    },
+    {
+      "title": "Monitoring, responsible use & capstone review",
+      "icon": "shield",
+      "summary": "Show when a model is useful, when it should defer and when it needs review.",
+      "topics": [
+        "Data drift versus changes in predictive performance",
+        "Monitoring when labels arrive late",
+        "Subgroup error analysis and limitations of small samples",
+        "Human review, inappropriate uses and sensitive data minimisation",
+        "Model cards, reproducibility and retraining approval"
+      ],
+      "tools": [
+        "pandas — compare input distributions and labelled outcomes",
+        "Python monitoring scripts — generate a small review report",
+        "Git and a model-card template — version assumptions and intended use"
+      ],
+      "practice": "Simulate a change in input distribution and a rise in error once labels arrive. Prepare a review recommendation and a human fallback; do not automate retraining simply because a drift score changed.",
+      "deliverables": [
+        "Model card with intended use and exclusions",
+        "Monitoring report with alert rationale",
+        "Capstone review package and reproducibility instructions"
+      ],
+      "criteria": [
+        "Distinguish a drift signal from evidence of model failure",
+        "State sample-size limitations when comparing groups",
+        "Document who decides whether to retain, revise or retire the model"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Service-demand prediction",
+      "icon": "chart",
+      "problem": "An operations team needs a better estimate of demand than last-period averages.",
+      "flow": [
+        "Approved data",
+        "Time-aware split",
+        "Baseline + model",
+        "Error report"
+      ],
+      "practice": "Build and compare a simple forecasting-style tabular regression workflow using time-appropriate features. Use a chronological holdout when observations are time-dependent. Compare a naive forecast with feature-based regression, inspect unusually high and low demand separately, and explain the effect of unavailable or delayed inputs. End with a recommendation that connects the error measure to the proposed planning task.",
+      "failures": [
+        "Future information leaks into training",
+        "Rare peaks dominate error",
+        "A changed process invalidates old patterns"
+      ],
+      "evidence": [
+        "Reproducible notebook",
+        "Baseline comparison",
+        "Model card"
+      ]
+    },
+    {
+      "title": "Support-request triage",
+      "icon": "message",
+      "problem": "A team wants suggested categories and urgency flags while retaining human review.",
+      "flow": [
+        "Sample text",
+        "Feature pipeline",
+        "Classification",
+        "Human review"
+      ],
+      "practice": "Build a text classifier and explain threshold, class imbalance and uncertain predictions. Create a small labelled sample with explicit categories and a held-out evaluation set. Compare a simple text baseline with another justified model. Inspect confused categories, document when to send a request to human review and show what happens to a request outside the known topics.",
+      "failures": [
+        "Rare categories are missed",
+        "Personal information appears in raw text",
+        "Confident-looking mistakes misroute work"
+      ],
+      "evidence": [
+        "Error slice report",
+        "Threshold decision",
+        "Demonstrable review flow"
+      ]
+    },
+    {
+      "title": "An evaluated prediction API",
+      "icon": "network",
+      "problem": "A useful notebook needs a reliable interface before another application can use it.",
+      "flow": [
+        "Typed request",
+        "Preprocessing",
+        "Versioned model",
+        "Result + limitations"
+      ],
+      "practice": "Integrate the chosen model with a small service, input checks and reproducible setup. Package preprocessing and prediction together so the service applies the same transformations used during training. Validate inputs, test missing and unknown values and return an explicit error for unsupported requests. Reproduce the saved model result, then prepare a release note and a monitoring review for changing inputs.",
+      "failures": [
+        "Schema mismatch",
+        "Invalid or out-of-range input",
+        "Different preprocessing at inference"
+      ],
+      "evidence": [
+        "Working demo",
+        "API tests",
+        "Runbook and lifecycle plan"
+      ]
+    }
+  ],
+  "preparation": [
+    [
+      "Explain the experiment",
+      "Present the problem, split, baseline, metric and error cases in a concise technical walkthrough. Walk through the data split, baseline, feature availability and metric choice before showing a result. Use one failed experiment to explain what you learned and what you changed."
+    ],
+    [
+      "Practise ML interviews",
+      "Reason through bias/variance, leakage, imbalance, feature availability and metric selection with examples. Practise bias–variance tradeoffs, regularisation, cross-validation, threshold selection and leakage detection. Explain your answer with a small dataset or diagram, then discuss how the answer changes for time-dependent data."
+    ],
+    [
+      "Build a reproducible portfolio",
+      "Prepare notebooks, a model card, an API demonstration and a README another developer can follow. Include a dataset description, pinned environment, training command, evaluation report and model card. A reviewer should be able to reproduce a representative result without private credentials."
+    ],
+    [
+      "Discuss responsible use",
+      "Explain limitations, privacy boundaries, review needs and the cost of an incorrect prediction. Identify an inappropriate use of your model, a weakly represented data segment and a fallback for unsupported input. Explain uncertainty without implying that a score makes the application safe for every use."
+    ]
+  ],
+  "curriculumTitle": "Machine Learning curriculum: from data to dependable predictions.",
+  "curriculumIntro": "Explore ten modules: data preparation, feature pipelines, regression, classification, model comparison, evaluation, time-aware prediction, neural foundations and delivery."
+}

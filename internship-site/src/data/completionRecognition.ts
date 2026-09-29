@@ -1,0 +1,2 @@
+// Owner-confirmed completion recognition; artwork remains illustrative. No issuance backend.
+export const completionRecognition = { published: true, heading: 'Complete your program. Celebrate your progress.', description: 'Receive a SamkhyaAcademy certificate of completion after successfully meeting your learning program’s requirements. The required learning activities, practical work and reviews are explained for your chosen program before you begin.' };

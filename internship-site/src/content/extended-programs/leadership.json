@@ -1,0 +1,340 @@
+{
+  "key": "leadership",
+  "slug": "fde-for-leaders",
+  "title": "Forward Deployment Engineering for Leaders",
+  "shortTitle": "FDE for Leaders",
+  "image": "ai-leadership",
+  "headline": "Lead AI from a promising demo to a governed decision.",
+  "intro": "A C-suite learning experience for selecting useful AI opportunities, funding bounded pilots, assigning ownership and making evidence-based decisions about adoption.",
+  "audience": "C-suite leaders, business heads and transformation sponsors",
+  "bridge": "No coding prerequisite. Bring familiarity with a business workflow, its stakeholders and the decisions you need to make. Technical concepts are explored through demonstrations, proposal reviews and leadership exercises.",
+  "scope": "Designed around AI strategy, investment decisions, governance and adoption. Exercises focus on leadership decisions and do not require coding. The 90-day blueprint is a planning exercise, not a course duration or a guaranteed delivery schedule.",
+  "tags": [
+    "AI strategy",
+    "Pilot economics",
+    "Governance",
+    "Adoption"
+  ],
+  "paths": [
+    [
+      "Business sponsors",
+      "Frame value, baseline measures, decision rights and the investment case for a bounded pilot."
+    ],
+    [
+      "Technology & transformation leaders",
+      "Connect architecture, data readiness, risk ownership and operating-model decisions."
+    ]
+  ],
+  "modules": [
+    {
+      "title": "AI reality for leaders",
+      "icon": "brain",
+      "summary": "Evaluate proposals by capability, evidence and consequences of error.",
+      "topics": [
+        "LLM capabilities, unsupported answers and limitations",
+        "RAG, fine-tuning and smaller-model tradeoffs",
+        "Agents, reversible actions and human approval",
+        "Voice, vision and document-workflow opportunities"
+      ],
+      "tools": [
+        "Facilitated model demonstrations — inspect success and failure",
+        "Capability scorecard — compare a proposal with evidence",
+        "Workflow map — locate decisions and escalation"
+      ],
+      "practice": "Review a proposal claiming AI can resolve all service tickets. Narrow the ticket classes, permitted actions and evidence requirements, then request a denied-action and unsupported-answer demonstration.",
+      "deliverables": [
+        "AI proposal review",
+        "Capability/limitation map",
+        "Human-control boundary"
+      ],
+      "criteria": [
+        "The proposal has testable scope",
+        "Consequential actions have review owners",
+        "A fluent demonstration is not treated as proof of reliability"
+      ]
+    },
+    {
+      "title": "Workflow discovery & opportunity framing",
+      "icon": "search",
+      "summary": "Start with a business process and a measurable problem.",
+      "topics": [
+        "Current-state workflow and handoff mapping",
+        "Customer, employee and operator perspectives",
+        "Task suitability: deterministic software, assistance or bounded automation",
+        "Baseline measures and counterfactual questions",
+        "Choosing a pilot with a manageable impact boundary"
+      ],
+      "tools": [
+        "Workflow canvas — map tasks, decisions and exceptions",
+        "Interview guide — collect observations rather than solution preferences",
+        "Opportunity scorecard — compare value, readiness and uncertainty"
+      ],
+      "practice": "Review an illustrative invoice-query workflow. Identify the real delay, interview questions, non-AI alternatives and the smallest useful pilot boundary.",
+      "deliverables": [
+        "Current-state map and problem statement",
+        "Baseline measurement plan",
+        "Opportunity shortlist with explicit assumptions"
+      ],
+      "criteria": [
+        "Connect the proposed capability to an observed problem",
+        "Consider simpler process or software changes",
+        "Make unresolved assumptions visible before funding"
+      ]
+    },
+    {
+      "title": "Data readiness & architecture choices",
+      "icon": "database",
+      "summary": "Ask the questions that connect a proposal to the organisation’s systems.",
+      "topics": [
+        "Source ownership, access rights and information quality",
+        "Retrieval, model adaptation and system integration at a decision level",
+        "Identity, permissions and auditability",
+        "Vendor dependencies, portability and exit planning",
+        "Human review points and failure containment"
+      ],
+      "tools": [
+        "Architecture canvas — explain systems and trust boundaries",
+        "Data-readiness checklist — identify ownership and quality gaps",
+        "Build–buy–partner matrix — compare operating responsibilities"
+      ],
+      "practice": "Compare a document assistant delivered as a managed service with an internal application. Identify who owns access, corrections, evaluations and the ongoing service.",
+      "deliverables": [
+        "One-page architecture with trust boundaries",
+        "Data-readiness gap list and owners",
+        "Option comparison with exit assumptions"
+      ],
+      "criteria": [
+        "Distinguish product claims from evidence available for review",
+        "Identify an owner for each data source and access decision",
+        "Include ongoing operations when comparing options"
+      ]
+    },
+    {
+      "title": "Prioritise & fund",
+      "icon": "target",
+      "summary": "Choose an opportunity the organisation can responsibly validate.",
+      "topics": [
+        "Workflow discovery and measurable baselines",
+        "Data quality, provenance and permission readiness",
+        "Build, buy and partner comparisons",
+        "Cost assumptions, review effort and sensitivity analysis"
+      ],
+      "tools": [
+        "Use-case scorecard — compare value, feasibility and risk",
+        "Spreadsheet scenario model — test cost/value assumptions",
+        "Vendor-question guide — examine integration and exit needs"
+      ],
+      "practice": "Compare an internal knowledge assistant, invoice triage and a sales-support workflow. Select one bounded pilot and explain why the alternatives should wait.",
+      "deliverables": [
+        "Opportunity shortlist",
+        "Build/buy/partner rationale",
+        "Assumption-based value and cost model"
+      ],
+      "criteria": [
+        "Value is tied to a stated baseline",
+        "Review, integration and operating costs are included",
+        "Estimates are scenarios rather than promised returns"
+      ]
+    },
+    {
+      "title": "Evaluation, assurance & decision gates",
+      "icon": "check",
+      "summary": "Define the evidence a pilot must produce before it expands.",
+      "topics": [
+        "Task quality, unsupported answers and consequential errors",
+        "Representative test sets and adversarial scenarios",
+        "Human review effort, latency and total service cost",
+        "Pilot gates, acceptance criteria and stop conditions",
+        "Independent challenge and escalation responsibilities"
+      ],
+      "tools": [
+        "Evaluation scorecard — relate evidence to intended use",
+        "Scenario library — test ordinary cases and important failures",
+        "Decision log — record proceed, revise and pause reasoning"
+      ],
+      "practice": "Inspect a sample AI pilot scorecard with strong average results but poor handling of high-impact exceptions. Decide what evidence is missing and whether the scope should change.",
+      "deliverables": [
+        "Acceptance scorecard and review plan",
+        "Pilot gate decision with conditions",
+        "Escalation and exception ownership map"
+      ],
+      "criteria": [
+        "Do not substitute a demo or single metric for acceptance evidence",
+        "Define thresholds before reviewing pilot results",
+        "Account for human work needed to operate safely"
+      ]
+    },
+    {
+      "title": "Govern & operate",
+      "icon": "shield",
+      "summary": "Assign responsibility for safe operation and meaningful adoption.",
+      "topics": [
+        "Risk, human control and stop conditions",
+        "Access limits, logs and necessary evidence",
+        "Business, technical and incident ownership",
+        "Role-specific training, feedback and change management"
+      ],
+      "tools": [
+        "Risk register — identify owners and controls",
+        "RACI — clarify decision and operating responsibilities",
+        "Tabletop incident exercise — rehearse escalation",
+        "Adoption checklist — define readiness evidence"
+      ],
+      "practice": "Map an approval-based invoice workflow. Rehearse an incorrect recommendation, an unauthorised action and an unavailable service, then decide who pauses the pilot.",
+      "deliverables": [
+        "Risk/control register",
+        "Operating model and escalation map",
+        "Adoption and feedback plan"
+      ],
+      "criteria": [
+        "Reviewers have evidence, time and authority",
+        "Logs do not unnecessarily expose sensitive content",
+        "An accountable owner can stop or revise the workflow"
+      ]
+    },
+    {
+      "title": "Adoption, operating model & stakeholder communication",
+      "icon": "users",
+      "summary": "Prepare people and responsibilities alongside the technology.",
+      "topics": [
+        "Process redesign and new ownership responsibilities",
+        "Role-based enablement and user feedback",
+        "Adoption measures versus business outcomes",
+        "Procurement and implementation handovers",
+        "Executive updates that separate facts, assumptions and decisions"
+      ],
+      "tools": [
+        "Responsibility matrix — clarify who decides and operates",
+        "Adoption plan — sequence enablement and feedback",
+        "Executive update template — present evidence and requested decisions"
+      ],
+      "practice": "Prepare a rollout conversation for business users, engineering, security and support. Explain changed responsibilities, the fallback process and how feedback will change the pilot.",
+      "deliverables": [
+        "Stakeholder map and responsibility matrix",
+        "Enablement and feedback plan",
+        "Executive update and handover checklist"
+      ],
+      "criteria": [
+        "Name accountable owners rather than generic teams alone",
+        "Measure actual use and task outcomes separately",
+        "Keep open risks and remaining decisions visible"
+      ]
+    },
+    {
+      "title": "The 90-day execution blueprint",
+      "icon": "compass",
+      "summary": "Present an evidence-led pilot plan with a genuine stop or scale decision.",
+      "topics": [
+        "Priority use cases and dependency sequencing",
+        "Pilot audience, quality measures and baseline",
+        "Data, evaluation, user-readiness and incident gates",
+        "Leadership review, scope revision and controlled expansion"
+      ],
+      "tools": [
+        "Pilot charter — scope the experiment",
+        "Decision-gate checklist — define evidence and ownership",
+        "Executive narrative — present the recommendation",
+        "Roadmap template — sequence discovery, pilot and review"
+      ],
+      "practice": "Present an illustrative 90-day plan: first establish the baseline and permissions, then run a bounded pilot, then review measured evidence. Explain what would change your recommendation.",
+      "deliverables": [
+        "Pilot charter",
+        "Phased roadmap with owners",
+        "Executive decision brief"
+      ],
+      "criteria": [
+        "Efficiency measures are paired with quality and risk measures",
+        "Dates are planning assumptions, not delivery promises",
+        "Stop, revise and scale decisions each have explicit evidence"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "AI opportunity investment brief",
+      "icon": "target",
+      "problem": "Leadership has several attractive proposals but limited delivery capacity.",
+      "flow": [
+        "Workflow baseline",
+        "Readiness scorecard",
+        "Options",
+        "Pilot recommendation"
+      ],
+      "practice": "Compare three illustrative opportunities and present the assumptions behind one priority. Compare the proposed pilot with a process improvement or conventional software alternative. Record value assumptions, readiness gaps, cost categories and the evidence required to justify the next commitment. Present a staged decision rather than a confident forecast unsupported by the available data.",
+      "failures": [
+        "Benefits counted twice",
+        "Data rights unclear",
+        "Vendor capability mistaken for organisational readiness"
+      ],
+      "evidence": [
+        "Use-case scorecard",
+        "Cost assumptions",
+        "Decision memo"
+      ]
+    },
+    {
+      "title": "A governed operations pilot",
+      "icon": "shield",
+      "problem": "Invoice triage could reduce repetitive work, but a wrong action has consequences.",
+      "flow": [
+        "Approved documents",
+        "AI suggestion",
+        "Human approval",
+        "Operational record"
+      ],
+      "practice": "Design the review boundary, ownership and stop conditions using a simulated workflow. Map where a human must approve an action and what happens when information is missing or contradictory. Review sample evaluation results, assign an operating owner and define the conditions for a limited pilot. Include a clear stop condition and a route for users to challenge an output.",
+      "failures": [
+        "Approval without sufficient evidence",
+        "Unauthorised access",
+        "No incident owner"
+      ],
+      "evidence": [
+        "Control matrix",
+        "Tabletop incident notes",
+        "Operating-model proposal"
+      ]
+    },
+    {
+      "title": "The executive deployment blueprint",
+      "icon": "compass",
+      "problem": "A successful demonstration needs a controlled path into organisational practice.",
+      "flow": [
+        "Discover",
+        "Bound the pilot",
+        "Evaluate",
+        "Stop / revise / scale"
+      ],
+      "practice": "Prepare and defend a 90-day planning scenario with measurable gates, adoption responsibilities and a handover decision. Sequence discovery, readiness, bounded implementation, evaluation and adoption decisions in an illustrative planning window. Identify dependencies and decision owners, then rehearse a review where one milestone is not met. Revise the plan without treating elapsed time as evidence of readiness.",
+      "failures": [
+        "Metrics reward speed but hide errors",
+        "Users cannot challenge output",
+        "Scaling before readiness"
+      ],
+      "evidence": [
+        "Pilot charter",
+        "Adoption roadmap",
+        "Executive presentation"
+      ]
+    }
+  ],
+  "preparation": [
+    [
+      "Challenge AI proposals",
+      "Ask for baselines, failure examples, access boundaries and a clear operating owner. Ask a team to trace a successful case and an important failure through the proposed system. Identify unsupported assumptions about data access, human review and operational ownership."
+    ],
+    [
+      "Lead an investment conversation",
+      "Explain value assumptions, total operating effort and what evidence would justify further funding. Present the baseline, cost drivers, learning budget and next decision gate. Explain what would make you reduce the scope or stop, as well as what evidence would justify further work."
+    ],
+    [
+      "Rehearse governance decisions",
+      "Practise pausing or revising a pilot when quality, risk or adoption evidence is inadequate. Work through an exception scenario involving an unsupported answer, permission gap or rising review workload. Assign a decision owner and record whether the pilot should proceed, revise or pause."
+    ],
+    [
+      "Communicate a deployment decision",
+      "Present the charter, accountable owners and stop/scale criteria to business and technical stakeholders. Give business, technology and operations audiences a common account of value, evidence, open risks and ownership. End with a specific decision request and the conditions attached to it."
+    ]
+  ],
+  "curriculumTitle": "AI leadership curriculum: make the decisions behind deployment.",
+  "curriculumIntro": "Explore eight executive modules on AI capabilities, opportunity framing, data readiness, funding, evaluation, governance, adoption and a 90-day planning exercise."
+}

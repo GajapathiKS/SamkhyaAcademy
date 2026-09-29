@@ -1,0 +1,10 @@
+---
+import SiteLink from '../components/SiteLink.astro';
+import Layout from './Layout.astro';
+import Icon from '../components/Icon.astro';
+import '../styles/programs.css';
+interface Props {title:string;description:string;section:string}
+const {title,description,section}=Astro.props;
+const links=[['overview','/venture-studio/','Overview','compass'],['journey','/venture-studio/journey/','The venture journey','layers'],['submit','/venture-studio/submit/','Share your idea','message']];
+---
+<Layout title={title} description={description}><slot name="hero" /><div class="program-context"><div class="container"><div class="track-heading"><div><strong>Venture Launchpad</strong></div><SiteLink class="text-link" href="/programs/">Explore all programs <Icon name="arrowRight" /></SiteLink></div><nav class="program-tabs" aria-label="Venture Launchpad sections">{links.map(([id,href,label,icon])=><SiteLink href={href} aria-current={section===id?'page':undefined}><Icon name={icon}/>{label}</SiteLink>)}</nav></div></div><slot /></Layout>

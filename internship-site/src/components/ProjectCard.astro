@@ -1,0 +1,7 @@
+---
+import Icon from './Icon.astro';
+import type { projects } from '../data/curriculum';
+interface Props { project: (typeof projects)[number]; }
+const { project: p } = Astro.props;
+---
+<a class={`project-card visual-project-card ${p.color}`} href={`/programs/ai-engineering-internship/projects/#${p.id}`}><div class="project-card-cover"><img src={`/images/${p.image}-640.webp`} alt="" width="640" height="427" loading="lazy" /><span class="cover-icon"><Icon name={p.icon} /></span><span class="cover-number">{p.number}</span></div><div class="project-body"><p class="eyebrow">{p.stage}</p><h3>{p.title}</h3><p>{p.subtitle}</p><span class="text-link">Explore the project <Icon name="arrowUpRight" /></span></div></a>

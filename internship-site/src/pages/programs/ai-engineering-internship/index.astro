@@ -1,0 +1,21 @@
+---
+import Icon from '../../../components/Icon.astro';
+import { getEntry, render } from 'astro:content';
+import PageDepth from '../../../components/PageDepth.astro';
+import InternshipAIHighlights from '../../../components/InternshipAIHighlights.astro';
+import Layout from '../../../layouts/ProgramLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import CTA from '../../../components/CTA.astro';
+const program = (await getEntry('programs', 'ai-engineering'))!;
+const { Content } = await render(program);
+const faqs = [
+ ['Do I need to know programming already?', 'No. The program begins with Python fundamentals. Basic computer skills, a laptop, and regular practice time are the starting point.'],
+ ['Is this a job or a training program?', 'This is a project-based training internship. The projects are learning exercises and portfolio work; participation does not constitute employment or a client-work assignment.'],
+ ['How much time should I set aside?', 'Plan for approximately 12–15 hours a week across learning, exercises, and project work. Enquire to confirm the teaching timetable.'],
+ ['Is the program online or in person?', 'Enquire about the delivery arrangements available for the next batch and how they fit your location and college schedule.'],
+ ['Will I learn DSA as well as AI?', 'Yes. Python problem-solving runs throughout the program, from arrays and hash maps to introductory trees and graphs, with technical explanation practice.'],
+ ['Will this guarantee a job?', 'The program focuses on practical skills, project evidence, and interview preparation. Employment, placement, and stipend outcomes are not guaranteed.'],
+ ['How do I find out about joining?', 'Use the enquiry page to ask about the next batch, delivery arrangements, setup requirements, and enrolment details.'],
+];
+---
+<Layout track="internship" section="overview" title="The AI engineering internship" description={program.data.summary}><PageHero slot="hero" image="ai-engineering" imageAlt="AI-generated learning scene with learners collaborating; not actual academy participants" caption="An illustrative learning scene. Your journey starts with practice." eyebrow="The internship" title="Your starting point for building with AI." description={program.data.summary}><div class="pill-row"><span>{program.data.duration}</span><span>{program.data.audience}</span><span>{program.data.effort}</span></div></PageHero><InternshipAIHighlights /><section class="container section content-sidebar"><div class="prose"><Content /></div><aside class="info-panel"><p class="eyebrow">THE LEARNING RHYTHM</p><h2>Learn. Try.<br />Debug. Repeat.</h2><ol class="rhythm"><li><strong>Understand the idea</strong><span>Work through a focused concept.</span></li><li><strong>Practise in code</strong><span>Try it, break it, and find out why.</span></li><li><strong>Build a project</strong><span>Connect new skills to a real output.</span></li><li><strong>Explain your work</strong><span>Document what you did and learned.</span></li></ol><a class="button" href="/programs/ai-engineering-internship/curriculum/">Explore what you’ll learn <Icon name="arrowRight" /></a></aside></section><section class="tinted section"><div class="container faq-wrap"><p class="eyebrow">GOOD QUESTIONS</p><h2>A little clarity before you begin.</h2>{faqs.map(([q,a]) => <details class="faq"><summary>{q}<Icon name="plus" /></summary><p>{a}</p></details>)}</div></section><PageDepth page="internship" /><CTA /></Layout>

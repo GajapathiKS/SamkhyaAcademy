@@ -1,0 +1,36 @@
+{
+  "foundations": [
+    {
+      "icon": "code",
+      "title": "Get the fundamentals right",
+      "description": "Arrays, strings, hash maps, searching, sorting, stacks, and queues. Learn to choose a useful starting point."
+    },
+    {
+      "icon": "network",
+      "title": "Think beyond the happy path",
+      "description": "Recursion, sets, trees, and traversal. Compare approaches and test empty, invalid, and boundary inputs."
+    },
+    {
+      "icon": "message",
+      "title": "Explain under pressure",
+      "description": "Introductory graphs, mixed problems, and technical walkthroughs. Practise communicating before reaching for code."
+    }
+  ],
+  "interview": [
+    {
+      "number": "01",
+      "title": "Walk through your code",
+      "description": "Explain how a request moves from React to your API, database, and AI workflow."
+    },
+    {
+      "number": "02",
+      "title": "Debug out loud",
+      "description": "Describe what you observe, form a hypothesis, and use evidence to find the issue."
+    },
+    {
+      "number": "03",
+      "title": "Defend a decision",
+      "description": "Explain why you used retrieval, where an agent helped, and when simpler code was enough."
+    }
+  ]
+}

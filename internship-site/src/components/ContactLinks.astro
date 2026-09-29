@@ -1,0 +1,13 @@
+---
+import SiteLink from './SiteLink.astro';
+import { site } from '../../site.config.mjs';
+import Icon from './Icon.astro';
+const { cards = false, compact = false } = Astro.props;
+const contacts = [
+ {label:'Email',value:site.email,href:`mailto:${site.email}`,icon:'mail'},
+ {label:'Call us',value:site.phone,href:`tel:${site.phone.replace(/[^+0-9]/g,'')}`,icon:'phone'},
+ {label:'WhatsApp',value:site.whatsapp,href:`https://wa.me/${site.whatsapp.replace(/\D/g,'')}`,icon:'message'}
+];
+---
+<div class:list={['contact-methods', { cards, compact }]}>{contacts.filter(c => c.value && (!compact || c.label !== 'WhatsApp')).map(c => <div><Icon name={c.icon}/><strong>{c.label}</strong><SiteLink href={c.href}>{c.value}</SiteLink></div>)}</div>
+<style>.contact-methods>div{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-block:12px}.contact-methods a{overflow-wrap:anywhere}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.cards>div{padding:26px;border:1px solid var(--border);border-radius:12px;background:white}.cards strong{font-size:1.1rem}.cards p,.cards a{width:100%;font-size:.9rem}.cards .icon{color:var(--indigo)}@media(max-width:768px){.cards{grid-template-columns:1fr}}.compact{font-size:.8rem;line-height:1.7;margin-block:16px}.compact>div{display:grid;grid-template-columns:16px auto minmax(0,1fr);gap:8px;margin-block:7px;align-items:start}.compact strong{font-size:inherit;font-weight:700}.compact :global(a){font-size:inherit;font-weight:400;margin:0;padding:0}.compact :global(.icon){width:15px;height:15px;margin-top:3px}@media(max-width:360px){.compact>div{grid-template-columns:16px minmax(0,1fr)}.compact :global(a){grid-column:2}}</style>

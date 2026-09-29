@@ -1,0 +1,14 @@
+---
+import { site } from '../../site.config.mjs';
+---
+{site.beta.enabled && <aside class="beta-ribbon" aria-label="Website release status"><strong>Beta</strong><span class="desktop-message">{site.beta.message}</span><span class="mobile-message">Official launch coming soon</span></aside>}
+<style>
+  .beta-ribbon { display:flex; align-items:center; justify-content:center; gap:12px; min-height:38px; padding:6px 16px; background:linear-gradient(110deg,#132e57,#214e7e,#132e57); color:#fff; font-size:13px; font-weight:500; line-height:1.5; text-align:center; }
+  .beta-ribbon strong { flex-shrink:0; padding:3px 10px; border:1px solid #a7e4ff; border-radius:6px; background:linear-gradient(135deg,#effbff,#8fdcff); color:#102c50; box-shadow:0 0 14px #80d8ff55; text-transform:uppercase; letter-spacing:.1em; font-size:12px; font-weight:700; }
+  .beta-ribbon span { min-width:0; }
+  .mobile-message { display:none; }
+  .beta-ribbon strong { animation:beta-pulse 2.4s ease-in-out infinite; }
+  @keyframes beta-pulse { 0%,100% { opacity:1; box-shadow:0 0 5px #80d8ff55; } 50% { opacity:.65; box-shadow:0 0 18px #80d8ffaa; } }
+  @media (prefers-reduced-motion:reduce) { .beta-ribbon strong { animation:none; } }
+  @media (max-width:600px) { .beta-ribbon { min-height:30px; padding:4px 10px; gap:8px; font-size:11px; } .desktop-message { display:none; } .mobile-message { display:inline; white-space:nowrap; } .beta-ribbon strong { font-size:10px; padding:2px 7px; } }
+</style>

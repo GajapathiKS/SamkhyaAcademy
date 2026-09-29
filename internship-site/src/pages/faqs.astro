@@ -1,0 +1,8 @@
+---
+import SiteLink from '../components/SiteLink.astro';
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { faqGroups } from '../data/faqs';
+---
+<Layout title="Frequently asked questions" description="Answers about SamkhyaAcademy programs, prerequisites, projects, schedules, and enquiries."><PageHero eyebrow="FAQs" title="Good questions. Clear starting points." description="Find the essentials before exploring your next learning direction."/><div class="container section narrow">{faqGroups.map(group=><section class="faq-group"><h2>{group.title}</h2>{group.items.map(([q,a])=><details class="faq"><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>)}</section>)}<p>Still have a question? <SiteLink href="/enquire/">Enquire about a program</SiteLink> or visit <SiteLink href="/contact/">Contact us</SiteLink>. Read our <SiteLink href="/privacy/">privacy notice</SiteLink>.</p></div></Layout>
+<style>.faq-group{margin-bottom:38px}.faq-group h2{font-size:1.5rem;margin-bottom:18px}</style>
